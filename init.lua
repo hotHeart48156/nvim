@@ -1,0 +1,1 @@
+/home/ubuntu/.sea.nvim/init.lua
