@@ -1,20 +1,19 @@
 local plugin={}
 
-plugin.core
-=
-{
+plugin.core=
+  {
     "SirVer/ultisnips",
     
-    setup=function()
-        vim.g.UltiSnipsEditSplit = 'vertical',
-        vim.g.snips_author = 'Yang Biao',
-    end,
+--    setup = function()
+  --      vim.g.UltiSnipsEditSplit = 'vertical',
+    --    vim.g.snips_author = 'Yang Biao',
+    --end,
     
-    config=function()
+    config = function()
         vim.g.UltiSnipsExpandTrigger="<leader><tab>"
-    end
-}
-plugin.mapping=function()
+    end,
+  }
+plugin.mapping = function()
 
 end
 
