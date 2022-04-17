@@ -11,6 +11,21 @@ if FEATURES['default'] == true then
    }
 end
 
+if FEATURES['lsp']==true then
+	plugins_configure.plugins_groups['lsp']=
+	{
+	    ['lsp_config']={enable=true},
+
+	}
+end
+
+if FEATURES['theme']==true then 
+	plugins_configure.plugins_groups['theme']=
+	{
+	    ["material"]={enable=true}
+	}
+end
+
 plugins_configure.create_mapping=function()
     for feature_name,plugins in pairs(plugins_configure.plugins_groups) do
         if FEATURES[feature_name]==true then

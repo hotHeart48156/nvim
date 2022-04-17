@@ -1,8 +1,8 @@
 FEATURES={}
 FEATURES['default']=true
-FEATURES['colors']=true
 FEATURES['themes']=true
-
+FEATURES['lsp']=true
+vim.g.theme = "light"
 
 require ('core.default_setting')
 require('core.plugins').setup()
