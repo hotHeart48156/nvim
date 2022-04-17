@@ -3,10 +3,11 @@ plugin.core = {
     "neovim/nvim-lspconfig",
 }
 
-plugin.setup=function()
+plugin.core.setup=function()
 end
-
-plugin.config=function()
+plugin.core.disable=false
+plugin.core.opt=false
+plugin.core.config=function()
         local util = require("lspconfig.util")
         root_dir=function(name)
             return util.root_pattern(".git", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt")(name) or util.path.dirname(name)

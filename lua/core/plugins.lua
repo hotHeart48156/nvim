@@ -1,6 +1,7 @@
 local plugins_configure = {}
 plugins_configure.plugins_groups={}
 plugins_configure.plugin_configure_root = 'configure.'
+plugins_configure.all_loaded_module={}
 
 
 if FEATURES['default'] == true then
@@ -19,11 +20,37 @@ if FEATURES['lsp']==true then
 	}
 end
 
-if FEATURES['theme']==true then 
-	plugins_configure.plugins_groups['theme']=
+if FEATURES['themes']==true then 
+	plugins_configure.plugins_groups['themes']=
 	{
-	    ["material"]={enable=true}
+	    ["material"]={enable=true},
+	    ['dashboard']={enable=true}
 	}
+end
+
+function print_r ( t ) 
+    local print_r_cache={}
+    local function sub_print_r(t,indent)
+        if (print_r_cache[tostring(t)]) then
+            print(indent.."*"..tostring(t))
+        else
+            print_r_cache[tostring(t)]=true
+            if (type(t)=="table") then
+                for pos,val in pairs(t) do
+                    if (type(val)=="table") then
+                        print(indent.."["..pos.."] => "..tostring(t).." {")
+                        sub_print_r(val,indent..string.rep(" ",string.len(pos)+8))
+                        print(indent..string.rep(" ",string.len(pos)+6).."}")
+                    else
+                        print(indent.."["..pos.."] => "..tostring(val))
+                    end
+                end
+            else
+                print(indent..tostring(t))
+            end
+        end
+    end
+    sub_print_r(t,"  ")
 end
 
 plugins_configure.create_mapping=function()
@@ -41,7 +68,7 @@ end
 
 plugins_configure.setup=function()
     packer.startup(
-    function(use)
+    function()
         for feature_name,plugins in pairs (plugins_configure.plugins_groups) do
             if FEATURES[feature_name]==true then
                 for plugin , plugins_status in pairs(plugins) do 
@@ -51,10 +78,11 @@ plugins_configure.setup=function()
                     --end
                     
                     if core.disable == false then
-                        plugins_configure.all_loaded_module[plugin_name] = true-- added to all_loaded_module
+			--print(type(plugins_configure.all_loaded_module))
+                        --plugins_configure.all_loaded_module[plugin_name] = true
                     end
-
                      use(core)
+                    -- print_r(core)
 		     plugins_configure.create_mapping()
                 end
             end

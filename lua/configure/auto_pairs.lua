@@ -15,5 +15,6 @@ plugin.core = {
 plugin.mapping = function()
 
 end
-
+plugin.core.disable=false
+plugin.core.opt=false
 return plugin
