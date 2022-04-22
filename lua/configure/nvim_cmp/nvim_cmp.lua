@@ -40,7 +40,7 @@ cmp.core.config=function()
 
 end
 cmp.core.formatting={
-    field = {"kind","abbr","menu"}
+    field = {"kind","abbr","menu"},
     format = function(entry,item)
     	--item.kind=string.format("%s %s")
     item.menu=(
@@ -56,8 +56,8 @@ cmp.core.formatting={
 	
 	}
     )
-
 end
+
 }
 cmp.mapping=function()
     
