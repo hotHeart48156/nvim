@@ -7,24 +7,24 @@ plugins_configure.all_loaded_module={}
 if FEATURES['default'] == true then
    plugins_configure.plugins_groups['default']=
    {
-       ["nerd_commenter"] = {enable=true},       -- for quick comment
-       ["ultisnips"] = {enable=true}
+       ["nerd_commenter"] = {disable=false},       -- for quick comment
+       ["ultisnips"] = {disable=false}
    }
 end
 
 if FEATURES['lsp']==true then
 	plugins_configure.plugins_groups['lsp']=
 	{
-	    ['lsp_config']={enable=true},
-
+	    ['lsp_config']={disable=false},
+            ['nvim_cmp.nvim_cmp']={disable=false}
 	}
 end
 
 if FEATURES['themes']==true then 
 	plugins_configure.plugins_groups['themes']=
 	{
-	    ["material"]={enable=true},
-	    ['dashboard']={enable=true}
+	    ["material"]={disable=false},
+	    ['dashboard']={disable=false}
 	}
 end
 
@@ -54,10 +54,10 @@ function print_r ( t )
 end
 
 plugins_configure.create_mapping=function()
-    for feature_name,plugins in pairs(plugins_configure.plugins_groups) do
+    for feature_name,plugin_status in pairs(plugins_configure.plugins_groups) do
         if FEATURES[feature_name]==true then
-           for plugin,active in pairs(plugins) do
-                if active['enable'] == true then
+           for plugin,active in pairs(plugin_status) do
+                if active['disable'] == false then
                     require(plugins_configure.plugin_configure_root..plugin).mapping()
                 end
            end
@@ -71,18 +71,16 @@ plugins_configure.setup=function()
     function()
         for feature_name,plugins in pairs (plugins_configure.plugins_groups) do
             if FEATURES[feature_name]==true then
-                for plugin , plugins_status in pairs(plugins) do 
+                for plugin , plugin_status in pairs(plugins) do 
                     core = require(plugins_configure.plugin_configure_root..plugin).core
-                    --for plugin,status in pairs(plugin_status) do 
-                     -- core[key] = value  
-                    --end
+                    for k,v in pairs(plugin_status) do 
+                       core[k] = v  
+                    end
                     
                     if core.disable == false then
-			--print(type(plugins_configure.all_loaded_module))
-                        --plugins_configure.all_loaded_module[plugin_name] = true
+                        plugins_configure.all_loaded_module[plugin] = true
                     end
                      use(core)
-                    -- print_r(core)
 		     plugins_configure.create_mapping()
                 end
             end
