@@ -1,11 +1,11 @@
 local cmp = {}
 cmp.core = {
-    "hrsh7th/nvim-comp"
+    "hrsh7th/nvim-cmp"
 }
 cmp.core.setup=function()
 end
 cmp.core.config=function()
-     require'comp'.setup {
+     require'cmp'.setup {
             enabled = true;
             autocomplete = true;
             debug = false;

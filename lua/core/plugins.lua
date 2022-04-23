@@ -3,12 +3,11 @@ plugins_configure.plugins_groups={}
 plugins_configure.plugin_configure_root = 'configure.'
 plugins_configure.all_loaded_module={}
 
-
 if FEATURES['default'] == true then
    plugins_configure.plugins_groups['default']=
    {
-       ["nerd_commenter"] = {disable=false},       -- for quick comment
-       ["ultisnips"] = {disable=false}
+       ["basic.nerd_commenter"] = {disable=false},       -- for quick comment
+       ["basic.ultisnips"] = {disable=false}
    }
 end
 
@@ -16,15 +15,15 @@ if FEATURES['lsp']==true then
 	plugins_configure.plugins_groups['lsp']=
 	{
 	    ['lsp_config']={disable=false},
-            ['nvim_cmp.nvim_cmp']={disable=false}
+  --          ['nvim_cmp.nvim_cmp']={disable=false}
 	}
 end
 
 if FEATURES['themes']==true then 
 	plugins_configure.plugins_groups['themes']=
 	{
-	    ["material"]={disable=false},
-	    ['dashboard']={disable=false}
+	    ["themes.material"]={disable=false},
+	    ['basic.dashboard']={disable=false}
 	}
 end
 
