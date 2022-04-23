@@ -15,7 +15,7 @@ if FEATURES['lsp']==true then
 	plugins_configure.plugins_groups['lsp']=
 	{
 	    ['lsp_config']={disable=false},
-  --          ['nvim_cmp.nvim_cmp']={disable=false}
+            ['nvim_cmp.nvim_cmp']={disable=false}
 	}
 end
 
