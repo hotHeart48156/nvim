@@ -42,6 +42,9 @@ plugins['telescope'] = {
    'telescope.vim_bookmarks'
 }
 
+plugins['debug'] = {
+   'debug.sniprun'
+}
 
 plugins['git'] = {
    'git.'
