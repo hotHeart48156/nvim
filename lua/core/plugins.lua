@@ -12,7 +12,7 @@ plugins['basic'] = {
   }
 
 plugins['lsp'] = {
-  'lsp_config',
+  'nvim_cmp.lsp_config',
   'nvim_cmp.nvim_cmp',
   'nvim_cmp.cmp_buffer',
   'nvim_cmp.cmp_cmdline',
@@ -29,11 +29,11 @@ plugins['themes'] = {
    'themes.colorizer '
 }
 
-plugin['tree'] = {
+plugins['tree'] = {
    'treesitter.nvim_treesitter'
 }
 
-plugin['telescope'] = {
+plugins['telescope'] = {
    'telescope.telescope',
    'telescope.telescope_fzf_native',
    'telescope.telescope_live_grep_raw',
@@ -43,16 +43,16 @@ plugin['telescope'] = {
 }
 
 
-plugin['git'] = {
+plugins['git'] = {
    'git.'
 }
 
-plugin['snippets'] = {
+plugins['snippets'] = {
    'snippets.friendly-snippert',
    'snippets.sources_lua_snip'
 }
 
-plugin['markdown'] = {
+plugins['markdown'] = {
    'markdown.md_image'
 }
 
@@ -80,7 +80,7 @@ end
 if FEATURES['lsp']==true then
 	plugins_configure.plugins_groups['lsp']=
 	{
-	    ['lsp_config']={disable=false},
+	    ['nvim_cmp.lsp_config']={disable=false},
             ['nvim_cmp.nvim_cmp']={disable=false}
 	}
 end
