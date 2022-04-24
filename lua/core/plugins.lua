@@ -2,51 +2,61 @@ local plugins_configure = {}
 plugins_configure.plugins_groups={}
 plugins_configure.plugin_configure_root = 'configure.'
 plugins_configure.all_loaded_module={}
+
+local basic = 'basic'
+local lsp = 'nvim_cmp'
+local themes = 'themes'
+local tree = 'treesitter'
+local telescope = 'telescope'
+local debug = 'debug'
+local git = 'git'
+local markdown = 'markdown'
+
 local plugins= {}
 
-plugins['basic'] = {
-  "basic.nerd_commenter",       -- for quick comment
-  "basic.ultisnips",
-  'basic.auto_pairs',
-  'basic.nerd_font'
+plugins[basic] = {
+   basic.."nerd_commenter",       -- for quick comment
+   basic.."ultisnips",
+   basic..'auto_pairs',
+   basic..'nerd_font'
   }
 
-plugins['lsp'] = {
-  'nvim_cmp.lsp_config',
-  'nvim_cmp.nvim_cmp',
-  'nvim_cmp.cmp_buffer',
-  'nvim_cmp.cmp_cmdline',
-  'nvim_cmp.cmp_lua',
-  'nvim_cmp.cmp_luasnip',
-  'nvim_cmp.cmp_path',
-  'nvim_cmp.cmp_spell',
-  'nvim_cmp.cmp_tabnine'
+plugins[lsp] = {
+  lsp..'lsp_config',
+  lsp..'nvim_cmp',
+  lsp..'cmp_buffer',
+  lsp..'cmp_cmdline',
+  lsp..'cmp_lua',
+  lsp..'cmp_luasnip',
+  lsp..'cmp_path',
+  lsp..'cmp_spell',
+  lsp..'cmp_tabnine'
 }
 
-plugins['themes'] = {
-   'themes.material',
-   'basic.dashboard',
-   'themes.colorizer '
+plugins[themes] = {
+    themes..'material',
+    basic..'dashboard',
+    themes..'colorizer'
 }
 
-plugins['tree'] = {
-   'treesitter.nvim_treesitter'
+plugins[tree] = {
+    tree..'nvim_treesitter'
 }
 
-plugins['telescope'] = {
-   'telescope.telescope',
-   'telescope.telescope_fzf_native',
-   'telescope.telescope_live_grep_raw',
-   'telescope.telescope_ui_select',
-   'telescope.telescope_vim_bookmarks',
-   'telescope.vim_bookmarks'
+plugins[telescope] = {
+   telescope..'telescope',
+   telescope..'telescope_fzf_native',
+   telescope..'telescope_live_grep_raw',
+   telescope..'telescope_ui_select',
+   telescope..'telescope_vim_bookmarks',
+   telescope..'vim_bookmarks'
 }
 
-plugins['debug'] = {
-   'debug.sniprun'
+plugins[debug] = {
+   debug..'sniprun'
 }
 
-plugins['git'] = {
+plugins[git] = {
    'git.'
 }
 
@@ -55,8 +65,8 @@ plugins['snippets'] = {
    'snippets.sources_lua_snip'
 }
 
-plugins['markdown'] = {
-   'markdown.md_image'
+plugins[markdown] = {
+   markdown..'md_image'
 }
 
 
