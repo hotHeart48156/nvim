@@ -11,3 +11,4 @@ end
 plugin.mapping=function()
 end
 
+return plugin

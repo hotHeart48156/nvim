@@ -3,110 +3,8 @@ plugins_configure.plugins_groups={}
 plugins_configure.plugin_configure_root = 'configure.'
 plugins_configure.all_loaded_module={}
 
-local basic = 'basic'
-local lsp = 'nvim_cmp'
-local themes = 'themes'
-local tree = 'treesitter'
-local telescope = 'telescope'
-local debug = 'debug'
-local git = 'git'
-local markdown = 'markdown'
 
-local plugins= {}
-
-plugins[basic] = {
-   basic.."nerd_commenter",       -- for quick comment
-   basic.."ultisnips",
-   basic..'auto_pairs',
-   basic..'nerd_font'
-  }
-
-plugins[lsp] = {
-  lsp..'lsp_config',
-  lsp..'nvim_cmp',
-  lsp..'cmp_buffer',
-  lsp..'cmp_cmdline',
-  lsp..'cmp_lua',
-  lsp..'cmp_luasnip',
-  lsp..'cmp_path',
-  lsp..'cmp_spell',
-  lsp..'cmp_tabnine'
-}
-
-plugins[themes] = {
-    themes..'material',
-    basic..'dashboard',
-    themes..'colorizer'
-}
-
-plugins[tree] = {
-    tree..'nvim_treesitter'
-}
-
-plugins[telescope] = {
-   telescope..'telescope',
-   telescope..'telescope_fzf_native',
-   telescope..'telescope_live_grep_raw',
-   telescope..'telescope_ui_select',
-   telescope..'telescope_vim_bookmarks',
-   telescope..'vim_bookmarks'
-}
-
-plugins[debug] = {
-   debug..'sniprun'
-}
-
-plugins[git] = {
-   'git.'
-}
-
-plugins['snippets'] = {
-   'snippets.friendly-snippert',
-   'snippets.sources_lua_snip'
-}
-
-plugins[markdown] = {
-   markdown..'md_image'
-}
-
-
-for feature_name,plugin_s in pairs(plugins) do
-    if FEATURES[feature_name]==true then
-        --plugins_configure.plugins_groups[feature_name]             
-        --local result={}
-        --for _,p in ipairs(plugin_s) do
-        --    result[p]={disable=false}
-        --end
-    end
-end
-
-
-
-if FEATURES['default'] == true then
-   plugins_configure.plugins_groups['default']=
-   {
-       ["basic.nerd_commenter"] = {disable=false},       -- for quick comment
-       ["basic.ultisnips"] = {disable=false}
-   }
-end
-
-if FEATURES['lsp']==true then
-	plugins_configure.plugins_groups['lsp']=
-	{
-	    ['nvim_cmp.lsp_config']={disable=false},
-            ['nvim_cmp.nvim_cmp']={disable=false}
-	}
-end
-
-if FEATURES['themes']==true then 
-	plugins_configure.plugins_groups['themes']=
-	{
-	    ["themes.material"]={disable=false},
-	    ['basic.dashboard']={disable=false}
-	}
-end
-
-function print_r ( t ) 
+function print_r ( t )
     local print_r_cache={}
     local function sub_print_r(t,indent)
         if (print_r_cache[tostring(t)]) then
@@ -131,6 +29,125 @@ function print_r ( t )
     sub_print_r(t,"  ")
 end
 
+
+local packages={
+
+basic = 'basic',
+lsp = 'nvim_cmp',
+themes = 'themes',
+tree = 'treesitter',
+telescope = 'telescope',
+debug = 'debug',
+git = 'git',
+markdown = 'markdown',
+snippets = "snippets",
+}
+
+for name,package in pairs(packages) do
+	packages[name]=package.."."
+end
+
+local plugins= {}
+
+
+
+plugins[packages['basic']] = {
+   packages['basic'].."nerd_commenter",       -- for quick comment
+   packages['basic'].."ultisnips",
+   packages['basic']..'auto_pairs',
+  --packages['basic']..'nerd_font'
+  }
+
+plugins[packages['lsp']] = {
+ packages['lsp']..'lsp_config',
+ packages['lsp']..'nvim_cmp',
+ packages['lsp']..'cmp_buffer',
+ packages['lsp']..'cmp_cmdline',
+ packages['lsp']..'cmp_lua',
+ packages['lsp']..'cmp_luasnip',
+ packages['lsp']..'cmp_path',
+ packages['lsp']..'cmp_spell',
+ packages['lsp']..'cmp_tabnine'
+}
+
+plugins[packages['themes']] = {
+   packages['themes']..'material',
+   packages['basic']..'dashboard',
+   packages['themes']..'colorizer'
+}
+
+plugins[packages['tree']] = {
+   packages['tree']..'nvim_treesitter'
+}
+
+plugins[packages['telescope']] = {
+   packages['telescope']..'telescope',
+  -- packages['telescope']..'telescope_fzf_native',
+  -- packages['telescope']..'telescope_live_grep_raw',
+  -- packages['telescope']..'telescope_ui_select',
+  -- packages['telescope']..'telescope_vim_bookmarks',
+   packages['telescope']..'vim_bookmarks'
+}
+
+plugins[packages['debug']] = {
+   packages['debug']..'sniprun'
+}
+
+plugins[packages['git']] = {
+   packages['git']..'git_signs',
+   packages['git']..'diff_view',
+}
+
+plugins[packages['snippets']] = 
+{
+   packages['snippets']..'friendly-snippert',
+   packages['snippets']..'sources_lua_snip'
+}
+
+plugins[packages['markdown']] = {
+   packages['markdown']..'markdown_image'
+}
+
+
+for feature_name,plugin_s in pairs(plugins) do
+    if FEATURES[feature_name:sub(1,-2)]==true then
+        --plugins_configure.plugins_groups[feature_name]             
+        local result={}
+        for _,p in ipairs(plugin_s) do
+           result[p]={disable=false}
+        end
+	plugins_configure.plugins_groups[feature_name]=result
+    end
+end
+
+
+--if FEATURES['default'] == true then
+--  plugins_configure.plugins_groups['default']=
+--   {
+--	#       ["basic.nerd_commenter"] = {disable=false},       -- for quick comment
+--	#      ["basic.ultisnips"] = {disable=false}
+--	# }
+--	#end
+
+--	#if FEATURES['lsp']==true then
+--	#	plugins_configure.plugins_groups['lsp']=
+--
+--
+--#	{
+--		#    ['nvim_cmp.lsp_config']={disable=false},
+--		# ['nvim_cmp.nvim_cmp']={disable=false}
+--		#}
+--		#end
+--
+--		#if FEATURES['themes']==true then 
+---		#plugins_configure.plugins_groups['themes']=
+--		#	{
+--			# ["themes.material"]={disable=false},
+--			# ['basic.dashboard']={disable=false}
+--			#	}
+--			#end
+
+
 plugins_configure.create_mapping=function()
     for feature_name,plugin_status in pairs(plugins_configure.plugins_groups) do
         if FEATURES[feature_name]==true then
@@ -148,8 +165,9 @@ plugins_configure.setup=function()
     packer.startup(
     function()
         for feature_name,plugins in pairs (plugins_configure.plugins_groups) do
-            if FEATURES[feature_name]==true then
+            if FEATURES[feature_name:sub(1,-2)]==true then
                 for plugin , plugin_status in pairs(plugins) do 
+		    print(plugin)
                     core = require(plugins_configure.plugin_configure_root..plugin).core
                     for k,v in pairs(plugin_status) do 
                        core[k] = v  

@@ -9,3 +9,5 @@ plugin.config=function()
 end
 
 plugin.mapping=function()
+
+return plugin

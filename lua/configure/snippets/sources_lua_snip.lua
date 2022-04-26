@@ -10,3 +10,4 @@ end
 
 plugin.mapping=function()
 end
+return pluginreturn plugin

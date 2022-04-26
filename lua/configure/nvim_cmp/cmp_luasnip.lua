@@ -12,3 +12,4 @@ end
 plugin.core.sources={name="luasnip"}
 plugin.mapping=function()
 end
+return plugin
