@@ -49,8 +49,18 @@ end
 
 local plugins= {}
 
+--for k,v in pairs(vim.fn.glob('.')) do 
 
-
+--end
+--
+--print(vim.fn.glob(vim.fn.fnameescape('.').'/{,.}*/', 1, 1))
+--https://gitter.im/neovim/neovim/archives/2019/11/16
+--let directories=map(glob(fnameescape('../').'/{,.}*/', 1, 1), 'fnamemodify(v:val, ":h:t")')
+local luv=require 'luv'
+print(vim.inspect{'nk'})
+print(vim.fn.getcwd())
+print(luv.fs_scandir('.'))
+-- 把configure的所有文件夹以及子文件夹变为packages的key，
 plugins[packages['basic']] = {
    packages['basic'].."nerd_commenter",       -- for quick comment
    packages['basic'].."ultisnips",
