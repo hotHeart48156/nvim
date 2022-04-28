@@ -48,24 +48,36 @@ for name,package in pairs(packages) do
 end
 
 local plugins= {}
-
---for k,v in pairs(vim.fn.glob('.')) do 
-
---end
---
 --print(vim.fn.glob(vim.fn.fnameescape('.').'/{,.}*/', 1, 1))
 --https://gitter.im/neovim/neovim/archives/2019/11/16
---let directories=map(glob(fnameescape('../').'/{,.}*/', 1, 1), 'fnamemodify(v:val, ":h:t")')
 local luv=require 'luv'
-print(vim.inspect{'nk'})
-print(vim.fn.getcwd())
-print(luv.fs_scandir('.'))
--- 把configure的所有文件夹以及子文件夹变为packages的key，
+local f=luv.fs_scandir('.')
+-- print(vim.o.runtimepath) return string
+-- print(vim.opt.runtimepath:get()) api local way
+-- print(vim.api.nvim_list_runtime_paths()) --api way
+local nvim_config_path=vim.api.nvim_list_runtime_paths()[1]..'/lua/'..plugins_configure.plugin_configure_root:sub(1,-2)
+local  function list_dir(path)
+    local fs_t=luv.fs_scandir(path)
+    local file_name,file_type=luv.fs_scandir_next(fs_t)
+    if not file_name then 
+        return
+    end
+    print(file_name:sub(1,1))
+    if file_type=='directory' and file_name:sub(1,1)~='_' then
+        print(path..'/'..file_name)
+        list_dir(path..'/'..file_name)
+        print("cc")
+    else 
+        local file_name,file_type=luv.fs_scandir_next(fs_t)
+        print(file_name)
+    end
+end
+list_dir(nvim_config_path)
+
 plugins[packages['basic']] = {
    packages['basic'].."nerd_commenter",       -- for quick comment
    packages['basic'].."ultisnips",
    packages['basic']..'auto_pairs',
-  --packages['basic']..'nerd_font'
   }
 
 plugins[packages['lsp']] = {
