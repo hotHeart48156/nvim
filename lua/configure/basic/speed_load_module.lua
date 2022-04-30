@@ -1,13 +1,13 @@
 local plugin={}
 plugin.core={"lewis6991/impatient.nvim"}
 
-plugin.setup=function()
+plugin.core.setup=function()
     
 end
 
-plugin.config=function()
+plugin.core.config=function()
 end
 
 plugin.mapping=function()
-
+end
 return plugin

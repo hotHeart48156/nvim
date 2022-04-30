@@ -1,6 +1,6 @@
 local plugin = {}
 
-plugin.core = {"hrsh7th/cmp-lua"}
+plugin.core = {"hrsh7th/cmp-nvim-lua"}
 
 plugin.core.setup = function()
 end

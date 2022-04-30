@@ -37,7 +37,6 @@ local fs_t=luv.fs_scandir(nvim_config_path)
 local function traverse_directory (root_path,super_node,node)
 
 	local file_name,file_type=luv.fs_scandir_next(node)
-
 	if file_type=='directory' and file_name:sub(1,1)~='_'  then
 	   local old_node=node
 	   local new_node=luv.fs_scandir(root_path..'/'..file_name)
@@ -45,7 +44,6 @@ local function traverse_directory (root_path,super_node,node)
            --print('entry directory:'..super_path)
 	   traverse_directory(super_path,old_node,new_node)
 	end
-
 	if file_type=='file' and file_name:sub(1,1)~='_' then 
            table.insert(all_plugin_configure_file,root_path..'/'..file_name)  
 	   traverse_directory(root_path,super_node,node)
@@ -59,12 +57,12 @@ local function traverse_directory (root_path,super_node,node)
                 local i=root_path:match('.*'..'/()')
                 local super_path=root_path:sub(1,i-2)
                 local super_fs=super_node
-                --print('return directory :'..super_path)
+               -- print('return directory :'..super_path)
 		traverse_directory(super_path,fs_t,super_fs)
         end
 end
-traverse_directory(nvim_config_path,nil,fs_t)
 
+traverse_directory(nvim_config_path,nil,fs_t)
 
 for _,path in ipairs(all_plugin_configure_file) do
    local cut_attribute_path=path:sub(1,-5)
@@ -86,8 +84,8 @@ end
 
 
 for key,value in pairs(plugins) do
-    for k,v in ipairs(value) do
-    	print("header:"..key..'package:'..v)
+   -- print(key)
+    for k,v in pairs(value) do
     end
 end
 
@@ -104,31 +102,6 @@ for feature_name,plugin_s in pairs(plugins) do
 end
 
 
---if FEATURES['default'] == true then
---  plugins_configure.plugins_groups['default']=
---   {
---	#       ["basic.nerd_commenter"] = {disable=false},       -- for quick comment
---	#      ["basic.ultisnips"] = {disable=false}
---	# }
---	#end
-
---	#if FEATURES['lsp']==true then
---	#	plugins_configure.plugins_groups['lsp']=
---
---
---#	{
---		#    ['nvim_cmp.lsp_config']={disable=false},
---		# ['nvim_cmp.nvim_cmp']={disable=false}
---		#}
---		#end
---
---		#if FEATURES['themes']==true then 
----		#plugins_configure.plugins_groups['themes']=
---		#	{
---			# ["themes.material"]={disable=false},
---			# ['basic.dashboard']={disable=false}
---			#	}
---			#end
 
 
 plugins_configure.create_mapping=function()
@@ -147,14 +120,11 @@ end
 plugins_configure.setup=function()
     packer.startup(
     function()
-        for feature_name,plugins in pairs (plugins_configure.plugins_groups) do
-            if FEATURES[feature_name:sub(1,-2)]==true then
-                for plugin , plugin_status in pairs(plugins) do 
+        for feature_name,_plugins in pairs (plugins) do
+            if FEATURES[feature_name]==true then
+                for _, plugin in ipairs(_plugins) do 
                     core = require(plugins_configure.plugin_configure_root..plugin).core
-                    for k,v in pairs(plugin_status) do 
-                       core[k] = v  
-                    end
-                    
+                    core['disable']=false 
                     if core.disable == false then
                         plugins_configure.all_loaded_module[plugin] = true
                     end
