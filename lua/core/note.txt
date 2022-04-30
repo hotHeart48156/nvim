@@ -1,0 +1,4 @@
+--https://gitter.im/neovim/neovim/archives/2019/11/16
+5 -- print(vim.o.runtimepath) return string
+ 36 -- print(vim.opt.runtimepath:get()) api local way
+ 37 -- print(vim.api.nvim_list_runtime_paths()) --api way
