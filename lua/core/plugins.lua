@@ -48,31 +48,45 @@ for name,package in pairs(packages) do
 end
 
 local plugins= {}
---print(vim.fn.glob(vim.fn.fnameescape('.').'/{,.}*/', 1, 1))
 --https://gitter.im/neovim/neovim/archives/2019/11/16
 local luv=require 'luv'
-local f=luv.fs_scandir('.')
 -- print(vim.o.runtimepath) return string
 -- print(vim.opt.runtimepath:get()) api local way
 -- print(vim.api.nvim_list_runtime_paths()) --api way
 local nvim_config_path=vim.api.nvim_list_runtime_paths()[1]..'/lua/'..plugins_configure.plugin_configure_root:sub(1,-2)
-local  function list_dir(path)
-    local fs_t=luv.fs_scandir(path)
-    local file_name,file_type=luv.fs_scandir_next(fs_t)
-    if not file_name then 
-        return
-    end
-    print(file_name:sub(1,1))
-    if file_type=='directory' and file_name:sub(1,1)~='_' then
-        print(path..'/'..file_name)
-        list_dir(path..'/'..file_name)
-        print("cc")
-    else 
-        local file_name,file_type=luv.fs_scandir_next(fs_t)
-        print(file_name)
-    end
+local fs_t=luv.fs_scandir(nvim_config_path)
+local function traverse_directory (root_path,super_node,node)
+
+	local file_name,file_type=luv.fs_scandir_next(node)
+
+	if file_type=='directory' then
+	   local old_node=node
+	   local new_node=luv.fs_scandir(root_path..'/'..file_name)
+           local super_path=root_path..'/'..file_name
+           print('entry directory:'..super_path)
+	   traverse_directory(super_path,old_node,new_node)
+	end
+
+	if file_type=='file' then 
+	   print(root_path..'/'..file_name)
+	   traverse_directory(root_path,super_node,node)
+	end
+
+        if root_path==nvim_config_path then 
+            return
+        end
+
+	if file_type==nil then 
+                local i=root_path:match('.*'..'/()')
+                local super_path=root_path:sub(1,i-2)
+                local super_fs=super_node
+                print('return directory :'..super_path)
+
+		traverse_directory(super_path,fs_t,super_fs)
+        end
 end
-list_dir(nvim_config_path)
+--local fs_t=luv.fs_scandir(nvim_config_path)
+traverse_directory(nvim_config_path,nil,fs_t)
 
 plugins[packages['basic']] = {
    packages['basic'].."nerd_commenter",       -- for quick comment
