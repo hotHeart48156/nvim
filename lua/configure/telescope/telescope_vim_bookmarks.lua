@@ -1,6 +1,6 @@
 local plugin = {}
 
-plugin.core = {""}
+plugin.core = {"tom-anders/telescope-vim-bookmarks.nvim"}
 
 plugin.core.setup = function()
 end     

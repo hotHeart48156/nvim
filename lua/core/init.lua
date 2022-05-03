@@ -7,6 +7,9 @@ FEATURES['tree']=true
 FEATURES['telescope']=true
 FEATURES['debug']=true
 FEATURES['markdown']=true
+FEATURES['treesitter']=true
+FEATURES['snippets']=true
+--FEATURES['misc']=true
 vim.g.theme = "light"
 require ('core.default_setting')
 require('core.plugins').setup()

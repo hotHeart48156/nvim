@@ -1,6 +1,6 @@
 local plugin = {}
 
-plugin.core = {""}
+plugin.core = {"MattesGroeger/vim-bookmarks"}
 
 plugin.core.setup = function()
 end     

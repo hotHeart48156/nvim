@@ -1,6 +1,6 @@
 local plugin = {}
 
-plugin.core = {""}
+plugin.core = {"nvim-telescope/telescope-rg.nvim"}
 
 plugin.core.setup = function()
 end     

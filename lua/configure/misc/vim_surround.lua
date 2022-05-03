@@ -1,11 +1,11 @@
 local plugin={}
 plugin.core={"tpope/vim-surround"}
 
-plugin.setup=function()
+plugin.core.setup=function()
     
 end
 
-plugin.config=function()
+plugin.core.config=function()
 end
 
 plugin.mapping=function()

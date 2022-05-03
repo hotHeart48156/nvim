@@ -1,6 +1,6 @@
 local plugin = {}
 
-plugin.core = {""}
+plugin.core = {"nvim-telescope/telescope-ui-select.nvim"}
 
 plugin.core.setup = function()
 end     

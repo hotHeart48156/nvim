@@ -1,6 +1,6 @@
 local plugin = {}
 
-plugin.core = {""}
+plugin.core = {"nvim-treesitter/nvim-treesitter"}
 
 plugin.core.setup = function()
 end     
@@ -10,3 +10,4 @@ end
 
 plugin.mapping = function()
 end   
+return plugin

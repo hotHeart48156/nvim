@@ -35,14 +35,16 @@ local all_plugin_configure_file={}
 local nvim_config_path=vim.api.nvim_list_runtime_paths()[1]..'/lua/'..plugins_configure.plugin_configure_root:sub(1,-2)
 local fs_t=luv.fs_scandir(nvim_config_path)
 local function traverse_directory (root_path,super_node,node)
-
+        if node==nil then 
+		return
+	end
 	local file_name,file_type=luv.fs_scandir_next(node)
 	if file_type=='directory' then
 	   if file_name:sub(1,1)~='_' and file_name:sub(1,1)~='.' then 
 	      local old_node=node
 	      local new_node=luv.fs_scandir(root_path..'/'..file_name)
               local super_path=root_path..'/'..file_name
-              --print('entry directory:'..super_path)
+--              print('entry directory:'..super_path)
 	      traverse_directory(super_path,old_node,new_node)
             end
 	end
@@ -61,7 +63,7 @@ local function traverse_directory (root_path,super_node,node)
                 local i=root_path:match('.*'..'/()')
                 local super_path=root_path:sub(1,i-2)
                 local super_fs=super_node
-               -- print('return directory :'..super_path)
+  --              print('return directory :'..super_path)
 		traverse_directory(super_path,fs_t,super_fs)
         end
 end
