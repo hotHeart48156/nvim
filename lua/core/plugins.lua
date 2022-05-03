@@ -37,14 +37,14 @@ local fs_t=luv.fs_scandir(nvim_config_path)
 local function traverse_directory (root_path,super_node,node)
 
 	local file_name,file_type=luv.fs_scandir_next(node)
-	if file_type=='directory' and file_name:sub(1,1)~='_'  then
+	if file_type=='directory' and file_name:sub(1,1)~='_' and file_name:sub(1,1)~='.' then
 	   local old_node=node
 	   local new_node=luv.fs_scandir(root_path..'/'..file_name)
            local super_path=root_path..'/'..file_name
            --print('entry directory:'..super_path)
 	   traverse_directory(super_path,old_node,new_node)
 	end
-	if file_type=='file' and file_name:sub(1,1)~='_' then 
+	if file_type=='file' and file_name:sub(1,1)~='_' and file_name:sub(1,1)~='.' then 
            table.insert(all_plugin_configure_file,root_path..'/'..file_name)  
 	   traverse_directory(root_path,super_node,node)
 	end
@@ -83,11 +83,6 @@ for _,path in ipairs(all_plugin_configure_file) do
 end
 
 
-for key,value in pairs(plugins) do
-   -- print(key)
-    for k,v in pairs(value) do
-    end
-end
 
 
 for feature_name,plugin_s in pairs(plugins) do

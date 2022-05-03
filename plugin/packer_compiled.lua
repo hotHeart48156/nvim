@@ -70,7 +70,7 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Auto-Pairs"] = {
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/Auto-Pairs",
@@ -83,7 +83,7 @@ _G.packer_plugins = {
   },
   ["cmp-buffer"] = {
     after_files = { "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp-buffer",
@@ -91,7 +91,7 @@ _G.packer_plugins = {
   },
   ["cmp-nvim-lua"] = {
     after_files = { "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lua/after/plugin/cmp_nvim_lua.lua" },
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lua",
@@ -99,7 +99,7 @@ _G.packer_plugins = {
   },
   ["cmp-path"] = {
     after_files = { "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp-path/after/plugin/cmp_path.lua" },
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp-path",
@@ -107,7 +107,7 @@ _G.packer_plugins = {
   },
   ["cmp-spell"] = {
     after_files = { "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp-spell/after/plugin/cmp-spell.lua" },
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp-spell",
@@ -115,7 +115,7 @@ _G.packer_plugins = {
   },
   ["cmp-tabnine"] = {
     after_files = { "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp-tabnine/after/plugin/cmp-tabnine.lua" },
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp-tabnine",
@@ -123,7 +123,7 @@ _G.packer_plugins = {
   },
   cmp_luasnip = {
     after_files = { "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp_luasnip/after/plugin/cmp_luasnip.lua" },
-    config = { "\27LJ\2\nπ\1\0\0\a\0\v\0\0226\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\1\0B\0\2\0029\0\3\0005\2\t\0004\3\3\0006\4\4\0009\4\5\0049\4\6\4'\6\a\0B\4\2\0026\5\b\0&\4\5\4>\4\1\3=\3\n\2B\0\2\1K\0\1\0\tpath\1\0\0\rsnippets\vconfig\fstdpath\afn\bvim\tload\14lazy_load luasnip.loaders.from_vscode\frequire\0" },
+    config = { "\27LJ\2\2C\0\1\3\0\4\0\a6\1\0\0'\2\1\0B\1\2\0029\1\2\0019\2\3\0B\1\2\1K\0\1\0\tbody\15lsp_expand\fluasnip\frequire[\1\0\4\0\b\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\6\0005\2\4\0003\3\3\0=\3\5\2=\2\a\1B\0\2\1K\0\1\0\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\bcmp\frequire\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/cmp_luasnip",
@@ -135,7 +135,7 @@ _G.packer_plugins = {
     url = "https://github.com/lunarvim/colorschemes"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\nÎ\2\0\0\4\0\v\0\0196\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0005\1\5\0=\1\4\0006\0\0\0009\0\1\0006\1\0\0009\1\a\0019\1\b\1'\3\t\0B\1\2\2'\2\n\0&\1\2\1=\1\6\0K\0\1\0\r/session\ncache\fstdpath\afn dashboard_session_directory\1\0\a\17find_history\fSPC f h\23change_colorscheme\fSPC f c\17last_session\fSPC s l\14find_word\fSPC f q\rnew_file\fSPC c f\15book_marks\fSPC f m\14find_file\fSPC f f\30dashboard_custom_shortcut\1\2\0\0\26üê¨ Have A Good Day!\28dashboard_custom_footer\6g\bvim\0" },
+    config = { "\27LJ\2\2Î\2\0\0\3\0\v\0\0196\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0005\1\5\0=\1\4\0006\0\0\0009\0\1\0006\1\0\0009\1\a\0019\1\b\1'\2\t\0B\1\2\2'\2\n\0&\1\2\1=\1\6\0K\0\1\0\r/session\ncache\fstdpath\afn dashboard_session_directory\1\0\a\rnew_file\fSPC c f\23change_colorscheme\fSPC f c\15book_marks\fSPC f m\17last_session\fSPC s l\17find_history\fSPC f h\14find_word\fSPC f q\14find_file\fSPC f f\30dashboard_custom_shortcut\1\2\0\0\26üê¨ Have A Good Day!\28dashboard_custom_footer\6g\bvim\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
@@ -152,21 +152,21 @@ _G.packer_plugins = {
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["impatient.nvim"] = {
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["lualine.nvim"] = {
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   material = {
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/material",
@@ -178,21 +178,21 @@ _G.packer_plugins = {
     url = "https://github.com/ferrine/md-img-paste.vim"
   },
   nerdcommenter = {
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/nerdcommenter",
     url = "https://github.com/preservim/nerdcommenter"
   },
   ["nvim-cmp"] = {
-    config = { "\27LJ\2\n¥\4\0\0\a\0\16\1\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0036\4\a\0009\4\b\0046\6\t\0009\6\n\0069\6\v\6\24\6\0\6B\4\2\2=\4\f\3=\3\r\0025\3\14\0=\3\15\2B\0\2\1K\0\1\0\vsource\1\0\a\14ultisnips\2\rnvim_lua\2\vbuffer\2\tcalc\2\rnvim_lsp\2\nemoji\2\tpath\2\18documentation\15max_height\nlines\6o\bvim\nfloor\tmath\vborder\1\0\4\14max_width\3x\17winhighlightHNormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder\15min_height\3\1\14min_width\3<\1\t\0\0\5\5\5\6 \5\5\5\6 \1\0\f\ndebug\1\19max_menu_width\3d\19max_kind_width\3d\19max_abbr_width\3d\21incomplete_delay\3ê\3\20resolve_timeout\3†\6\19source_timeout\3»\1\18throttle_time\3P\14preselect\venable\15min_length\3\1\17autocomplete\2\fenabled\2\nsetup\bcmp\frequireÁÃô≥\6≥ÊÃ˛\3\0" },
+    config = { "\27LJ\2\2;\0\1\3\0\4\0\0066\1\0\0009\1\1\0019\1\2\0019\2\3\0B\1\2\1K\0\1\0\tbody\20vsnip#anonymous\afn\bvim‹\6\1\0\n\0000\0n6\0\0\0'\1\1\0B\0\2\0029\1\2\0005\2\6\0005\3\4\0003\4\3\0=\4\5\3=\3\a\0025\3\v\0009\4\b\0009\4\t\0049\4\n\4B\4\1\2=\4\f\0039\4\b\0009\4\t\0049\4\n\4B\4\1\2=\4\r\3=\3\t\0029\3\b\0009\3\14\0035\4\15\0005\5\16\0005\6\17\0005\a\18\0005\b\19\0005\t\20\0B\3\a\2=\3\14\0029\3\21\0009\3\22\0039\3\23\0035\4\25\0009\5\21\0009\5\24\5)\6¸ˇB\5\2\2=\5\26\0049\5\21\0009\5\24\5)\6\4\0B\5\2\2=\5\27\0049\5\21\0009\5\28\5B\5\1\2=\5\29\0049\5\21\0009\5\30\5B\5\1\2=\5\31\0049\5\21\0009\5 \0055\6!\0B\5\2\2=\5\"\4B\3\2\2=\3\21\2B\1\2\0019\1\2\0009\1#\1'\2$\0005\3'\0009\4\b\0009\4\14\0044\5\3\0005\6%\0>\6\1\0055\6&\0>\6\2\5B\4\2\2=\4\14\3B\1\3\0019\1\2\0009\1(\1'\2)\0005\3*\0009\4\21\0009\4\22\0049\4(\4B\4\1\2=\4\21\0034\4\3\0005\5+\0>\5\1\4=\4\14\3B\1\3\0019\1\2\0009\1(\1'\2,\0005\3-\0009\4\21\0009\4\22\0049\4(\4B\4\1\2=\4\21\0039\4\b\0009\4\14\0044\5\3\0005\6.\0>\6\1\0054\6\3\0005\a/\0>\a\1\6B\4\3\2=\4\14\3B\1\3\1K\0\1\0\1\0\1\tname\fcmdline\1\0\1\tname\tpath\1\0\0\6:\1\0\1\tname\vbuffer\1\0\0\6/\fcmdline\1\0\0\1\0\1\tname\vbuffer\1\0\1\tname\fcmp_git\14gitcommit\rfiletype\t<CR>\1\0\1\vselect\2\fconfirm\n<C-e>\nabort\14<C-Space>\rcomplete\n<C-f>\n<C-b>\1\0\0\16scroll_docs\vinsert\vpreset\fmapping\1\0\1\tname\vsnippy\1\0\1\tname\14ultisnips\1\0\1\tname\fluasnip\1\0\1\tname\vbuffer\1\0\1\tname\nvsnip\1\0\1\tname\rnvim_lsp\fsources\18documentation\15completion\1\0\0\rbordered\vwindow\vconfig\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\bcmp\frequire\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer"] = {
-    config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0" },
+    config = { "\27LJ\2\0027\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/nvim-colorizer",
@@ -219,7 +219,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
-    config = { "\27LJ\2\n£\1\0\1\b\1\b\0\18-\1\0\0009\1\0\1'\3\1\0'\4\2\0'\5\3\0'\6\4\0'\a\5\0B\1\6\2\18\3\0\0B\1\2\2\14\0\1\0X\2\5Ä-\1\0\0009\1\6\0019\1\a\1\18\3\0\0B\1\2\2L\1\2\0\0¿\fdirname\tpath\21requirements.txt\19pyproject.toml\14setup.cfg\rsetup.py\t.git\17root_patternà\2\1\0\4\0\14\0\0176\0\0\0'\2\1\0B\0\2\0023\1\2\0007\1\3\0005\1\4\0007\1\5\0005\1\6\0007\1\a\0005\1\v\0005\2\t\0005\3\b\0=\3\n\2=\2\f\0017\1\r\0002\0\0ÄK\0\1\0\rsettings\vpython\1\0\0\ranalysis\1\0\0\1\0\3\27useLibraryCodeForTypes\2\19diagnosticMode\14workspace\20autoSearchPaths\2\14filetypes\1\2\0\0\vpython\bcmd\1\3\0\0\23pyright-langserver\f--stdio\rroot_dir\0\19lspconfig.util\frequire\0" },
+    config = { "\27LJ\2\2£\1\0\1\a\1\b\0\18-\1\0\0009\1\0\1'\2\1\0'\3\2\0'\4\3\0'\5\4\0'\6\5\0B\1\6\2\18\2\0\0B\1\2\2\14\0\1\0X\2\5Ä-\1\0\0009\1\6\0019\1\a\1\18\2\0\0B\1\2\2L\1\2\0\0¿\fdirname\tpath\21requirements.txt\19pyproject.toml\14setup.cfg\rsetup.py\t.git\17root_patternà\2\1\0\4\0\14\0\0176\0\0\0'\1\1\0B\0\2\0023\1\2\0007\1\3\0005\1\4\0007\1\5\0005\1\6\0007\1\a\0005\1\v\0005\2\t\0005\3\b\0=\3\n\2=\2\f\0017\1\r\0002\0\0ÄK\0\1\0\rsettings\vpython\1\0\0\ranalysis\1\0\0\1\0\3\27useLibraryCodeForTypes\2\20autoSearchPaths\2\19diagnosticMode\14workspace\14filetypes\1\2\0\0\vpython\bcmd\1\3\0\0\23pyright-langserver\f--stdio\rroot_dir\0\19lspconfig.util\frequire\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig",
@@ -246,14 +246,14 @@ _G.packer_plugins = {
     url = "https://github.com/skanehira/preview-markdown.vim"
   },
   sniprun = {
-    config = { "\27LJ\2\n‹\2\0\0\a\0\17\0\0236\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0034\4\0\0=\4\6\0035\4\n\0005\5\b\0005\6\a\0=\6\t\5=\5\v\4=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\3B\1\2\1K\0\1\0\19display_option\1\0\2\25notification_timeout\3\5\19terminal_width\3-\fdisplay\1\4\0\0\fClassic\18VirtualTextOk\rTerminal\24interpreter_options\17GFM_original\1\0\0\21use_on_filetypes\1\0\0\1\2\0\0\20markdown.pandoc\17repl_disable\16repl_enable\26selected_interpreters\1\0\0\nsetup\fsniprun\frequire\0" },
+    config = { "\27LJ\2\2ÿ\5\0\0\5\0\28\0!6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0004\2\0\0=\2\4\0014\2\0\0=\2\5\0015\2\t\0005\3\a\0005\4\6\0=\4\b\3=\3\n\2=\2\v\0015\2\f\0=\2\r\0015\2\14\0=\2\15\0015\2\16\0=\2\17\0015\2\19\0005\3\18\0=\3\20\0025\3\21\0=\3\22\0025\3\23\0=\3\24\0025\3\25\0=\3\26\2=\2\27\1B\0\2\1K\0\1\0\18snipruncolors\26SniprunFloatingWinErr\1\0\2\fctermfg\fDarkRed\afg\f#881515\26SniprunVirtualTextErr\1\0\4\fctermbg\fDarkRed\abg\f#881515\afg\f#000000\vcterfg\nBlack\25SniprunFloatingWinOk\1\0\2\fctermfg\tCyan\afg\f#66eeff\25SniprunVirtualTextOk\1\0\0\1\0\4\fctermbg\tCyan\abg\f#66eeff\afg\f#000000\vcterfg\nBlack\19show_no_output\1\3\0\0\fClassic\20TempFloatWindow\20display_options\1\0\2\19terminal_width\3-\25notification_timeout\3\5\fdisplay\1\3\0\0\fClassic\18VirtualTextOk\24interpreter_options\17GFM_original\1\0\0\21use_on_filetypes\1\0\0\1\2\0\0\20markdown.pandoc\16repl_enable\26selected_interpreters\1\0\3\20inline_messages\3\0\fborders\vsingle\21live_mode_toggle\aon\nsetup\fsniprun\frequire\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/sniprun",
     url = "https://github.com/michaelb/sniprun"
   },
   ["telescope.nvim"] = {
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = true,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/telescope.nvim",
@@ -261,7 +261,7 @@ _G.packer_plugins = {
   },
   ultisnips = {
     after_files = { "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/ultisnips/after/plugin/UltiSnips_after.vim" },
-    config = { "\27LJ\2\nF\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\18<leader><tab>\27UltiSnipsExpandTrigger\6g\bvim\0" },
+    config = { "\27LJ\2\2F\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\18<leader><tab>\27UltiSnipsExpandTrigger\6g\bvim\0" },
     loaded = true,
     needs_bufread = true,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/ultisnips",
@@ -270,41 +270,69 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Setup for: nvim-colorizer
-time([[Setup for nvim-colorizer]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "nvim-colorizer")
-time([[Setup for nvim-colorizer]], false)
-time([[packadd for nvim-colorizer]], true)
-vim.cmd [[packadd nvim-colorizer]]
-time([[packadd for nvim-colorizer]], false)
--- Setup for: cmp-path
-time([[Setup for cmp-path]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp-path")
-time([[Setup for cmp-path]], false)
-time([[packadd for cmp-path]], true)
-vim.cmd [[packadd cmp-path]]
-time([[packadd for cmp-path]], false)
+-- Setup for: nvim-lspconfig
+time([[Setup for nvim-lspconfig]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "nvim-lspconfig")
+time([[Setup for nvim-lspconfig]], false)
+time([[packadd for nvim-lspconfig]], true)
+vim.cmd [[packadd nvim-lspconfig]]
+time([[packadd for nvim-lspconfig]], false)
+-- Setup for: nvim-cmp
+time([[Setup for nvim-cmp]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "nvim-cmp")
+time([[Setup for nvim-cmp]], false)
+time([[packadd for nvim-cmp]], true)
+vim.cmd [[packadd nvim-cmp]]
+time([[packadd for nvim-cmp]], false)
 -- Setup for: sniprun
 time([[Setup for sniprun]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "sniprun")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "sniprun")
 time([[Setup for sniprun]], false)
 time([[packadd for sniprun]], true)
 vim.cmd [[packadd sniprun]]
 time([[packadd for sniprun]], false)
 -- Setup for: cmp-spell
 time([[Setup for cmp-spell]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp-spell")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp-spell")
 time([[Setup for cmp-spell]], false)
 time([[packadd for cmp-spell]], true)
 vim.cmd [[packadd cmp-spell]]
 time([[packadd for cmp-spell]], false)
--- Setup for: nerdcommenter
-time([[Setup for nerdcommenter]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "nerdcommenter")
-time([[Setup for nerdcommenter]], false)
-time([[packadd for nerdcommenter]], true)
-vim.cmd [[packadd nerdcommenter]]
-time([[packadd for nerdcommenter]], false)
+-- Setup for: impatient.nvim
+time([[Setup for impatient.nvim]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "impatient.nvim")
+time([[Setup for impatient.nvim]], false)
+time([[packadd for impatient.nvim]], true)
+vim.cmd [[packadd impatient.nvim]]
+time([[packadd for impatient.nvim]], false)
+-- Setup for: material
+time([[Setup for material]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "material")
+time([[Setup for material]], false)
+time([[packadd for material]], true)
+vim.cmd [[packadd material]]
+time([[packadd for material]], false)
+-- Setup for: lualine.nvim
+time([[Setup for lualine.nvim]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "lualine.nvim")
+time([[Setup for lualine.nvim]], false)
+time([[packadd for lualine.nvim]], true)
+vim.cmd [[packadd lualine.nvim]]
+time([[packadd for lualine.nvim]], false)
+-- Setup for: ultisnips
+time([[Setup for ultisnips]], true)
+try_loadstring("\27LJ\2\2b\0\0\2\0\6\0\t6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0K\0\1\0\14Yang Biao\17snips_author\rvertical\21tiSnipsEditSplit\6g\bvim\0", "setup", "ultisnips")
+time([[Setup for ultisnips]], false)
+time([[packadd for ultisnips]], true)
+vim.cmd [[packadd ultisnips]]
+time([[packadd for ultisnips]], false)
+-- Setup for: cmp-buffer
+time([[Setup for cmp-buffer]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp-buffer")
+time([[Setup for cmp-buffer]], false)
+time([[packadd for cmp-buffer]], true)
+vim.cmd [[packadd cmp-buffer]]
+time([[packadd for cmp-buffer]], false)
 -- Setup for: telescope.nvim
 time([[Setup for telescope.nvim]], true)
 time([[Setup for telescope.nvim]], false)
@@ -313,160 +341,132 @@ vim.cmd [[packadd telescope.nvim]]
 time([[packadd for telescope.nvim]], false)
 -- Setup for: cmp-tabnine
 time([[Setup for cmp-tabnine]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp-tabnine")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp-tabnine")
 time([[Setup for cmp-tabnine]], false)
 time([[packadd for cmp-tabnine]], true)
 vim.cmd [[packadd cmp-tabnine]]
 time([[packadd for cmp-tabnine]], false)
--- Setup for: cmp_luasnip
-time([[Setup for cmp_luasnip]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp_luasnip")
-time([[Setup for cmp_luasnip]], false)
-time([[packadd for cmp_luasnip]], true)
-vim.cmd [[packadd cmp_luasnip]]
-time([[packadd for cmp_luasnip]], false)
--- Setup for: material
-time([[Setup for material]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "material")
-time([[Setup for material]], false)
-time([[packadd for material]], true)
-vim.cmd [[packadd material]]
-time([[packadd for material]], false)
 -- Setup for: dashboard-nvim
 time([[Setup for dashboard-nvim]], true)
-try_loadstring("\27LJ\2\nÇ\2\0\0\2\0\n\0\0216\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0006\0\0\0009\0\1\0)\1\n\0=\1\b\0006\0\0\0009\0\1\0)\1F\0=\1\t\0K\0\1\0!dashboard_preview_file_width\"dashboard_preview_file_height\vlolcat\31dashboard_preview_pipeline\bcat\30dashboard_preview_command\14telescope dashboard_default_executive\6g\bvim\0", "setup", "dashboard-nvim")
+try_loadstring("\27LJ\2\2Ç\2\0\0\2\0\n\0\0216\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0006\0\0\0009\0\1\0)\1\n\0=\1\b\0006\0\0\0009\0\1\0)\1F\0=\1\t\0K\0\1\0!dashboard_preview_file_width\"dashboard_preview_file_height\vlolcat\31dashboard_preview_pipeline\bcat\30dashboard_preview_command\14telescope dashboard_default_executive\6g\bvim\0", "setup", "dashboard-nvim")
 time([[Setup for dashboard-nvim]], false)
 time([[packadd for dashboard-nvim]], true)
 vim.cmd [[packadd dashboard-nvim]]
 time([[packadd for dashboard-nvim]], false)
--- Setup for: ultisnips
-time([[Setup for ultisnips]], true)
-try_loadstring("\27LJ\2\nb\0\0\2\0\6\0\t6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0K\0\1\0\14Yang Biao\17snips_author\rvertical\21tiSnipsEditSplit\6g\bvim\0", "setup", "ultisnips")
-time([[Setup for ultisnips]], false)
-time([[packadd for ultisnips]], true)
-vim.cmd [[packadd ultisnips]]
-time([[packadd for ultisnips]], false)
--- Setup for: nvim-lspconfig
-time([[Setup for nvim-lspconfig]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "nvim-lspconfig")
-time([[Setup for nvim-lspconfig]], false)
-time([[packadd for nvim-lspconfig]], true)
-vim.cmd [[packadd nvim-lspconfig]]
-time([[packadd for nvim-lspconfig]], false)
 -- Setup for: Auto-Pairs
 time([[Setup for Auto-Pairs]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "Auto-Pairs")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "Auto-Pairs")
 time([[Setup for Auto-Pairs]], false)
 time([[packadd for Auto-Pairs]], true)
 vim.cmd [[packadd Auto-Pairs]]
 time([[packadd for Auto-Pairs]], false)
--- Setup for: cmp-buffer
-time([[Setup for cmp-buffer]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp-buffer")
-time([[Setup for cmp-buffer]], false)
-time([[packadd for cmp-buffer]], true)
-vim.cmd [[packadd cmp-buffer]]
-time([[packadd for cmp-buffer]], false)
--- Setup for: impatient.nvim
-time([[Setup for impatient.nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "impatient.nvim")
-time([[Setup for impatient.nvim]], false)
-time([[packadd for impatient.nvim]], true)
-vim.cmd [[packadd impatient.nvim]]
-time([[packadd for impatient.nvim]], false)
+-- Setup for: nerdcommenter
+time([[Setup for nerdcommenter]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "nerdcommenter")
+time([[Setup for nerdcommenter]], false)
+time([[packadd for nerdcommenter]], true)
+vim.cmd [[packadd nerdcommenter]]
+time([[packadd for nerdcommenter]], false)
 -- Setup for: cmp-nvim-lua
 time([[Setup for cmp-nvim-lua]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp-nvim-lua")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp-nvim-lua")
 time([[Setup for cmp-nvim-lua]], false)
 time([[packadd for cmp-nvim-lua]], true)
 vim.cmd [[packadd cmp-nvim-lua]]
 time([[packadd for cmp-nvim-lua]], false)
--- Setup for: nvim-cmp
-time([[Setup for nvim-cmp]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "nvim-cmp")
-time([[Setup for nvim-cmp]], false)
-time([[packadd for nvim-cmp]], true)
-vim.cmd [[packadd nvim-cmp]]
-time([[packadd for nvim-cmp]], false)
--- Setup for: lualine.nvim
-time([[Setup for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "lualine.nvim")
-time([[Setup for lualine.nvim]], false)
-time([[packadd for lualine.nvim]], true)
-vim.cmd [[packadd lualine.nvim]]
-time([[packadd for lualine.nvim]], false)
--- Config for: nvim-colorizer
-time([[Config for nvim-colorizer]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer")
-time([[Config for nvim-colorizer]], false)
--- Config for: cmp-path
-time([[Config for cmp-path]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-path")
-time([[Config for cmp-path]], false)
+-- Setup for: nvim-colorizer
+time([[Setup for nvim-colorizer]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "nvim-colorizer")
+time([[Setup for nvim-colorizer]], false)
+time([[packadd for nvim-colorizer]], true)
+vim.cmd [[packadd nvim-colorizer]]
+time([[packadd for nvim-colorizer]], false)
+-- Setup for: cmp-path
+time([[Setup for cmp-path]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp-path")
+time([[Setup for cmp-path]], false)
+time([[packadd for cmp-path]], true)
+vim.cmd [[packadd cmp-path]]
+time([[packadd for cmp-path]], false)
+-- Setup for: cmp_luasnip
+time([[Setup for cmp_luasnip]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp_luasnip")
+time([[Setup for cmp_luasnip]], false)
+time([[packadd for cmp_luasnip]], true)
+vim.cmd [[packadd cmp_luasnip]]
+time([[packadd for cmp_luasnip]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+try_loadstring("\27LJ\2\2£\1\0\1\a\1\b\0\18-\1\0\0009\1\0\1'\2\1\0'\3\2\0'\4\3\0'\5\4\0'\6\5\0B\1\6\2\18\2\0\0B\1\2\2\14\0\1\0X\2\5Ä-\1\0\0009\1\6\0019\1\a\1\18\2\0\0B\1\2\2L\1\2\0\0¿\fdirname\tpath\21requirements.txt\19pyproject.toml\14setup.cfg\rsetup.py\t.git\17root_patternà\2\1\0\4\0\14\0\0176\0\0\0'\1\1\0B\0\2\0023\1\2\0007\1\3\0005\1\4\0007\1\5\0005\1\6\0007\1\a\0005\1\v\0005\2\t\0005\3\b\0=\3\n\2=\2\f\0017\1\r\0002\0\0ÄK\0\1\0\rsettings\vpython\1\0\0\ranalysis\1\0\0\1\0\3\27useLibraryCodeForTypes\2\20autoSearchPaths\2\19diagnosticMode\14workspace\14filetypes\1\2\0\0\vpython\bcmd\1\3\0\0\23pyright-langserver\f--stdio\rroot_dir\0\19lspconfig.util\frequire\0", "config", "nvim-lspconfig")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\2;\0\1\3\0\4\0\0066\1\0\0009\1\1\0019\1\2\0019\2\3\0B\1\2\1K\0\1\0\tbody\20vsnip#anonymous\afn\bvim‹\6\1\0\n\0000\0n6\0\0\0'\1\1\0B\0\2\0029\1\2\0005\2\6\0005\3\4\0003\4\3\0=\4\5\3=\3\a\0025\3\v\0009\4\b\0009\4\t\0049\4\n\4B\4\1\2=\4\f\0039\4\b\0009\4\t\0049\4\n\4B\4\1\2=\4\r\3=\3\t\0029\3\b\0009\3\14\0035\4\15\0005\5\16\0005\6\17\0005\a\18\0005\b\19\0005\t\20\0B\3\a\2=\3\14\0029\3\21\0009\3\22\0039\3\23\0035\4\25\0009\5\21\0009\5\24\5)\6¸ˇB\5\2\2=\5\26\0049\5\21\0009\5\24\5)\6\4\0B\5\2\2=\5\27\0049\5\21\0009\5\28\5B\5\1\2=\5\29\0049\5\21\0009\5\30\5B\5\1\2=\5\31\0049\5\21\0009\5 \0055\6!\0B\5\2\2=\5\"\4B\3\2\2=\3\21\2B\1\2\0019\1\2\0009\1#\1'\2$\0005\3'\0009\4\b\0009\4\14\0044\5\3\0005\6%\0>\6\1\0055\6&\0>\6\2\5B\4\2\2=\4\14\3B\1\3\0019\1\2\0009\1(\1'\2)\0005\3*\0009\4\21\0009\4\22\0049\4(\4B\4\1\2=\4\21\0034\4\3\0005\5+\0>\5\1\4=\4\14\3B\1\3\0019\1\2\0009\1(\1'\2,\0005\3-\0009\4\21\0009\4\22\0049\4(\4B\4\1\2=\4\21\0039\4\b\0009\4\14\0044\5\3\0005\6.\0>\6\1\0054\6\3\0005\a/\0>\a\1\6B\4\3\2=\4\14\3B\1\3\1K\0\1\0\1\0\1\tname\fcmdline\1\0\1\tname\tpath\1\0\0\6:\1\0\1\tname\vbuffer\1\0\0\6/\fcmdline\1\0\0\1\0\1\tname\vbuffer\1\0\1\tname\fcmp_git\14gitcommit\rfiletype\t<CR>\1\0\1\vselect\2\fconfirm\n<C-e>\nabort\14<C-Space>\rcomplete\n<C-f>\n<C-b>\1\0\0\16scroll_docs\vinsert\vpreset\fmapping\1\0\1\tname\vsnippy\1\0\1\tname\14ultisnips\1\0\1\tname\fluasnip\1\0\1\tname\vbuffer\1\0\1\tname\nvsnip\1\0\1\tname\rnvim_lsp\fsources\18documentation\15completion\1\0\0\rbordered\vwindow\vconfig\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\bcmp\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
 -- Config for: sniprun
 time([[Config for sniprun]], true)
-try_loadstring("\27LJ\2\n‹\2\0\0\a\0\17\0\0236\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0034\4\0\0=\4\6\0035\4\n\0005\5\b\0005\6\a\0=\6\t\5=\5\v\4=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\3B\1\2\1K\0\1\0\19display_option\1\0\2\25notification_timeout\3\5\19terminal_width\3-\fdisplay\1\4\0\0\fClassic\18VirtualTextOk\rTerminal\24interpreter_options\17GFM_original\1\0\0\21use_on_filetypes\1\0\0\1\2\0\0\20markdown.pandoc\17repl_disable\16repl_enable\26selected_interpreters\1\0\0\nsetup\fsniprun\frequire\0", "config", "sniprun")
+try_loadstring("\27LJ\2\2ÿ\5\0\0\5\0\28\0!6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0004\2\0\0=\2\4\0014\2\0\0=\2\5\0015\2\t\0005\3\a\0005\4\6\0=\4\b\3=\3\n\2=\2\v\0015\2\f\0=\2\r\0015\2\14\0=\2\15\0015\2\16\0=\2\17\0015\2\19\0005\3\18\0=\3\20\0025\3\21\0=\3\22\0025\3\23\0=\3\24\0025\3\25\0=\3\26\2=\2\27\1B\0\2\1K\0\1\0\18snipruncolors\26SniprunFloatingWinErr\1\0\2\fctermfg\fDarkRed\afg\f#881515\26SniprunVirtualTextErr\1\0\4\fctermbg\fDarkRed\abg\f#881515\afg\f#000000\vcterfg\nBlack\25SniprunFloatingWinOk\1\0\2\fctermfg\tCyan\afg\f#66eeff\25SniprunVirtualTextOk\1\0\0\1\0\4\fctermbg\tCyan\abg\f#66eeff\afg\f#000000\vcterfg\nBlack\19show_no_output\1\3\0\0\fClassic\20TempFloatWindow\20display_options\1\0\2\19terminal_width\3-\25notification_timeout\3\5\fdisplay\1\3\0\0\fClassic\18VirtualTextOk\24interpreter_options\17GFM_original\1\0\0\21use_on_filetypes\1\0\0\1\2\0\0\20markdown.pandoc\16repl_enable\26selected_interpreters\1\0\3\20inline_messages\3\0\fborders\vsingle\21live_mode_toggle\aon\nsetup\fsniprun\frequire\0", "config", "sniprun")
 time([[Config for sniprun]], false)
 -- Config for: cmp-spell
 time([[Config for cmp-spell]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-spell")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-spell")
 time([[Config for cmp-spell]], false)
--- Config for: nerdcommenter
-time([[Config for nerdcommenter]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "nerdcommenter")
-time([[Config for nerdcommenter]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "impatient.nvim")
+time([[Config for impatient.nvim]], false)
+-- Config for: material
+time([[Config for material]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "material")
+time([[Config for material]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
+-- Config for: ultisnips
+time([[Config for ultisnips]], true)
+try_loadstring("\27LJ\2\2F\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\18<leader><tab>\27UltiSnipsExpandTrigger\6g\bvim\0", "config", "ultisnips")
+time([[Config for ultisnips]], false)
+-- Config for: cmp-buffer
+time([[Config for cmp-buffer]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-buffer")
+time([[Config for cmp-buffer]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "telescope.nvim")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "telescope.nvim")
 time([[Config for telescope.nvim]], false)
 -- Config for: cmp-tabnine
 time([[Config for cmp-tabnine]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-tabnine")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-tabnine")
 time([[Config for cmp-tabnine]], false)
--- Config for: cmp_luasnip
-time([[Config for cmp_luasnip]], true)
-try_loadstring("\27LJ\2\nπ\1\0\0\a\0\v\0\0226\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\1\0B\0\2\0029\0\3\0005\2\t\0004\3\3\0006\4\4\0009\4\5\0049\4\6\4'\6\a\0B\4\2\0026\5\b\0&\4\5\4>\4\1\3=\3\n\2B\0\2\1K\0\1\0\tpath\1\0\0\rsnippets\vconfig\fstdpath\afn\bvim\tload\14lazy_load luasnip.loaders.from_vscode\frequire\0", "config", "cmp_luasnip")
-time([[Config for cmp_luasnip]], false)
--- Config for: material
-time([[Config for material]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "material")
-time([[Config for material]], false)
 -- Config for: dashboard-nvim
 time([[Config for dashboard-nvim]], true)
-try_loadstring("\27LJ\2\nÎ\2\0\0\4\0\v\0\0196\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0005\1\5\0=\1\4\0006\0\0\0009\0\1\0006\1\0\0009\1\a\0019\1\b\1'\3\t\0B\1\2\2'\2\n\0&\1\2\1=\1\6\0K\0\1\0\r/session\ncache\fstdpath\afn dashboard_session_directory\1\0\a\17find_history\fSPC f h\23change_colorscheme\fSPC f c\17last_session\fSPC s l\14find_word\fSPC f q\rnew_file\fSPC c f\15book_marks\fSPC f m\14find_file\fSPC f f\30dashboard_custom_shortcut\1\2\0\0\26üê¨ Have A Good Day!\28dashboard_custom_footer\6g\bvim\0", "config", "dashboard-nvim")
+try_loadstring("\27LJ\2\2Î\2\0\0\3\0\v\0\0196\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0005\1\5\0=\1\4\0006\0\0\0009\0\1\0006\1\0\0009\1\a\0019\1\b\1'\2\t\0B\1\2\2'\2\n\0&\1\2\1=\1\6\0K\0\1\0\r/session\ncache\fstdpath\afn dashboard_session_directory\1\0\a\rnew_file\fSPC c f\23change_colorscheme\fSPC f c\15book_marks\fSPC f m\17last_session\fSPC s l\17find_history\fSPC f h\14find_word\fSPC f q\14find_file\fSPC f f\30dashboard_custom_shortcut\1\2\0\0\26üê¨ Have A Good Day!\28dashboard_custom_footer\6g\bvim\0", "config", "dashboard-nvim")
 time([[Config for dashboard-nvim]], false)
--- Config for: ultisnips
-time([[Config for ultisnips]], true)
-try_loadstring("\27LJ\2\nF\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\18<leader><tab>\27UltiSnipsExpandTrigger\6g\bvim\0", "config", "ultisnips")
-time([[Config for ultisnips]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-try_loadstring("\27LJ\2\n£\1\0\1\b\1\b\0\18-\1\0\0009\1\0\1'\3\1\0'\4\2\0'\5\3\0'\6\4\0'\a\5\0B\1\6\2\18\3\0\0B\1\2\2\14\0\1\0X\2\5Ä-\1\0\0009\1\6\0019\1\a\1\18\3\0\0B\1\2\2L\1\2\0\0¿\fdirname\tpath\21requirements.txt\19pyproject.toml\14setup.cfg\rsetup.py\t.git\17root_patternà\2\1\0\4\0\14\0\0176\0\0\0'\2\1\0B\0\2\0023\1\2\0007\1\3\0005\1\4\0007\1\5\0005\1\6\0007\1\a\0005\1\v\0005\2\t\0005\3\b\0=\3\n\2=\2\f\0017\1\r\0002\0\0ÄK\0\1\0\rsettings\vpython\1\0\0\ranalysis\1\0\0\1\0\3\27useLibraryCodeForTypes\2\19diagnosticMode\14workspace\20autoSearchPaths\2\14filetypes\1\2\0\0\vpython\bcmd\1\3\0\0\23pyright-langserver\f--stdio\rroot_dir\0\19lspconfig.util\frequire\0", "config", "nvim-lspconfig")
-time([[Config for nvim-lspconfig]], false)
 -- Config for: Auto-Pairs
 time([[Config for Auto-Pairs]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "Auto-Pairs")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "Auto-Pairs")
 time([[Config for Auto-Pairs]], false)
--- Config for: cmp-buffer
-time([[Config for cmp-buffer]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-buffer")
-time([[Config for cmp-buffer]], false)
--- Config for: impatient.nvim
-time([[Config for impatient.nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "impatient.nvim")
-time([[Config for impatient.nvim]], false)
+-- Config for: nerdcommenter
+time([[Config for nerdcommenter]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "nerdcommenter")
+time([[Config for nerdcommenter]], false)
 -- Config for: cmp-nvim-lua
 time([[Config for cmp-nvim-lua]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-nvim-lua")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-nvim-lua")
 time([[Config for cmp-nvim-lua]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-try_loadstring("\27LJ\2\n¥\4\0\0\a\0\16\1\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0036\4\a\0009\4\b\0046\6\t\0009\6\n\0069\6\v\6\24\6\0\6B\4\2\2=\4\f\3=\3\r\0025\3\14\0=\3\15\2B\0\2\1K\0\1\0\vsource\1\0\a\14ultisnips\2\rnvim_lua\2\vbuffer\2\tcalc\2\rnvim_lsp\2\nemoji\2\tpath\2\18documentation\15max_height\nlines\6o\bvim\nfloor\tmath\vborder\1\0\4\14max_width\3x\17winhighlightHNormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder\15min_height\3\1\14min_width\3<\1\t\0\0\5\5\5\6 \5\5\5\6 \1\0\f\ndebug\1\19max_menu_width\3d\19max_kind_width\3d\19max_abbr_width\3d\21incomplete_delay\3ê\3\20resolve_timeout\3†\6\19source_timeout\3»\1\18throttle_time\3P\14preselect\venable\15min_length\3\1\17autocomplete\2\fenabled\2\nsetup\bcmp\frequireÁÃô≥\6≥ÊÃ˛\3\0", "config", "nvim-cmp")
-time([[Config for nvim-cmp]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
+-- Config for: nvim-colorizer
+time([[Config for nvim-colorizer]], true)
+try_loadstring("\27LJ\2\0027\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer")
+time([[Config for nvim-colorizer]], false)
+-- Config for: cmp-path
+time([[Config for cmp-path]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-path")
+time([[Config for cmp-path]], false)
+-- Config for: cmp_luasnip
+time([[Config for cmp_luasnip]], true)
+try_loadstring("\27LJ\2\2C\0\1\3\0\4\0\a6\1\0\0'\2\1\0B\1\2\0029\1\2\0019\2\3\0B\1\2\1K\0\1\0\tbody\15lsp_expand\fluasnip\frequire[\1\0\4\0\b\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\6\0005\2\4\0003\3\3\0=\3\5\2=\2\a\1B\0\2\1K\0\1\0\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\bcmp\frequire\0", "config", "cmp_luasnip")
+time([[Config for cmp_luasnip]], false)
 if should_profile then save_profiles() end
 
 end)
