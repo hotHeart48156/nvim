@@ -52,6 +52,8 @@ local function traverse_directory (root_path,super_node,node)
 	   if file_name:sub(1,1)~='_' and file_name:sub(1,1)~='.' then 
               table.insert(all_plugin_configure_file,root_path..'/'..file_name)  
 	      traverse_directory(root_path,super_node,node)
+           else
+		   traverse_directory(root_path,super_node,node)
            end
 	end
 
