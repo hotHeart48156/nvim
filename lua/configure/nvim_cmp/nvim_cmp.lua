@@ -20,10 +20,10 @@ cmp.core.config=function()
 	   sources= cmp.config.sources(
 	       {name='nvim_lsp'},
 	       {name='vsnip'},
-	       {name='buffer'},
-	       {name='luasnip'},--luasnip user
-	       {name='ultisnips'},--for ultisnips user
-	       {name='snippy'}--for snippt user
+	       {name='buffer'}
+--	       {name='luasnip'},--luasnip user
+--	       {name='ultisnips'},--for ultisnips user
+--	       {name='snippy'}--for snippt user
 	   ),
            mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
