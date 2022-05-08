@@ -71,11 +71,11 @@ end
 
 
 
-global_mapping.register({
-    mode = "x",
-    key = {"<"},
-    action = "<gv",
-})
+--global_mapping.register({
+--    mode = "x",
+--    key = {"<"},
+--    action = "<gv",
+--})
 
 
 global_mapping.set_up=function ()

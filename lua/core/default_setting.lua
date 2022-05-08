@@ -11,8 +11,9 @@ default_setting['opt']=
 	encoding = 'utf-8',
 	fileencodings = "utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,latin1",
 	-- tab
-	--tapstop = 4,
+	tabstop = 4,	
 	shiftwidth = 4,
+    softtabstop=4,
 	expandtab = true,
 	-- folder
 	foldenable = true,
@@ -24,8 +25,9 @@ default_setting['opt']=
     }
 default_setting['global']=
     {
-        mapleader = ' ',
+       mapleader = ' ',
        maplocalleader = ' ',
+       tabstop=4
     }
 for key,value in pairs(default_setting['opt']) do
     vim.o[key]=value

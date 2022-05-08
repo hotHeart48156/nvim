@@ -10,9 +10,7 @@ FEATURES['markdown']=true
 FEATURES['treesitter']=true
 FEATURES['snippets']=true
 --FEATURES['misc']=true
-vim.g.theme = "light"
 require ('core.default_setting')
 require('core.plugins').setup()
 --require('core.plugins').create_mapping()
-require('core.mapping').set_up()
-
+--require('core.mapping').set_u
