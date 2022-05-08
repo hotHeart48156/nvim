@@ -20,10 +20,9 @@ plugin.core.config=function()
 		}
 	  },
         pip = {
-	    install_args = 
-                    {
+	    install_args = {
 		"-i","https://pypi.tuna.tsinghua.edu.cn/simple"
-		    }
+		                }
 	    }
     }
     )
