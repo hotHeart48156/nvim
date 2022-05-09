@@ -26,6 +26,7 @@ plugin.core.config=function()
 	    }
     }
     )
+    local lsp_config=require('lspconfig')
     -- lsp setup end
     lsp_install.on_server_ready(
         function(server)
@@ -36,11 +37,13 @@ plugin.core.config=function()
             if server.name == 'clangd' then 
                 local clang=require('configure.nvim_cmp.language._clang')
                 opts = vim.tbl_deep_extend("force", clang, opts)
+		lsp_config.clangd.setup{on_attach=require('configure.nvim_cmp._handlers').on_attach}
             end
 
             if server.name =='pyright' then 
                 local py=require('configure.nvim_cmp.language._python')
                 opts = vim.tbl_deep_extend("force", py, opts)
+		lsp_config.pyright.setup{on_attach=require('configure.nvim_cmp._handlers').on_attach}
             end
 
             if server.name == 'sumneko_lua' then 
@@ -51,9 +54,6 @@ plugin.core.config=function()
             server:setup(opts)
         end
     )
-
-
-
 
 end
 
