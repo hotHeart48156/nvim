@@ -3,7 +3,7 @@ local plugin = {}
 plugin.core
 =
 {
-    "preservim/nerdcommenter",
+    -- "ryanoasis/nerd-fonts",
 
     setup = function()
 
