@@ -25,11 +25,20 @@ plugin.core.config=function()
         pip = {
 	    install_args = {
 		"-i","https://pypi.tuna.tsinghua.edu.cn/simple"
-		                }
+		        }
 	    }
     }
     )
-    --local lsp_config=require('lspconfig')
+    local lsp_config=require("lspconfig")
+    lsp_config.pyright.setup{
+        on_attach=require('configure.nvim_cmp._handlers').on_attach,
+        capabilities=require('configure.nvim_cmp._handlers').capabilities,
+    }
+    lsp_config.clangd.setup{
+        on_attach=require('configure.nvim_cmp._handlers').on_attach,
+        capabilities=require('configure.nvim_cmp._handlers').capabilities
+    }
+    require('configure.nvim_cmp._handlers').setup()
     -- lsp setup end
     lsp_install.on_server_ready(
         function(server)
