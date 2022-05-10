@@ -1,5 +1,8 @@
 local plugin={}
-plugin.core={"williamboman/nvim-lsp-installer"}
+plugin.core={
+	"williamboman/nvim-lsp-installer",
+	{"neovim/nvim-lspconfig"}
+}
 
 plugin.core.setup=function()
     
@@ -26,13 +29,16 @@ plugin.core.config=function()
 	    }
     }
     )
-    local lsp_config=require('lspconfig')
+    --local lsp_config=require('lspconfig')
     -- lsp setup end
     lsp_install.on_server_ready(
         function(server)
             local opts={
                 on_attach=require('configure.nvim_cmp._handlers').on_attach,
-                capabilities=require('configure.nvim_cmp._handlers').capabilities
+                capabilities=require('configure.nvim_cmp._handlers').capabilities,
+                flags = {
+                    debounce_text_changes = 150,
+                }
             }
             if server.name == 'clangd' then 
                 local clang=require('configure.nvim_cmp.language._clang')
@@ -43,7 +49,7 @@ plugin.core.config=function()
             if server.name =='pyright' then 
                 local py=require('configure.nvim_cmp.language._python')
                 opts = vim.tbl_deep_extend("force", py, opts)
-		lsp_config.pyright.setup{on_attach=require('configure.nvim_cmp._handlers').on_attach}
+		--lsp_config.pyright.setup{on_attach=require('configure.nvim_cmp._handlers').on_attach}
             end
 
             if server.name == 'sumneko_lua' then 

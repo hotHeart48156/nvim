@@ -37,7 +37,7 @@ local function lsp_highlight_document(client)
             [[
             augroup lsp_document_highlight
                 autocmd! * <buffer>
-                autocmd CusorHold <buffer> lua vim.lsp.buf.document_highlight()
+                autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
                 autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
             augroup END
             ]],
@@ -59,7 +59,7 @@ end
 handlers.on_attach=function(client,buf)
     lsp_key_maps(buf)
     lsp_highlight_document(client)
-    require('aerial').on_attach(client,buf)
+    --require('aerial').on_attach(client,buf)
     require('lsp_signature').on_attach()
 end
 
