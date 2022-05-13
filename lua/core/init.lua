@@ -12,5 +12,5 @@ FEATURES['snippets']=true
 --FEATURES['misc']=true
 require ('core.default_setting')
 require('core.plugins').setup()
---require('core.plugins').create_mapping()
---require('core.mapping').set_u
+require('core.mapping').setup()
+vim.g.theme = "light"
