@@ -6,8 +6,7 @@ plugin.core.setup=function()
 end
 
 plugin.core.config=function()
+    require'impatient'.enable_profile()
 end
 
-plugin.mapping=function()
-end
 return plugin

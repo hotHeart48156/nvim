@@ -1,24 +1,21 @@
 local cmp = {}
 cmp.core = {"hrsh7th/nvim-cmp"}
-cmp.core.setup = function()
-end
+cmp.core.setup = function() end
 
 cmp.core.config = function()
     local luasnip, luasnip_status = pcall(require, 'luasnip')
-    if not luasnip_status then
-        return
-    end
+    if not luasnip_status then return end
     require('luasnip.loaders.from_vscode').lazy_load()
     -- require('luasnip.loaders.from_vscode').load({paths={'path'}})
     local cmp = require 'cmp'
     local kind_icons = {
-        Class = "❂",
+        Class = "❂ ",
         Color = "⛯ ",
         Constant = "⛭ ",
         Constructor = "⚙ ",
         Enum = "⚚ ",
         EnumMember = "⚜ ",
-        Event = " ",
+        Event = "E ",
         Field = "⽥ ",
         File = "⛶ ",
         Folder = "📁",
@@ -26,7 +23,7 @@ cmp.core.config = function()
         Interface = "⏧ ",
         Keyword = "☣ ",
         Method = "M ",
-        Module = "M ",
+        Module = "⨊ ",
         Operator = "☩ ",
         Property = "☪ ",
         Reference = "☬ ",
@@ -34,14 +31,14 @@ cmp.core.config = function()
         Struct = "䷦ ",
         Text = "T ",
         TypeParameter = " ",
-        Unit = "❂ ",
+        Unit = "Å ",
         Value = "፲ ",
         Variable = "⚝ "
     }
     local source_names = {
         nvim_lsp = "(LSP)",
         treesitter = "(TS)",
-        -- emoji = "(Emoji)",
+        emoji = "(Emoji)",
         path = "(Path)",
         calc = "(Calc)",
         cmp_tabnine = "(Tabnine)",
@@ -51,37 +48,28 @@ cmp.core.config = function()
         spell = "(Spell)"
     }
     cmp_config = {
-        confirm_opts = {
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = false
-        },
+        confirm_opts = {behavior = cmp.ConfirmBehavior.Replace, select = false},
         completion = {
             ---@usage The minimum length of a word to complete on.
             keyword_length = 1
         },
-        experimental = {
-            ghost_text = false,
-            native_menu = false
-        },
+        experimental = {ghost_text = false, native_menu = false},
         formatting = {
             fields = {"kind", "abbr", "menu"},
             max_width = 0,
 
-            duplicates = {
-                buffer = 1,
-                path = 1,
-                nvim_lsp = 0,
-                luasnip = 1
-            },
+            duplicates = {buffer = 1, path = 1, nvim_lsp = 0, luasnip = 1},
             duplicates_default = 0,
             format = function(entry, vim_item)
                 local max_width = cmp_config.formatting.max_width
                 if max_width ~= 0 and #vim_item.abbr > max_width then
-                    vim_item.abbr = string.sub(vim_item.abbr, 1, max_width - 1) .. "…"
+                    vim_item.abbr =
+                        string.sub(vim_item.abbr, 1, max_width - 1) .. "…"
                 end
                 vim_item.kind = kind_icons[vim_item.kind]
                 vim_item.menu = source_names[entry.source.name]
-                vim_item.dup = cmp_config.formatting.duplicates[entry.source.name] or
+                vim_item.dup = cmp_config.formatting.duplicates[entry.source
+                                   .name] or
                                    cmp_config.formatting.duplicates_default
                 return vim_item
             end
@@ -95,29 +83,12 @@ cmp.core.config = function()
             completion = cmp.config.window.bordered(),
             documentation = cmp.config.window.bordered()
         },
-        sources = {{
-            name = "nvim_lsp"
-        }, {
-            name = "path"
-        }, {
-            name = "luasnip"
-        }, {
-            name = "cmp_tabnine"
-        }, {
-            name = "nvim_lua"
-        }, {
-            name = "buffer"
-        }, {
-            name = "spell"
-        }, {
-            name = "calc"
-        }, {
-            name = "emoji"
-        }, {
-            name = "treesitter"
-        }, {
-            name = "crates"
-        }},
+        sources = {
+            {name = "nvim_lsp"}, {name = "path"}, {name = "luasnip"},
+            {name = "cmp_tabnine"}, {name = "nvim_lua"}, {name = "buffer"},
+            {name = "spell"}, {name = "calc"}, {name = "emoji"},
+            {name = "treesitter"}, {name = "crates"}
+        },
         mapping = cmp.mapping.preset.insert {
             ["<C-k>"] = cmp.mapping.select_prev_item(),
             ["<C-j>"] = cmp.mapping.select_next_item(),
@@ -168,26 +139,18 @@ cmp.core.config = function()
     -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline('/', {
         mapping = cmp.mapping.preset.cmdline(),
-        sources = {{
-            name = 'buffer'
-        }}
+        sources = {{name = 'buffer'}}
     })
 
     cmp.setup.cmdline('?', {
         mapping = cmp.mapping.preset.cmdline(),
-        sources = {{
-            name = 'buffer'
-        }}
+        sources = {{name = 'buffer'}}
     })
 
     -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources({{
-            name = 'cmdline'
-        }, {
-            name = 'path'
-        }})
+        sources = cmp.config.sources({{name = 'cmdline'}, {name = 'path'}})
     })
     cmp.setup(cmp_config)
 end
@@ -198,7 +161,7 @@ cmp.core.formatting = {
         item.menu = ({
             nvim_lsp = "{LSP}",
             cmp_tabnine = "[TabNine]",
-            nvim_lua = "[NVIM_LUA]",
+            nvim_lua = "[LUA]",
             luasnip = "[Snippets]",
             buffer = "[Buffer]",
             spell = "[Spell]",
@@ -208,6 +171,5 @@ cmp.core.formatting = {
     end
 
 }
-cmp.mapping = function()
-end
+cmp.mapping = function() end
 return cmp

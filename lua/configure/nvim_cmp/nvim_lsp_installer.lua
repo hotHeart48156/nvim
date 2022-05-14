@@ -1,8 +1,18 @@
 local plugin = {}
-plugin.core = {"williamboman/nvim-lsp-installer", {"neovim/nvim-lspconfig"}}
+plugin.core = {"williamboman/nvim-lsp-installer", {
+    "neovim/nvim-lspconfig",
+    config = function()
+        require("nvim-lsp-installer").setup {}
+        local lspconfig = require("lspconfig")
+        lspconfig.sumneko_lua.setup {}
+        lspconfig.pyright.setup {
+            on_attach = require('configure.nvim_cmp._handlers').on_attach,
+            server_capabilities = require('configure.nvim_cmp._handlers').capabilities
+        }
+    end
+}}
 
 plugin.core.setup = function()
-
 end
 
 plugin.core.config = function()
@@ -24,13 +34,15 @@ plugin.core.config = function()
     })
     local lsp_config = require("lspconfig")
     lsp_config.pyright.setup {
-        on_attach = require('configure.nvim_cmp._handlers').on_attach,
-        capabilities = require('configure.nvim_cmp._handlers').capabilities
+        on_attach = require('configure.nvim_cmp._handlers').on_attach
+        -- capabilities = require('configure.nvim_cmp._handlers').capabilities
     }
     lsp_config.clangd.setup {
         on_attach = require('configure.nvim_cmp._handlers').on_attach,
         capabilities = require('configure.nvim_cmp._handlers').capabilities
     }
+    local file = io.open('test.txt', 'w+')
+    file.write('cscs' .. "server.name")
     require('configure.nvim_cmp._handlers').setup()
     -- lsp setup end
     lsp_install.on_server_ready(function(server)
@@ -48,9 +60,12 @@ plugin.core.config = function()
                 on_attach = require('configure.nvim_cmp._handlers').on_attach
             }
         end
-
+        local file = io.open('test.txt', 'w+')
+        file.write('cscs' .. server.name)
+        local py = require('configure.nvim_cmp.language.python')
+        opts = vim.tbl_deep_extend("force", py, opts)
         if server.name == 'pyright' then
-            local py = require('configure.nvim_cmp.language._python')
+            local py = require('configure.nvim_cmp.language.python')
             opts = vim.tbl_deep_extend("force", py, opts)
             -- lsp_config.pyright.setup{on_attach=require('configure.nvim_cmp._handlers').on_attach}
         end
