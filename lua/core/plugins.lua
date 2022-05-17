@@ -134,7 +134,6 @@ plugins_configure.setup = function()
                 end
             end
         end
-        -- plugins_configure.create_mapping()
     end)
 end
 

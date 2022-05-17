@@ -382,7 +382,7 @@ _G.packer_plugins = {
   },
   ultisnips = {
     after_files = { "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/ultisnips/after/plugin/UltiSnips_after.vim" },
-    config = { "\27LJ\2\2F\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\18<leader><tab>\27UltiSnipsExpandTrigger\6g\bvim\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = true,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/ultisnips",
@@ -708,7 +708,7 @@ try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "vim-surround")
 time([[Config for vim-surround]], false)
 -- Config for: ultisnips
 time([[Config for ultisnips]], true)
-try_loadstring("\27LJ\2\2F\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\18<leader><tab>\27UltiSnipsExpandTrigger\6g\bvim\0", "config", "ultisnips")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "ultisnips")
 time([[Config for ultisnips]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)

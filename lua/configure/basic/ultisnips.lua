@@ -11,7 +11,7 @@ plugin.core.setup=function()
 end
 
 plugin.core.config=function()
-    vim.g.UltiSnipsExpandTrigger="<leader><tab>"
+    -- vim.g.UltiSnipsExpandTrigger="<leader><tab>"
 end
 
 plugin.mapping = function()
