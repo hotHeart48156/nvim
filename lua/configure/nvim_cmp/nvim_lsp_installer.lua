@@ -36,7 +36,9 @@ plugin.core = {"williamboman/nvim-lsp-installer", {
             settings = {
                 python = {
                     analysis = {
-                        typeCheckingMode = "off"
+                        autoSearchPaths = true,
+                        diagnosticMode = "workspace",
+                        useLibraryCodeForTypes = true
                     }
                 }
             }
@@ -73,8 +75,6 @@ plugin.core.config = function()
         on_attach = require('configure.nvim_cmp._handlers').on_attach,
         capabilities = require('configure.nvim_cmp._handlers').capabilities
     }
-    local file = io.open('test.txt', 'w+')
-    file.write('cscs' .. "server.name")
     require('configure.nvim_cmp._handlers').setup()
     -- lsp setup end
     lsp_install.on_server_ready(function(server)

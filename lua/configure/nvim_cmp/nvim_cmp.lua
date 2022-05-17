@@ -8,7 +8,7 @@ cmp.core.config = function()
     if not luasnip_status then
         return
     end
-    require('luasnip.loaders.from_vscode').lazy_load()
+    -- require('luasnip.loaders.from_vscode').lazy_load()
     -- require('luasnip.loaders.from_vscode').load({paths={'path'}})
     local nvim_cmp = require 'cmp'
     local kind_icons = {
@@ -72,10 +72,10 @@ cmp.core.config = function()
             duplicates = {
                 buffer = 1,
                 path = 1,
-                nvim_lsp = 0,
+                nvim_lsp = 1,
                 luasnip = 1
             },
-            duplicates_default = 0,
+            duplicates_default = 1,
             format = function(entry, vim_item)
                 local max_width = cmp_config.formatting.max_width
                 if max_width ~= 0 and #vim_item.abbr > max_width then
@@ -164,7 +164,7 @@ cmp.core.config = function()
     --       { name = 'buffer' },
     --     })
     --   })
-
+    
     nvim_cmp.setup.cmdline('/', {
         mapping = nvim_cmp.mapping.preset.cmdline(),
         sources = {{
@@ -189,31 +189,23 @@ cmp.core.config = function()
         }}
     })
     nvim_cmp.setup(cmp_config)
-    -- nvim_cmp.setup.sources=nvim_cmp.config.sources({{name = 'buffer'}, {name = 'path'}})
-    -- Setup lspconfig.
-    local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-    require('lspconfig')['sumneko_lua'].setup {
-        capabilities = capabilities
-    }
 end
-cmp.core.formatting = {
-    field = {"kind", "abbr", "menu"},
-    format = function(entry, item)
-        -- item.kind=string.format("%s %s")
-        item.menu = ({
-            nvim_lsp = "{LSP}",
-            cmp_tabnine = "[TabNine]",
-            nvim_lua = "[LUA]",
-            luasnip = "[Snippets]",
-            buffer = "[Buffer]",
-            spell = "[Spell]",
-            path = "[Path]"
+-- cmp.core.formatting = {
+--     field = {"kind", "abbr", "menu"},
+--     format = function(entry, item)
+--         item.menu = ({
+--             nvim_lsp = "{LSP}",
+--             cmp_tabnine = "[TabNine]",
+--             nvim_lua = "[LUA]",
+--             luasnip = "[Snippets]",
+--             buffer = "[Buffer]",
+--             spell = "[Spell]",
+--             path = "[Path]"
 
-        })
-    end
+--         })
+--     end
 
-}
+-- }
 cmp.mapping = function()
 end
 return cmp

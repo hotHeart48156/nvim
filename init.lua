@@ -24,6 +24,4 @@ packer.init {
 }
 --this code only can being write in init.lua or nvim/lua/plugins.lua
 -------------------------Packer End --------------------------------------------------------------------------------
-
-
 require('core')
