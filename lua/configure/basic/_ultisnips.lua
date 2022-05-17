@@ -3,15 +3,15 @@ local plugin={}
 plugin.core=
   {
     "SirVer/ultisnips",
+    "honza/vim-snippets"
   }
 
 plugin.core.setup=function()
-    vim.g.tiSnipsEditSplit = 'vertical'
+    -- vim.g.tiSnipsEditSplit = 'vertical'
     vim.g.snips_author = 'Yang Biao'
 end
 
 plugin.core.config=function()
-    -- vim.g.UltiSnipsExpandTrigger="<leader><tab>"
 end
 
 plugin.mapping = function()
