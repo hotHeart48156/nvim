@@ -4,10 +4,42 @@ plugin.core = {"williamboman/nvim-lsp-installer", {
     config = function()
         require("nvim-lsp-installer").setup {}
         local lspconfig = require("lspconfig")
-        lspconfig.sumneko_lua.setup {}
+        lspconfig.sumneko_lua.setup {
+            on_attach = require('configure.nvim_cmp._handlers').on_attach,
+            capabilities = require('configure.nvim_cmp._handlers').capabilities,
+            settings = {
+                Lua = {
+                    -- runtime = {
+                    --     -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+                    --     version = 'LuaJIT',
+                    --     -- Setup your lua path
+                    --     path = runtime_path
+                    -- },
+                    diagnostics = {
+                        -- Get the language server to recognize the `vim` global
+                        globals = {'vim'}
+                    },
+                    workspace = {
+                        -- Make the server aware of Neovim runtime files
+                        library = vim.api.nvim_get_runtime_file("", true)
+                    },
+                    -- Do not send telemetry data containing a randomized but unique identifier
+                    telemetry = {
+                        enable = false
+                    }
+                }
+            }
+        }
         lspconfig.pyright.setup {
             on_attach = require('configure.nvim_cmp._handlers').on_attach,
-            server_capabilities = require('configure.nvim_cmp._handlers').capabilities
+            capabilities = require('configure.nvim_cmp._handlers').capabilities,
+            settings = {
+                python = {
+                    analysis = {
+                        typeCheckingMode = "off"
+                    }
+                }
+            }
         }
     end
 }}

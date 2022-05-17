@@ -21,7 +21,6 @@ global_mapping.register = function(map)
         end
 
     end
-    print("yes:w:")
     map_key_default_value['desc'] = 'No Desc'
     map_key_default_value['short_desc'] = 'No Short Desc'
 

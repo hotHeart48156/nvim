@@ -14,10 +14,10 @@ plugin.core.config=function()
             --signature help in normal mode
             floating_window = true,--show hint(提示) in a floating window,set to false for virtual text
             --only mode (V mode)
-            floating_window_off_x = 1,-- adjust float windows x position ,
+            floating_window_off_x = 0,-- adjust float windows x position ,
             --1 may be thought of as a quantitative true
-            floating_window_off_y = 1,--adjust float windows y position
-            fix_pos = false,-- if set to true, the float window will not auto-close 
+            floating_window_off_y = 0,--adjust float windows y position
+            fix_pos = true,-- if set to true, the float window will not auto-close 
             --until finish all parameter
             hint_enable = true,-- enable virtual hint
             hint_prefix="🐼",-- set pands for parameter
