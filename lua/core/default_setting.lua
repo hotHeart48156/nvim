@@ -8,10 +8,10 @@ default_setting['opt']=
 	history = 1000,
 	maxmempattern = 2000,
 	syntax = 'on',
-	cursorline = true,
+	-- cursorline = true,
 	-- file encoding
 	encoding = 'utf-8',
-	fileencodings = "utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,latin1",
+	-- fileencodings = "utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,latin1",
 	-- tab
 	tabstop = 2,	
 	shiftwidth = 2,
