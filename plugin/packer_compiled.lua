@@ -243,10 +243,9 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
-    config = { "\27LJ\2\2´\2\0\2\6\1\14\0*6\2\1\0009\2\2\2'\3\3\0-\4\0\0009\5\0\0018\4\5\0049\5\0\1B\2\4\2=\2\0\0016\2\5\0009\2\6\0029\2\4\0029\3\a\0009\3\b\0038\2\3\2=\2\4\0016\2\5\0009\2\6\0029\2\t\0029\3\0\0018\2\3\2=\2\0\0016\2\5\0009\2\6\0029\2\n\0029\3\a\0009\3\b\0038\2\3\2=\2\4\0016\2\5\0009\2\6\0029\2\f\0029\3\a\0009\3\b\0038\2\3\2\14\0\2\0X\3\3Ä6\2\5\0009\2\6\0029\2\r\2=\2\v\1L\1\2\0\3¿\23duplicates_default\15duplicates\bdup\17source_names\15kind_icons\tname\vsource\15formatting\15cmp_config\tmenu\n%s %s\vformat\vstring\tkindW\0\1\3\0\5\0\n6\1\0\0\18\2\0\0B\1\2\0016\1\1\0'\2\2\0B\1\2\0029\1\3\0019\2\4\0B\1\2\1K\0\1\0\tbody\15lsp_expand\fluasnip\frequire\fprint_r∆\17\1\0\v\0Z\0∏\0016\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\1\0X\2\1Ä2\0∞Ä6\2\1\0'\3\3\0B\2\2\0029\2\4\2B\2\1\0016\2\1\0'\3\5\0B\2\2\0025\3\6\0005\4\a\0005\5\b\0005\6\r\0005\a\v\0009\b\t\0029\b\n\b=\b\f\a=\a\14\0065\a\15\0=\a\16\0065\a\17\0=\a\18\0065\a\20\0005\b\19\0=\b\21\a=\3\22\a=\4\23\a=\5\24\a5\b\25\0=\b\26\a3\b\27\0=\b\28\a=\a\29\0065\a\31\0003\b\30\0=\b \a=\a!\0065\a%\0009\b\"\0029\b#\b9\b$\bB\b\1\2=\b\16\a9\b\"\0029\b#\b9\b$\bB\b\1\2=\b&\a=\a#\0064\a\f\0005\b'\0>\b\1\a5\b(\0>\b\2\a5\b)\0>\b\3\a5\b*\0>\b\4\a5\b+\0>\b\5\a5\b,\0>\b\6\a5\b-\0>\b\a\a5\b.\0>\b\b\a5\b/\0>\b\t\a5\b0\0>\b\n\a5\b1\0>\b\v\a=\a2\0065\a5\0009\b3\0029\b4\bB\b\1\2=\b6\a9\b3\0029\b7\bB\b\1\2=\b8\a9\b3\0029\b9\b)\t¸ˇB\b\2\2=\b:\a9\b3\0029\b9\b)\t\4\0B\b\2\2=\b;\a9\b3\0029\b<\bB\b\1\2=\b=\a9\b3\0029\b>\bB\b\1\2=\b?\a=\a3\0067\6@\0009\6A\0029\6B\6'\aC\0005\bE\0009\t3\0029\tD\t9\tB\tB\t\1\2=\t3\b4\t\3\0005\nF\0>\n\1\t=\t2\bB\6\3\0019\6A\0029\6B\6'\aG\0005\bH\0009\t3\0029\tD\t9\tB\tB\t\1\2=\t3\b4\t\3\0005\nI\0>\n\1\t=\t2\bB\6\3\0019\6A\0029\6B\6'\aJ\0005\bK\0009\t3\0029\tD\t9\tB\tB\t\1\2=\t3\b4\t\3\0005\nL\0>\n\1\t5\nM\0>\n\2\t=\t2\bB\6\3\0019\6A\0026\a@\0B\6\2\0016\6\1\0'\aN\0B\6\2\0029\6O\0066\aP\0009\aQ\a9\aR\a9\aS\aB\a\1\0A\6\0\0026\a\1\0'\bT\0B\a\2\0029\aU\a9\aA\a5\bV\0=\6W\bB\a\2\0016\a\1\0'\bT\0B\a\2\0029\aX\a9\aA\a5\bY\0=\6W\bB\a\2\0012\0\0ÄK\0\1\0K\0\1\0\1\0\0\16sumneko_lua\17capabilities\1\0\0\fpyright\14lspconfig\29make_client_capabilities\rprotocol\blsp\bvim\24update_capabilities\17cmp_nvim_lsp\1\0\1\tname\tpath\1\0\1\tname\fcmdline\1\0\0\6:\1\0\1\tname\vbuffer\1\0\0\6?\1\0\1\tname\vbuffer\1\0\0\vpreset\6/\fcmdline\nsetup\15cmp_config\n<C-e>\nabort\n<C-p>\rcomplete\n<C-f>\n<C-d>\16scroll_docs\n<C-j>\21select_next_item\n<C-k>\1\0\0\21select_prev_item\fmapping\fsources\1\0\1\tname\vcrates\1\0\1\tname\15treesitter\1\0\1\tname\nemoji\1\0\1\tname\tcalc\1\0\1\tname\nspell\1\0\1\tname\vbuffer\1\0\1\tname\rnvim_lua\1\0\1\tname\16cmp_tabnine\1\0\1\tname\fluasnip\1\0\1\tname\tpath\1\0\1\tname\rnvim_lsp\18documentation\1\0\0\rbordered\vwindow\vconfig\fsnippet\vexpand\1\0\0\0\15formatting\vformat\0\15duplicates\1\0\4\tpath\3\1\fluasnip\3\1\rnvim_lsp\3\1\vbuffer\3\1\tmenu\17source_names\15kind_icons\vfields\1\0\1\23duplicates_default\3\1\1\4\0\0\tkind\tabbr\tmenu\17experimental\1\0\1\15ghost_text\2\15completion\1\0\1\19keyword_length\3\1\17confirm_opts\1\0\0\rbehavior\1\0\1\vselect\1\fReplace\20ConfirmBehavior\1\0\a\nspell\f[Spell]\rnvim_lua\n[LUA]\rnvim_lsp\n{LSP}\vbuffer\r[Buffer]\tpath\v[Path]\16cmp_tabnine\14[TabNine]\fluasnip\15[Snippets]\1\0\n\rnvim_lsp\n(LSP)\nvsnip\14(Snippet)\16cmp_tabnine\14(Tabnine)\15treesitter\t(TS)\tpath\v(Path)\nemoji\f(Emoji)\nspell\f(Spell)\vbuffer\r(Buffer)\tcalc\v(Calc)\fluasnip\14(Snippet)\1\0\25\tText\aT \vMethod\aM \rOperator\t‚ò© \14Interface\t‚èß \nColor\t‚õØ \vModule\t‚®ä \nEvent\aE \rFunction\t‚Ñò \16Constructor\t‚öô \15EnumMember\t‚öú \rProperty\t‚ò™ \rConstant\t‚õ≠ \vStruct\t‰∑¶ \rVariable\t‚öù \fSnippet\t‚ò´ \vFolder\tüìÅ\tUnit\t‚Ñ´ \nValue\t·ç≤ \18TypeParameter\tÔûÉ \tFile\t‚õ∂ \nClass\t‚ùÇ \nField\t‚Ω• \tEnum\t‚öö \fKeyword\t‚ò£ \14Reference\t‚ò¨ \bcmp\14lazy_load luasnip.loaders.from_vscode\fluasnip\frequire\npcall\0" },
+    config = { "\27LJ\2\2ˆ\1\0\2\6\2\r\0!6\2\1\0009\2\2\2'\3\3\0-\4\0\0009\5\0\0018\4\5\4B\2\3\2=\2\0\1-\2\1\0009\3\5\0009\3\6\0038\2\3\2=\2\4\1-\2\0\0009\3\0\0018\2\3\2=\2\0\0016\2\b\0009\2\t\0029\2\n\0029\3\5\0009\3\6\0038\2\3\2\14\0\2\0X\3\3Ä6\2\b\0009\2\t\0029\2\v\2=\2\a\0016\2\f\0\18\3\1\0B\2\2\1L\1\2\0\3¿\5¿\fprint_r\23duplicates_default\15duplicates\15formatting\15cmp_config\bdup\tname\vsource\tmenu\a%s\vformat\vstring\tkindC\0\1\3\0\4\0\a6\1\0\0'\2\1\0B\1\2\0029\1\2\0019\2\3\0B\1\2\1K\0\1\0\tbody\15lsp_expand\fluasnip\frequireı\r\1\0\v\0C\0ã\0016\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\1\0X\2\1Ä2\0ÉÄ6\2\1\0'\3\3\0B\2\2\0029\2\4\2B\2\1\0016\2\1\0'\3\5\0B\2\2\0025\3\6\0005\4\a\0005\5\b\0005\6\r\0005\a\v\0009\b\t\0029\b\n\b=\b\f\a=\a\14\0065\a\15\0=\a\16\0065\a\18\0005\b\17\0=\b\19\a5\b\20\0=\b\21\a3\b\22\0=\b\23\a=\a\24\0065\a\26\0003\b\25\0=\b\27\a=\a\28\0065\a \0009\b\29\0029\b\30\b9\b\31\bB\b\1\2=\b!\a9\b\29\0029\b\30\b9\b\31\bB\b\1\2=\b\"\a=\a\30\0065\a%\0009\b#\0029\b$\bB\b\1\2=\b&\a9\b#\0029\b'\bB\b\1\2=\b(\a9\b#\0029\b)\b)\t¸ˇB\b\2\2=\b*\a9\b#\0029\b)\b)\t\4\0B\b\2\2=\b+\a9\b#\0029\b,\bB\b\1\2=\b-\a9\b#\0029\b.\bB\b\1\2=\b/\a=\a#\0064\a\5\0005\b0\0>\b\1\a5\b1\0>\b\2\a5\b2\0>\b\3\a5\b3\0>\b\4\a=\a4\0067\0065\0009\0066\0026\a5\0B\6\2\0019\0066\0029\0067\6'\a8\0005\b:\0009\t#\0029\t9\t9\t7\tB\t\1\2=\t#\b4\t\3\0005\n;\0>\n\1\t=\t4\bB\6\3\0019\0066\0029\0067\6'\a<\0005\b=\0009\t#\0029\t9\t9\t7\tB\t\1\2=\t#\b4\t\3\0005\n>\0>\n\1\t=\t4\bB\6\3\0019\0066\0029\0067\6'\a?\0005\b@\0009\t#\0029\t9\t9\t7\tB\t\1\2=\t#\b4\t\3\0005\nA\0>\n\1\t5\nB\0>\n\2\t=\t4\bB\6\3\0012\0\0ÄK\0\1\0K\0\1\0\1\0\1\tname\tpath\1\0\1\tname\fcmdline\1\0\0\6:\1\0\1\tname\vbuffer\1\0\0\6?\1\0\1\tname\vbuffer\1\0\0\vpreset\6/\fcmdline\nsetup\15cmp_config\fsources\1\0\1\tname\tpath\1\0\1\tname\vbuffer\1\0\1\tname\fluasnip\1\0\1\tname\rnvim_lsp\n<C-e>\nabort\n<C-p>\rcomplete\n<C-f>\n<C-d>\16scroll_docs\n<C-j>\21select_next_item\n<C-k>\1\0\0\21select_prev_item\fmapping\18documentation\15completion\1\0\0\rbordered\vwindow\vconfig\fsnippet\vexpand\1\0\0\0\15formatting\vformat\0\15duplicates\1\0\4\tpath\3\1\fluasnip\3\1\rnvim_lsp\3\1\vbuffer\3\1\vfields\1\0\1\23duplicates_default\3\1\1\4\0\0\tkind\tabbr\tmenu\17experimental\1\0\1\15ghost_text\2\17confirm_opts\1\0\0\rbehavior\1\0\1\vselect\1\fReplace\20ConfirmBehavior\1\0\a\nspell\f[Spell]\rnvim_lua\n[LUA]\rnvim_lsp\n{LSP}\vbuffer\r[Buffer]\tpath\v[Path]\16cmp_tabnine\14[TabNine]\fluasnip\15[Snippets]\1\0\n\rnvim_lsp\n(LSP)\nvsnip\14(Snippet)\16cmp_tabnine\14(Tabnine)\15treesitter\t(TS)\tpath\v(Path)\nemoji\f(Emoji)\nspell\f(Spell)\vbuffer\r(Buffer)\tcalc\v(Calc)\fluasnip\14(Snippet)\1\0\25\tText\aT \vMethod\aM \rOperator\t‚ò© \14Interface\t‚èß \nColor\t‚õØ \vModule\t‚®ä \nEvent\aE \rFunction\t‚Ñò \16Constructor\t‚öô \15EnumMember\t‚öú \rProperty\t‚ò™ \rConstant\t‚õ≠ \vStruct\t‰∑¶ \rVariable\t‚öù \fSnippet\t‚ò´ \vFolder\tüìÅ\tUnit\t‚Ñ´ \nValue\t·ç≤ \18TypeParameter\tÔûÉ \tFile\t‚õ∂ \nClass\t‚ùÇ \nField\t‚Ω• \tEnum\t‚öö \fKeyword\t‚ò£ \14Reference\t‚ò¨ \bcmp\14lazy_load luasnip.loaders.from_vscode\fluasnip\frequire\npcall\0" },
     loaded = true,
-    needs_bufread = false,
-    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/nvim-cmp",
+    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer"] = {
@@ -518,20 +517,13 @@ time([[Setup for filetype.nvim]], false)
 time([[packadd for filetype.nvim]], true)
 vim.cmd [[packadd filetype.nvim]]
 time([[packadd for filetype.nvim]], false)
--- Setup for: nvim-cmp
-time([[Setup for nvim-cmp]], true)
-try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "nvim-cmp")
-time([[Setup for nvim-cmp]], false)
-time([[packadd for nvim-cmp]], true)
-vim.cmd [[packadd nvim-cmp]]
-time([[packadd for nvim-cmp]], false)
--- Setup for: sniprun
-time([[Setup for sniprun]], true)
-try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "sniprun")
-time([[Setup for sniprun]], false)
-time([[packadd for sniprun]], true)
-vim.cmd [[packadd sniprun]]
-time([[packadd for sniprun]], false)
+-- Setup for: which-key.nvim
+time([[Setup for which-key.nvim]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "which-key.nvim")
+time([[Setup for which-key.nvim]], false)
+time([[packadd for which-key.nvim]], true)
+vim.cmd [[packadd which-key.nvim]]
+time([[packadd for which-key.nvim]], false)
 -- Setup for: cmp-cmdline
 time([[Setup for cmp-cmdline]], true)
 try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp-cmdline")
@@ -587,20 +579,20 @@ time([[Setup for bufdelete.nvim]], false)
 time([[packadd for bufdelete.nvim]], true)
 vim.cmd [[packadd bufdelete.nvim]]
 time([[packadd for bufdelete.nvim]], false)
--- Setup for: cmp_luasnip
-time([[Setup for cmp_luasnip]], true)
-try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp_luasnip")
-time([[Setup for cmp_luasnip]], false)
-time([[packadd for cmp_luasnip]], true)
-vim.cmd [[packadd cmp_luasnip]]
-time([[packadd for cmp_luasnip]], false)
--- Setup for: which-key.nvim
-time([[Setup for which-key.nvim]], true)
-try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "which-key.nvim")
-time([[Setup for which-key.nvim]], false)
-time([[packadd for which-key.nvim]], true)
-vim.cmd [[packadd which-key.nvim]]
-time([[packadd for which-key.nvim]], false)
+-- Setup for: sniprun
+time([[Setup for sniprun]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "sniprun")
+time([[Setup for sniprun]], false)
+time([[packadd for sniprun]], true)
+vim.cmd [[packadd sniprun]]
+time([[packadd for sniprun]], false)
+-- Setup for: impatient.nvim
+time([[Setup for impatient.nvim]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "impatient.nvim")
+time([[Setup for impatient.nvim]], false)
+time([[packadd for impatient.nvim]], true)
+vim.cmd [[packadd impatient.nvim]]
+time([[packadd for impatient.nvim]], false)
 -- Setup for: nvim-comment
 time([[Setup for nvim-comment]], true)
 try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "nvim-comment")
@@ -615,13 +607,6 @@ time([[Setup for telescope-vim-bookmarks.nvim]], false)
 time([[packadd for telescope-vim-bookmarks.nvim]], true)
 vim.cmd [[packadd telescope-vim-bookmarks.nvim]]
 time([[packadd for telescope-vim-bookmarks.nvim]], false)
--- Setup for: impatient.nvim
-time([[Setup for impatient.nvim]], true)
-try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "impatient.nvim")
-time([[Setup for impatient.nvim]], false)
-time([[packadd for impatient.nvim]], true)
-vim.cmd [[packadd impatient.nvim]]
-time([[packadd for impatient.nvim]], false)
 -- Setup for: vim-bookmarks
 time([[Setup for vim-bookmarks]], true)
 try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "vim-bookmarks")
@@ -643,6 +628,13 @@ time([[Setup for cmp-path]], false)
 time([[packadd for cmp-path]], true)
 vim.cmd [[packadd cmp-path]]
 time([[packadd for cmp-path]], false)
+-- Setup for: cmp_luasnip
+time([[Setup for cmp_luasnip]], true)
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "cmp_luasnip")
+time([[Setup for cmp_luasnip]], false)
+time([[packadd for cmp_luasnip]], true)
+vim.cmd [[packadd cmp_luasnip]]
+time([[packadd for cmp_luasnip]], false)
 -- Setup for: vim-repeat
 time([[Setup for vim-repeat]], true)
 try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "setup", "vim-repeat")
@@ -716,7 +708,7 @@ try_loadstring("\27LJ\2\2Ä\3\0\0\r\0\16\0/6\0\0\0'\1\1\0B\0\2\0026\1\2\0006\2\3\
 time([[Config for nvim-lspconfig]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
-try_loadstring("\27LJ\2\2´\2\0\2\6\1\14\0*6\2\1\0009\2\2\2'\3\3\0-\4\0\0009\5\0\0018\4\5\0049\5\0\1B\2\4\2=\2\0\0016\2\5\0009\2\6\0029\2\4\0029\3\a\0009\3\b\0038\2\3\2=\2\4\0016\2\5\0009\2\6\0029\2\t\0029\3\0\0018\2\3\2=\2\0\0016\2\5\0009\2\6\0029\2\n\0029\3\a\0009\3\b\0038\2\3\2=\2\4\0016\2\5\0009\2\6\0029\2\f\0029\3\a\0009\3\b\0038\2\3\2\14\0\2\0X\3\3Ä6\2\5\0009\2\6\0029\2\r\2=\2\v\1L\1\2\0\3¿\23duplicates_default\15duplicates\bdup\17source_names\15kind_icons\tname\vsource\15formatting\15cmp_config\tmenu\n%s %s\vformat\vstring\tkindW\0\1\3\0\5\0\n6\1\0\0\18\2\0\0B\1\2\0016\1\1\0'\2\2\0B\1\2\0029\1\3\0019\2\4\0B\1\2\1K\0\1\0\tbody\15lsp_expand\fluasnip\frequire\fprint_r∆\17\1\0\v\0Z\0∏\0016\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\1\0X\2\1Ä2\0∞Ä6\2\1\0'\3\3\0B\2\2\0029\2\4\2B\2\1\0016\2\1\0'\3\5\0B\2\2\0025\3\6\0005\4\a\0005\5\b\0005\6\r\0005\a\v\0009\b\t\0029\b\n\b=\b\f\a=\a\14\0065\a\15\0=\a\16\0065\a\17\0=\a\18\0065\a\20\0005\b\19\0=\b\21\a=\3\22\a=\4\23\a=\5\24\a5\b\25\0=\b\26\a3\b\27\0=\b\28\a=\a\29\0065\a\31\0003\b\30\0=\b \a=\a!\0065\a%\0009\b\"\0029\b#\b9\b$\bB\b\1\2=\b\16\a9\b\"\0029\b#\b9\b$\bB\b\1\2=\b&\a=\a#\0064\a\f\0005\b'\0>\b\1\a5\b(\0>\b\2\a5\b)\0>\b\3\a5\b*\0>\b\4\a5\b+\0>\b\5\a5\b,\0>\b\6\a5\b-\0>\b\a\a5\b.\0>\b\b\a5\b/\0>\b\t\a5\b0\0>\b\n\a5\b1\0>\b\v\a=\a2\0065\a5\0009\b3\0029\b4\bB\b\1\2=\b6\a9\b3\0029\b7\bB\b\1\2=\b8\a9\b3\0029\b9\b)\t¸ˇB\b\2\2=\b:\a9\b3\0029\b9\b)\t\4\0B\b\2\2=\b;\a9\b3\0029\b<\bB\b\1\2=\b=\a9\b3\0029\b>\bB\b\1\2=\b?\a=\a3\0067\6@\0009\6A\0029\6B\6'\aC\0005\bE\0009\t3\0029\tD\t9\tB\tB\t\1\2=\t3\b4\t\3\0005\nF\0>\n\1\t=\t2\bB\6\3\0019\6A\0029\6B\6'\aG\0005\bH\0009\t3\0029\tD\t9\tB\tB\t\1\2=\t3\b4\t\3\0005\nI\0>\n\1\t=\t2\bB\6\3\0019\6A\0029\6B\6'\aJ\0005\bK\0009\t3\0029\tD\t9\tB\tB\t\1\2=\t3\b4\t\3\0005\nL\0>\n\1\t5\nM\0>\n\2\t=\t2\bB\6\3\0019\6A\0026\a@\0B\6\2\0016\6\1\0'\aN\0B\6\2\0029\6O\0066\aP\0009\aQ\a9\aR\a9\aS\aB\a\1\0A\6\0\0026\a\1\0'\bT\0B\a\2\0029\aU\a9\aA\a5\bV\0=\6W\bB\a\2\0016\a\1\0'\bT\0B\a\2\0029\aX\a9\aA\a5\bY\0=\6W\bB\a\2\0012\0\0ÄK\0\1\0K\0\1\0\1\0\0\16sumneko_lua\17capabilities\1\0\0\fpyright\14lspconfig\29make_client_capabilities\rprotocol\blsp\bvim\24update_capabilities\17cmp_nvim_lsp\1\0\1\tname\tpath\1\0\1\tname\fcmdline\1\0\0\6:\1\0\1\tname\vbuffer\1\0\0\6?\1\0\1\tname\vbuffer\1\0\0\vpreset\6/\fcmdline\nsetup\15cmp_config\n<C-e>\nabort\n<C-p>\rcomplete\n<C-f>\n<C-d>\16scroll_docs\n<C-j>\21select_next_item\n<C-k>\1\0\0\21select_prev_item\fmapping\fsources\1\0\1\tname\vcrates\1\0\1\tname\15treesitter\1\0\1\tname\nemoji\1\0\1\tname\tcalc\1\0\1\tname\nspell\1\0\1\tname\vbuffer\1\0\1\tname\rnvim_lua\1\0\1\tname\16cmp_tabnine\1\0\1\tname\fluasnip\1\0\1\tname\tpath\1\0\1\tname\rnvim_lsp\18documentation\1\0\0\rbordered\vwindow\vconfig\fsnippet\vexpand\1\0\0\0\15formatting\vformat\0\15duplicates\1\0\4\tpath\3\1\fluasnip\3\1\rnvim_lsp\3\1\vbuffer\3\1\tmenu\17source_names\15kind_icons\vfields\1\0\1\23duplicates_default\3\1\1\4\0\0\tkind\tabbr\tmenu\17experimental\1\0\1\15ghost_text\2\15completion\1\0\1\19keyword_length\3\1\17confirm_opts\1\0\0\rbehavior\1\0\1\vselect\1\fReplace\20ConfirmBehavior\1\0\a\nspell\f[Spell]\rnvim_lua\n[LUA]\rnvim_lsp\n{LSP}\vbuffer\r[Buffer]\tpath\v[Path]\16cmp_tabnine\14[TabNine]\fluasnip\15[Snippets]\1\0\n\rnvim_lsp\n(LSP)\nvsnip\14(Snippet)\16cmp_tabnine\14(Tabnine)\15treesitter\t(TS)\tpath\v(Path)\nemoji\f(Emoji)\nspell\f(Spell)\vbuffer\r(Buffer)\tcalc\v(Calc)\fluasnip\14(Snippet)\1\0\25\tText\aT \vMethod\aM \rOperator\t‚ò© \14Interface\t‚èß \nColor\t‚õØ \vModule\t‚®ä \nEvent\aE \rFunction\t‚Ñò \16Constructor\t‚öô \15EnumMember\t‚öú \rProperty\t‚ò™ \rConstant\t‚õ≠ \vStruct\t‰∑¶ \rVariable\t‚öù \fSnippet\t‚ò´ \vFolder\tüìÅ\tUnit\t‚Ñ´ \nValue\t·ç≤ \18TypeParameter\tÔûÉ \tFile\t‚õ∂ \nClass\t‚ùÇ \nField\t‚Ω• \tEnum\t‚öö \fKeyword\t‚ò£ \14Reference\t‚ò¨ \bcmp\14lazy_load luasnip.loaders.from_vscode\fluasnip\frequire\npcall\0", "config", "nvim-cmp")
+try_loadstring("\27LJ\2\2ˆ\1\0\2\6\2\r\0!6\2\1\0009\2\2\2'\3\3\0-\4\0\0009\5\0\0018\4\5\4B\2\3\2=\2\0\1-\2\1\0009\3\5\0009\3\6\0038\2\3\2=\2\4\1-\2\0\0009\3\0\0018\2\3\2=\2\0\0016\2\b\0009\2\t\0029\2\n\0029\3\5\0009\3\6\0038\2\3\2\14\0\2\0X\3\3Ä6\2\b\0009\2\t\0029\2\v\2=\2\a\0016\2\f\0\18\3\1\0B\2\2\1L\1\2\0\3¿\5¿\fprint_r\23duplicates_default\15duplicates\15formatting\15cmp_config\bdup\tname\vsource\tmenu\a%s\vformat\vstring\tkindC\0\1\3\0\4\0\a6\1\0\0'\2\1\0B\1\2\0029\1\2\0019\2\3\0B\1\2\1K\0\1\0\tbody\15lsp_expand\fluasnip\frequireı\r\1\0\v\0C\0ã\0016\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\1\0X\2\1Ä2\0ÉÄ6\2\1\0'\3\3\0B\2\2\0029\2\4\2B\2\1\0016\2\1\0'\3\5\0B\2\2\0025\3\6\0005\4\a\0005\5\b\0005\6\r\0005\a\v\0009\b\t\0029\b\n\b=\b\f\a=\a\14\0065\a\15\0=\a\16\0065\a\18\0005\b\17\0=\b\19\a5\b\20\0=\b\21\a3\b\22\0=\b\23\a=\a\24\0065\a\26\0003\b\25\0=\b\27\a=\a\28\0065\a \0009\b\29\0029\b\30\b9\b\31\bB\b\1\2=\b!\a9\b\29\0029\b\30\b9\b\31\bB\b\1\2=\b\"\a=\a\30\0065\a%\0009\b#\0029\b$\bB\b\1\2=\b&\a9\b#\0029\b'\bB\b\1\2=\b(\a9\b#\0029\b)\b)\t¸ˇB\b\2\2=\b*\a9\b#\0029\b)\b)\t\4\0B\b\2\2=\b+\a9\b#\0029\b,\bB\b\1\2=\b-\a9\b#\0029\b.\bB\b\1\2=\b/\a=\a#\0064\a\5\0005\b0\0>\b\1\a5\b1\0>\b\2\a5\b2\0>\b\3\a5\b3\0>\b\4\a=\a4\0067\0065\0009\0066\0026\a5\0B\6\2\0019\0066\0029\0067\6'\a8\0005\b:\0009\t#\0029\t9\t9\t7\tB\t\1\2=\t#\b4\t\3\0005\n;\0>\n\1\t=\t4\bB\6\3\0019\0066\0029\0067\6'\a<\0005\b=\0009\t#\0029\t9\t9\t7\tB\t\1\2=\t#\b4\t\3\0005\n>\0>\n\1\t=\t4\bB\6\3\0019\0066\0029\0067\6'\a?\0005\b@\0009\t#\0029\t9\t9\t7\tB\t\1\2=\t#\b4\t\3\0005\nA\0>\n\1\t5\nB\0>\n\2\t=\t4\bB\6\3\0012\0\0ÄK\0\1\0K\0\1\0\1\0\1\tname\tpath\1\0\1\tname\fcmdline\1\0\0\6:\1\0\1\tname\vbuffer\1\0\0\6?\1\0\1\tname\vbuffer\1\0\0\vpreset\6/\fcmdline\nsetup\15cmp_config\fsources\1\0\1\tname\tpath\1\0\1\tname\vbuffer\1\0\1\tname\fluasnip\1\0\1\tname\rnvim_lsp\n<C-e>\nabort\n<C-p>\rcomplete\n<C-f>\n<C-d>\16scroll_docs\n<C-j>\21select_next_item\n<C-k>\1\0\0\21select_prev_item\fmapping\18documentation\15completion\1\0\0\rbordered\vwindow\vconfig\fsnippet\vexpand\1\0\0\0\15formatting\vformat\0\15duplicates\1\0\4\tpath\3\1\fluasnip\3\1\rnvim_lsp\3\1\vbuffer\3\1\vfields\1\0\1\23duplicates_default\3\1\1\4\0\0\tkind\tabbr\tmenu\17experimental\1\0\1\15ghost_text\2\17confirm_opts\1\0\0\rbehavior\1\0\1\vselect\1\fReplace\20ConfirmBehavior\1\0\a\nspell\f[Spell]\rnvim_lua\n[LUA]\rnvim_lsp\n{LSP}\vbuffer\r[Buffer]\tpath\v[Path]\16cmp_tabnine\14[TabNine]\fluasnip\15[Snippets]\1\0\n\rnvim_lsp\n(LSP)\nvsnip\14(Snippet)\16cmp_tabnine\14(Tabnine)\15treesitter\t(TS)\tpath\v(Path)\nemoji\f(Emoji)\nspell\f(Spell)\vbuffer\r(Buffer)\tcalc\v(Calc)\fluasnip\14(Snippet)\1\0\25\tText\aT \vMethod\aM \rOperator\t‚ò© \14Interface\t‚èß \nColor\t‚õØ \vModule\t‚®ä \nEvent\aE \rFunction\t‚Ñò \16Constructor\t‚öô \15EnumMember\t‚öú \rProperty\t‚ò™ \rConstant\t‚õ≠ \vStruct\t‰∑¶ \rVariable\t‚öù \fSnippet\t‚ò´ \vFolder\tüìÅ\tUnit\t‚Ñ´ \nValue\t·ç≤ \18TypeParameter\tÔûÉ \tFile\t‚õ∂ \nClass\t‚ùÇ \nField\t‚Ω• \tEnum\t‚öö \fKeyword\t‚ò£ \14Reference\t‚ò¨ \bcmp\14lazy_load luasnip.loaders.from_vscode\fluasnip\frequire\npcall\0", "config", "nvim-cmp")
 time([[Config for nvim-cmp]], false)
 -- Config for: sniprun
 time([[Config for sniprun]], true)
