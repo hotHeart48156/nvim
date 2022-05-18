@@ -105,10 +105,10 @@ plugin.core.config = function()
             ["<C-p>"] = nvim_cmp.mapping.complete(),
             ["<C-e>"] = nvim_cmp.mapping.abort()
         },
-        sources = {
+        sources = nvim_cmp.config.sources({
             { name = 'nvim_lsp' },
-            { name = "path" },
             { name = "luasnip" },
+            { name = "path" },
             { name = "cmp_tabnine" },
             { name = "nvim_lua" },
             { name = "buffer" },
@@ -117,7 +117,7 @@ plugin.core.config = function()
             { name = "emoji" },
             { name = "treesitter" },
             { name = "crates" },
-          },
+          }),
     }
     nvim_cmp.setup(cmp_config)
     nvim_cmp.setup.cmdline('/', {

@@ -31,13 +31,6 @@ plugin.core.config = function()
     lsp_install.setup({
         ensure_installed = SERVERS,
         automatic_installation = true,
-        ui = {
-            icons = {
-                server_installed = "✓",
-                server_pending = "➜",
-                server_uninstalled = "✗"
-            }
-        },
         keymaps = {
             -- Keymap to expand a server in the UI
             toggle_server_expand = "<CR>",
@@ -54,7 +47,7 @@ plugin.core.config = function()
             -- Keymap to uninstall a server
             uninstall_server = "X"
         },
-        install_root_dir = path.concat {vim.fn.stdpath "data", "lsp_servers"},
+        install_root_dir = path.concat {vim.fn.stdpath "data", "lsp_servers"},--this is default value can be delete
         pip = {
             install_args = {"-i", "https://pypi.tuna.tsinghua.edu.cn/simple"}
         }
