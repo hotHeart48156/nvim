@@ -2,7 +2,8 @@ local plugin = {}
 plugin.core = {"williamboman/nvim-lsp-installer", {
     "neovim/nvim-lspconfig",
     config = function()
-        require("nvim-lsp-installer").setup {}--must exec otherwise no clinet attach on buffer
+        require("nvim-lsp-installer").setup {} -- must exec otherwise no clinet attach on buffer
+        require('configure.nvim_cmp._handlers').setup()
         local lspconfig = require("lspconfig")
         for _, server in pairs(SERVERS) do
             local opts = {
@@ -18,7 +19,7 @@ plugin.core = {"williamboman/nvim-lsp-installer", {
             end
             lspconfig[server].setup(opts)
         end
-        require('configure.nvim_cmp._handlers').setup()
+
     end
 }}
 
@@ -47,7 +48,7 @@ plugin.core.config = function()
             -- Keymap to uninstall a server
             uninstall_server = "X"
         },
-        install_root_dir = path.concat {vim.fn.stdpath "data", "lsp_servers"},--this is default value can be delete
+        install_root_dir = path.concat {vim.fn.stdpath "data", "lsp_servers"}, -- this is default value can be delete
         pip = {
             install_args = {"-i", "https://pypi.tuna.tsinghua.edu.cn/simple"}
         }

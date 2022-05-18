@@ -1,5 +1,8 @@
 local plugin = {}
-plugin.core = {"hrsh7th/nvim-cmp"}
+plugin.core = {
+    "hrsh7th/nvim-cmp",
+    disable = false
+}
 -- plugin.core.setup = function()
 -- end
 
@@ -51,7 +54,7 @@ plugin.core.config = function()
         buffer = "(Buffer)",
         spell = "(Spell)"
     }
-    local menu={
+    local menu = {
         nvim_lsp = "{LSP}",
         cmp_tabnine = "[TabNine]",
         nvim_lua = "[LUA]",
@@ -67,9 +70,10 @@ plugin.core.config = function()
             select = false
         },
         experimental = {
-            ghost_text = false,
-            native_menu = false,
+            ghost_text = true,
+            native_menu = false
         },
+        enabled = true,
         formatting = {
             fields = {"kind", "abbr", "menu"},
             duplicates = {
@@ -80,8 +84,8 @@ plugin.core.config = function()
             },
             duplicates_default = 1,
             format = function(entry, vim_item)
-                vim_item.kind=string.format('%s',kind_icons[vim_item.kind])
-                vim_item.menu=menu[entry.source.name]
+                vim_item.kind = string.format('%s', kind_icons[vim_item.kind])
+                vim_item.menu = menu[entry.source.name]
                 -- vim_item.dup = cmp_config.formatting.duplicates[entry.source.name] or
                 --                    cmp_config.formatting.duplicates_default
                 return vim_item
@@ -96,7 +100,7 @@ plugin.core.config = function()
             completion = nvim_cmp.config.window.bordered(),
             documentation = nvim_cmp.config.window.bordered()
         },
-        
+
         mapping = {
             ["<C-k>"] = nvim_cmp.mapping.select_prev_item(),
             ["<C-j>"] = nvim_cmp.mapping.select_next_item(),
@@ -105,21 +109,37 @@ plugin.core.config = function()
             ["<C-p>"] = nvim_cmp.mapping.complete(),
             ["<C-e>"] = nvim_cmp.mapping.abort()
         },
-        sources = nvim_cmp.config.sources({
-            { name = 'nvim_lsp' },
-            { name = "luasnip" },
-            { name = "path" },
-            { name = "cmp_tabnine" },
-            { name = "nvim_lua" },
-            { name = "buffer" },
-            { name = "spell" },
-            { name = "calc" },
-            { name = "emoji" },
-            { name = "treesitter" },
-            { name = "crates" },
-          }),
+        sources = nvim_cmp.config.sources({{
+            name = 'nvim_lsp'
+        }, {
+            name = "luasnip"
+        }, {
+            name = "path"
+        }, {
+            name = "cmp_tabnine"
+        }, {
+            name = "nvim_lua"
+        }, {
+            name = "buffer"
+        }, {
+            name = "spell"
+        }, {
+            name = "calc"
+        }, {
+            name = "emoji"
+        }, {
+            name = "treesitter"
+        }, {
+            name = "crates"
+        }})
     }
-    nvim_cmp.setup(cmp_config)
+    nvim_cmp.setup.filetype({'markdown', 'help'}, {
+        sources = {{
+            name = 'path'
+        }, {
+            name = 'buffer'
+        }}
+    })
     nvim_cmp.setup.cmdline('/', {
         mapping = nvim_cmp.mapping.preset.cmdline(),
         sources = {{
@@ -137,14 +157,14 @@ plugin.core.config = function()
     -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
     nvim_cmp.setup.cmdline(':', {
         mapping = nvim_cmp.mapping.preset.cmdline(),
-        sources ={{
+        sources = {{
             name = 'cmdline'
         }, {
             name = 'path'
         }}
     })
-   
-    
+    nvim_cmp.setup(cmp_config)
+
 end
 plugin.mapping = function()
 end
