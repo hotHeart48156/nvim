@@ -1,11 +1,11 @@
 local plugin={}
 plugin.core={"lewis6991/gitsigns.nvim"}
 
-plugin.setup=function()
+plugin.core.setup=function()
     
 end
 
-plugin.config=function()
+plugin.core.config=function()
     require('gitsigns').setup {
   signs = {
     add          = {hl = 'GitSignsAdd'   , text = '│', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},

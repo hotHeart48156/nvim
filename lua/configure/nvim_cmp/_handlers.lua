@@ -75,13 +75,13 @@ local function lsp_key_maps(buf)
     vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 handlers.on_attach = function(client, buf)
-    if client.name == "tsserver" then
-        client.resolved_capabilities.document_formatting = false
-    end
+    -- if client.name == "tsserver" then
+    --     client.resolved_capabilities.document_formatting = false
+    -- end
     lsp_key_maps(buf)
-    lsp_highlight_document(client)
+    -- lsp_highlight_document(client)
     -- require('aerial').on_attach(client,buf)
-    -- require('lsp_signature').on_attach()
+    require('lsp_signature').on_attach()
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

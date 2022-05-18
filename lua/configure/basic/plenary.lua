@@ -1,12 +1,12 @@
 local plugin={}
 plugin.core={"nvim-lua/plenary.nvim"}
 
-plugin.setup=function()
+-- plugin.core.setup=function()
     
-end
+-- end
 
-plugin.config=function()
-end
+-- plugin.core.config=function()
+-- end
 
 plugin.mapping=function()
 end

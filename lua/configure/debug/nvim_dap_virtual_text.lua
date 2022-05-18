@@ -1,11 +1,11 @@
 local plugin={}
 plugin.core={"theHamsta/nvim-dap-virtual-text"}
 
-plugin.setup=function()
+plugin.core.setup=function()
     --todo set image store dir and image name ; need xclip 
 end
 
-plugin.config=function()
+plugin.core.config=function()
 end
 
 plugin.mapping=function()

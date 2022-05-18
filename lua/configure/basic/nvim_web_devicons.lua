@@ -1,11 +1,11 @@
 local plugin={}
 plugin.core={"kyazdani42/nvim-web-devicons"}
 
-plugin.setup=function()
+plugin.core.setup=function()
     
 end
 
-plugin.config=function()
+plugin.core.config=function()
 end
 
 plugin.mapping=function()

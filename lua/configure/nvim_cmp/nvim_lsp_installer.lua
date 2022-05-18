@@ -4,6 +4,7 @@ plugin.core = {"williamboman/nvim-lsp-installer", {
     config = function()
         local lspconfig = require("lspconfig")
         for _, server in pairs(SERVERS) do
+            print("on attach" .. type(require('configure.nvim_cmp._handlers').capabilities))
             local opts = {
                 on_attach = require('configure.nvim_cmp._handlers').on_attach,
                 capabilities = require('configure.nvim_cmp._handlers').capabilities,

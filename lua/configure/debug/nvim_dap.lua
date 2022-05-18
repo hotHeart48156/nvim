@@ -1,8 +1,8 @@
 local plugin={}
 plugin.core={"ravenxrz/nvim-dap"}
-plugin.setup=function()
+plugin.core.setup=function()
 end
-plugin.config=function()
+plugin.core.config=function()
 end
 plugin.mapping=function()
 end

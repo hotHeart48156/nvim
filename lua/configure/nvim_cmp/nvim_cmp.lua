@@ -1,9 +1,9 @@
-local cmp = {}
-cmp.core = {"hrsh7th/nvim-cmp"}
--- cmp.core.setup = function()
+local plugin = {}
+plugin.core = {"hrsh7th/nvim-cmp"}
+-- plugin.core.setup = function()
 -- end
 
-cmp.core.config = function()
+plugin.core.config = function()
     -- vim.cmd [[packadd cmp-look]]
     local luasnip, luasnip_status = pcall(require, 'luasnip')
     if not luasnip_status then
@@ -146,6 +146,6 @@ cmp.core.config = function()
    
     
 end
-cmp.mapping = function()
+plugin.mapping = function()
 end
-return cmp
+return plugin
