@@ -1,11 +1,11 @@
 local plugin={}
 plugin.core={"romgrk/nvim-treesitter-context"}
 
-plugin.setup=function()
+plugin.core.setup=function()
     
 end
 
-plugin.config=function()
+plugin.core.config=function()
 end
 
 plugin.mapping=function()
