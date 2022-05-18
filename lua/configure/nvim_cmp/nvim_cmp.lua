@@ -84,7 +84,6 @@ cmp.core.config = function()
                 vim_item.menu=menu[entry.source.name]
                 -- vim_item.dup = cmp_config.formatting.duplicates[entry.source.name] or
                 --                    cmp_config.formatting.duplicates_default
-                print_r(vim_item)
                 return vim_item
             end
         },
