@@ -67,8 +67,8 @@ cmp.core.config = function()
             select = false
         },
         experimental = {
-            ghost_text = true,
-            -- native_menu = false,
+            ghost_text = false,
+            native_menu = false,
         },
         formatting = {
             fields = {"kind", "abbr", "menu"},
@@ -80,11 +80,10 @@ cmp.core.config = function()
             },
             duplicates_default = 1,
             format = function(entry, vim_item)
-                vim_item.kind=string.format('%s %s',kind_icons[vim_item.kind],vim_item.kind)
+                vim_item.kind=string.format('%s',kind_icons[vim_item.kind])
                 vim_item.menu=menu[entry.source.name]
-                vim_item.kind = kind_icons[vim_item.kind]
-                vim_item.dup = cmp_config.formatting.duplicates[entry.source.name] or
-                                   cmp_config.formatting.duplicates_default
+                -- vim_item.dup = cmp_config.formatting.duplicates[entry.source.name] or
+                --                    cmp_config.formatting.duplicates_default
                 print_r(vim_item)
                 return vim_item
             end
