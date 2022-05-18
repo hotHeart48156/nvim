@@ -303,7 +303,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
-    config = { "\27LJ\2\2½\3\0\0\r\0\19\00096\0\0\0'\1\1\0B\0\2\0026\1\2\0006\2\3\0B\1\2\4H\4*€6\6\4\0'\a\5\0006\b\6\0006\t\0\0'\n\a\0B\t\2\0029\t\b\tB\b\2\2&\a\b\aB\6\2\0015\6\n\0006\a\0\0'\b\a\0B\a\2\0029\a\t\a=\a\t\0066\a\0\0'\b\a\0B\a\2\0029\a\b\a=\a\b\0065\a\v\0=\a\f\0066\a\r\0006\b\0\0'\t\14\0\18\n\5\0&\t\n\tB\a\3\3\15\0\a\0X\t\a€6\t\15\0009\t\16\t'\n\17\0\18\v\b\0\18\f\6\0B\t\4\2\18\6\t\0008\t\5\0009\t\18\t\18\n\6\0B\t\2\1F\4\3\3R\4Ô\1276\1\0\0'\2\a\0B\1\2\0029\1\18\1B\1\1\1K\0\1\0\nsetup\nforce\20tbl_deep_extend\bvim\"configure.nvim_cmp.language._\npcall\nflags\1\0\1\26debounce_text_changes\3–\1\1\0\0\14on_attach\17capabilities!configure.nvim_cmp._handlers\ttype\14on attach\nprint\fSERVERS\npairs\14lspconfig\frequire\0" },
+    config = { "\27LJ\2\2«\3\0\0\r\0\17\00056\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\0016\0\0\0'\1\3\0B\0\2\0026\1\4\0006\2\5\0B\1\2\4H\4 €5\6\b\0006\a\0\0'\b\6\0B\a\2\0029\a\a\a=\a\a\0066\a\0\0'\b\6\0B\a\2\0029\a\t\a=\a\t\0065\a\n\0=\a\v\0066\a\f\0006\b\0\0'\t\r\0\18\n\5\0&\t\n\tB\a\3\3\15\0\a\0X\t\a€6\t\14\0009\t\15\t'\n\16\0\18\v\b\0\18\f\6\0B\t\4\2\18\6\t\0008\t\5\0009\t\2\t\18\n\6\0B\t\2\1F\4\3\3R\4Þ\1276\1\0\0'\2\6\0B\1\2\0029\1\2\1B\1\1\1K\0\1\0\nforce\20tbl_deep_extend\bvim\"configure.nvim_cmp.language._\npcall\nflags\1\0\1\26debounce_text_changes\3–\1\17capabilities\1\0\0\14on_attach!configure.nvim_cmp._handlers\fSERVERS\npairs\14lspconfig\nsetup\23nvim-lsp-installer\frequire\0" },
     loaded = true,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
@@ -820,7 +820,7 @@ try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "bufferline.nvim"
 time([[Config for bufferline.nvim]], false)
 -- Config for: nvim-lspconfig
 time([[Config for nvim-lspconfig]], true)
-try_loadstring("\27LJ\2\2½\3\0\0\r\0\19\00096\0\0\0'\1\1\0B\0\2\0026\1\2\0006\2\3\0B\1\2\4H\4*€6\6\4\0'\a\5\0006\b\6\0006\t\0\0'\n\a\0B\t\2\0029\t\b\tB\b\2\2&\a\b\aB\6\2\0015\6\n\0006\a\0\0'\b\a\0B\a\2\0029\a\t\a=\a\t\0066\a\0\0'\b\a\0B\a\2\0029\a\b\a=\a\b\0065\a\v\0=\a\f\0066\a\r\0006\b\0\0'\t\14\0\18\n\5\0&\t\n\tB\a\3\3\15\0\a\0X\t\a€6\t\15\0009\t\16\t'\n\17\0\18\v\b\0\18\f\6\0B\t\4\2\18\6\t\0008\t\5\0009\t\18\t\18\n\6\0B\t\2\1F\4\3\3R\4Ô\1276\1\0\0'\2\a\0B\1\2\0029\1\18\1B\1\1\1K\0\1\0\nsetup\nforce\20tbl_deep_extend\bvim\"configure.nvim_cmp.language._\npcall\nflags\1\0\1\26debounce_text_changes\3–\1\1\0\0\14on_attach\17capabilities!configure.nvim_cmp._handlers\ttype\14on attach\nprint\fSERVERS\npairs\14lspconfig\frequire\0", "config", "nvim-lspconfig")
+try_loadstring("\27LJ\2\2«\3\0\0\r\0\17\00056\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\0016\0\0\0'\1\3\0B\0\2\0026\1\4\0006\2\5\0B\1\2\4H\4 €5\6\b\0006\a\0\0'\b\6\0B\a\2\0029\a\a\a=\a\a\0066\a\0\0'\b\6\0B\a\2\0029\a\t\a=\a\t\0065\a\n\0=\a\v\0066\a\f\0006\b\0\0'\t\r\0\18\n\5\0&\t\n\tB\a\3\3\15\0\a\0X\t\a€6\t\14\0009\t\15\t'\n\16\0\18\v\b\0\18\f\6\0B\t\4\2\18\6\t\0008\t\5\0009\t\2\t\18\n\6\0B\t\2\1F\4\3\3R\4Þ\1276\1\0\0'\2\6\0B\1\2\0029\1\2\1B\1\1\1K\0\1\0\nforce\20tbl_deep_extend\bvim\"configure.nvim_cmp.language._\npcall\nflags\1\0\1\26debounce_text_changes\3–\1\17capabilities\1\0\0\14on_attach!configure.nvim_cmp._handlers\fSERVERS\npairs\14lspconfig\nsetup\23nvim-lsp-installer\frequire\0", "config", "nvim-lspconfig")
 time([[Config for nvim-lspconfig]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)

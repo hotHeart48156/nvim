@@ -96,7 +96,7 @@ for feature_name, plugin_s in pairs(plugins) do
         local result = {}
         for _, p in ipairs(plugin_s) do
             result[p] = {
-                disable = false
+               -- disable = false
             }
         end
         plugins_configure.plugins_groups[feature_name] = result
