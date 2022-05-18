@@ -14,3 +14,5 @@ require('core.plugins').setup()
 require('core.mapping').setup()
 require('core.plugins').create_mapping()
 vim.g.theme = "light"
+
+

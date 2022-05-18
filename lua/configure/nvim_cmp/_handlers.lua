@@ -82,5 +82,5 @@ end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-require('cmp_nvim_lsp').update_capabilities(capabilities)
+handlers.capabilities=require('cmp_nvim_lsp').update_capabilities(capabilities)
 return handlers
