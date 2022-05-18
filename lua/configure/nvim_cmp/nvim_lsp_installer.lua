@@ -13,6 +13,7 @@ plugin.core = {"williamboman/nvim-lsp-installer", {
             }
             local has_custom_opts, server_custom_opts = pcall(require, "configure.nvim_cmp.language._" .. server)
             if has_custom_opts then
+                -- print_r(server)
                 opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
             end
             lspconfig[server].setup(opts)
@@ -27,6 +28,7 @@ end
 plugin.core.config = function()
     local lsp_install = require('nvim-lsp-installer')
     lsp_install.setup({
+        ensure_installed=SERVERS,
         automatic_installation = true,
         ui = {
             icons = {

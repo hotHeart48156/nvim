@@ -144,24 +144,8 @@ cmp.core.config = function()
         }}
     })
    
-     -- Setup lspconfig.
+    
 end
-cmp.core.formatting = {
-    field = {"kind", "abbr", "menu"},
-    format = function(entry, item)
-        item.menu = ({
-            nvim_lsp = "{LSP}",
-            cmp_tabnine = "[TabNine]",
-            nvim_lua = "[LUA]",
-            luasnip = "[Snippets]",
-            buffer = "[Buffer]",
-            spell = "[Spell]",
-            path = "[Path]"
-
-        })
-    end
-
-}
 cmp.mapping = function()
 end
 return cmp
