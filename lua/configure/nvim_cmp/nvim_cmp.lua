@@ -1,18 +1,15 @@
 local cmp = {}
 cmp.core = {"hrsh7th/nvim-cmp"}
-cmp.core.config = function()
+cmp.core.setup = function()
 end
 
-cmp.core.setup = function()
-    vim.cmd [[packadd nvim-cmp]]
-    vim.cmd [[packadd cmp-nvim-lsp]]
-    vim.cmd [[packadd cmp-buffer]]
+cmp.core.config = function()
     -- vim.cmd [[packadd cmp-look]]
     local luasnip, luasnip_status = pcall(require, 'luasnip')
     if not luasnip_status then
         return
     end
-    -- require('luasnip.loaders.from_vscode').lazy_load()
+    require('luasnip.loaders.from_vscode').lazy_load()
     -- require('luasnip.loaders.from_vscode').load({paths={'path'}})
     local nvim_cmp = require 'cmp'
     local kind_icons = {

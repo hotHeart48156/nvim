@@ -2,47 +2,22 @@ local plugin = {}
 plugin.core = {"williamboman/nvim-lsp-installer", {
     "neovim/nvim-lspconfig",
     config = function()
-        require("nvim-lsp-installer").setup {}
         local lspconfig = require("lspconfig")
-        lspconfig.sumneko_lua.setup {
-            on_attach = require('configure.nvim_cmp._handlers').on_attach,
-            capabilities = require('configure.nvim_cmp._handlers').capabilities,
-            settings = {
-                Lua = {
-                    -- runtime = {
-                    --     -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                    --     version = 'LuaJIT',
-                    --     -- Setup your lua path
-                    --     path = runtime_path
-                    -- },
-                    diagnostics = {
-                        -- Get the language server to recognize the `vim` global
-                        globals = {'vim'}
-                    },
-                    workspace = {
-                        -- Make the server aware of Neovim runtime files
-                        library = vim.api.nvim_get_runtime_file("", true)
-                    },
-                    -- Do not send telemetry data containing a randomized but unique identifier
-                    telemetry = {
-                        enable = false
-                    }
+        for _, server in pairs(SERVERS) do
+            local opts = {
+                on_attach = require('configure.nvim_cmp._handlers').on_attach,
+                capabilities = require('configure.nvim_cmp._handlers').capabilities,
+                flags = {
+                    debounce_text_changes = 150
                 }
             }
-        }
-        lspconfig.pyright.setup {
-            on_attach = require('configure.nvim_cmp._handlers').on_attach,
-            capabilities = require('configure.nvim_cmp._handlers').capabilities,
-            settings = {
-                python = {
-                    analysis = {
-                        autoSearchPaths = true,
-                        -- diagnosticMode = "workspace",
-                        useLibraryCodeForTypes = true
-                    }
-                }
-            }
-        }
+            local has_custom_opts, server_custom_opts = pcall(require, "configure.nvim_cmp.language._" .. server)
+            if has_custom_opts then
+                opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
+            end
+            lspconfig[server].setup(opts)
+        end
+        require('configure.nvim_cmp._handlers').setup()
     end
 }}
 
@@ -51,7 +26,6 @@ end
 
 plugin.core.config = function()
     local lsp_install = require('nvim-lsp-installer')
-    -- lsp setup begin
     lsp_install.setup({
         automatic_installation = true,
         ui = {
@@ -65,44 +39,5 @@ plugin.core.config = function()
             install_args = {"-i", "https://pypi.tuna.tsinghua.edu.cn/simple"}
         }
     })
-    local lsp_config = require("lspconfig")
-    -- require('configure.nvim_cmp._handlers').setup()
-    -- lsp setup end
-    -- lsp_install.on_server_ready(function(server)
-    --     local opts = {
-    --         on_attach = require('configure.nvim_cmp._handlers').on_attach,
-    --         capabilities = require('configure.nvim_cmp._handlers').capabilities,
-    --         flags = {
-    --             debounce_text_changes = 150
-    --         }
-    --     }
-    --     if server.name == 'clangd' then
-    --         local clang = require('configure.nvim_cmp.language._clang')
-    --         opts = vim.tbl_deep_extend("force", clang, opts)
-    --         lsp_config.clangd.setup {
-    --             on_attach = require('configure.nvim_cmp._handlers').on_attach
-    --         }
-    --     end
-    --     local file = io.open('test.txt', 'w+')
-    --     file.write('cscs' .. server.name)
-    --     local py = require('configure.nvim_cmp.language.python')
-    --     opts = vim.tbl_deep_extend("force", py, opts)
-    --     if server.name == 'pyright' then
-    --         local py = require('configure.nvim_cmp.language.python')
-    --         opts = vim.tbl_deep_extend("force", py, opts)
-    --         -- lsp_config.pyright.setup{on_attach=require('configure.nvim_cmp._handlers').on_attach}
-    --     end
-
-    --     if server.name == 'sumneko_lua' then
-    --         local lua = require('configure.nvim_cmp.language._lua')
-    --         opts = vim.tbl_deep_extend("force", lua, opts)
-    --     end
-
-    --     server:setup(opts)
-    -- end)
-
-end
-
-plugin.mapping = function()
 end
 return plugin

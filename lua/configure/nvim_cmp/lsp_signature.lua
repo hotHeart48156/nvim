@@ -14,13 +14,13 @@ plugin.core.config=function()
             --signature help in normal mode
             floating_window = true,--show hint(提示) in a floating window,set to false for virtual text
             --only mode (V mode)
-            floating_window_off_x = 0,-- adjust float windows x position ,
+            floating_window_off_x = 1,-- adjust float windows x position ,
             --1 may be thought of as a quantitative true
-            floating_window_off_y = 0,--adjust float windows y position
+            floating_window_off_y = 1,--adjust float windows y position
             fix_pos = true,-- if set to true, the float window will not auto-close 
             --until finish all parameter
             hint_enable = true,-- enable virtual hint
-            hint_prefix="🐼",-- set pands for parameter
+            -- hint_prefix="🐼",-- set pands for parameter
             hint_scheme='String',
             hi_parameter='LspSignatureActiveParameter',
             max_height= 12,--max height of signature floating window ,the line will be wrapped if exceed
@@ -35,7 +35,7 @@ plugin.core.config=function()
             transparency = nil , --all floatting window transparent value is 0-100
             shadow_bled = 36,-- if use shadow as border this set the opcity
             shadow_guibg = 'Black',--border color this value can be set exanple 'Green' or '#123185'
-            time_interval = 200, -- defailt time check interval set lower value
+            time_interval = 50, -- defailt time check interval set lower value
             toggle_key = nil -- toggle signature on in inseart mode
             
 

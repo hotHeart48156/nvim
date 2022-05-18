@@ -14,7 +14,7 @@ handlers.setup = function()
         text = "⚛"
     }}
     for _, sign in ipairs(signs) do
-        vim.fn.sign_define(sing.name, {
+        vim.fn.sign_define(sign.name, {
             texthl = sign.name,
             text = sign.text,
             numhl = ""
@@ -26,7 +26,7 @@ handlers.setup = function()
             active = signs
         },
         update_in_insert = true,
-        underline = true,
+        underline = false,
         severity_sort = true,
         float = {
             focusable = false,
@@ -72,15 +72,24 @@ local function lsp_key_maps(buf)
         opts)
     vim.api
         .nvim_buf_set_keymap(buf, 'n', '<leader>dk', '<cmd>lua vim.diagnostic.goto_next({border="rounded"})CR>', opts)
+    vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 handlers.on_attach = function(client, buf)
+    if client.name == "tsserver" then
+        client.resolved_capabilities.document_formatting = false
+    end
     lsp_key_maps(buf)
     lsp_highlight_document(client)
     -- require('aerial').on_attach(client,buf)
-    require('lsp_signature').on_attach()
+    -- require('lsp_signature').on_attach()
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-handlers.capabilities=require('cmp_nvim_lsp').update_capabilities(capabilities)
+local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not status_ok then
+    return
+end
+
+handlers.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 return handlers
