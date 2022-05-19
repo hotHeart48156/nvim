@@ -1,6 +1,6 @@
 local plugin = {}
 plugin.core = {
-    "hrsh7th/nvim-cmp",
+    "hrsh7th/nvim-cmp",--https://github.com/hrsh7th/nvim-cmp/blob/main/doc/cmp.txt
     disable = false
 }
 -- plugin.core.setup = function()
