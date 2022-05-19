@@ -2,12 +2,12 @@ local plugin = {}
 
 plugin.core = {"f3fora/cmp-spell"}
 
--- plugin.core.setup = function()
--- end
+plugin.core.setup = function()
+end
 
--- plugin.core.config=function()
+plugin.core.config=function()
 
--- end     
+end     
 
 plugin.mapping=function()
 end

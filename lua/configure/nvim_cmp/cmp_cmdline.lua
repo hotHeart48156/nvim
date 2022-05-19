@@ -6,12 +6,12 @@ plugin.core.setup = function()
 end
 
 plugin.core.config=function()
-    require'cmp'.setup.cmdline('/', {
-  sources = {
-    { name = 'buffer' },
-    {}
-  }
-})
+--     require'cmp'.setup.cmdline('/', {
+--   sources = {
+--     { name = 'buffer' },
+--     {}
+--   }
+-- })
 end     
 
 plugin.mapping=function()

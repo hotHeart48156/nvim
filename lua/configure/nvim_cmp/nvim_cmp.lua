@@ -109,7 +109,7 @@ plugin.core.config = function()
             ["<C-p>"] = nvim_cmp.mapping.complete(),
             ["<C-e>"] = nvim_cmp.mapping.abort()
         },
-        sources = nvim_cmp.config.sources({{
+        sources = nvim_cmp.config.sources({{--不要配置相关的源
             name = 'nvim_lsp'
         }, {
             name = "luasnip"
