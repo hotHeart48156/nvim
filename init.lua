@@ -6,13 +6,14 @@ if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({
     "git",
     "clone",
-    "https://gitcode.net/mirrors/wbthomason/packer.nvim",
+    "https://github.com/wbthomason/packer.nvim",
     install_path,
   })
+  print("empty")
 end
  status_ok, packer = pcall(require, "packer")
 if not status_ok then
-   print("err")
+   print("err"..install_path)
    return
 end
 packer.init {
