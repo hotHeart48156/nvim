@@ -43,34 +43,32 @@ global_mapping.register = function(map)
     end
 
     -- :checkhealth provider
-    -- for _, k in pairs(map.key) do
-    --     if k == '<leader>' then
-    --         key = k .. vim.g.mapleader
-    --     end
+    for _, k in pairs(map.key) do
+        if k == '<leader>' then
+            key = k .. vim.g.mapleader
+        end
 
-    --     if k == '<localleader>' then
-    --         key = k .. vim.g.maplocalleader
-    --     end
+        if k == '<localleader>' then
+            key = k .. vim.g.maplocalleader
+        end
 
-    --     if k == vim.g.mapleader then
-    --         table.insert(keys, "<leader>")
-    --     elseif k == vim.g.maplocalleader then
-    --         table.insert(keys, "<localleader>")
-    --     else
-    --         table.insert(keys, k)
-    --     end
+        if k == vim.g.mapleader then
+            table.insert(keys, "<leader>")
+        elseif k == vim.g.maplocalleader then
+            table.insert(keys, "<localleader>")
+        else
+            table.insert(keys, k)
+        end
 
-    -- end
+    end
     -- todo check used key
-    -- todo which auto tip
-    -- print_r(map)
     if type(map.mode) == 'table' then
         for _, m in ipairs(map.mode) do
-            vim.api.nvim_set_keymap(m, map.key, map.action, option)
+            for _,k in ipairs(map.key) do
+                vim.api.nvim_set_keymap(m, k, map.action, option)
+            end
         end
     end
-    -- print("end")
-
 end
 
 -- global_mapping.register({

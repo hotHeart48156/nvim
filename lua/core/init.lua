@@ -9,6 +9,7 @@ FEATURES['markdown']=true
 FEATURES['treesitter']=true
 FEATURES['snippets']=true
 FEATURES['misc']=true
+
 SERVERS = { "sumneko_lua","pyright" }
 require ('core.default_setting')
 require('core.plugins').setup()

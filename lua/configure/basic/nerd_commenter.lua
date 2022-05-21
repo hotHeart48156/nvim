@@ -44,7 +44,7 @@ plugin.mapping = function()
     local mapping = require('core.mapping')
     mapping.register({
         mode = {'i'},
-        key = "<C-/>",
+        key = {"<C-/>"},
         action = "<esc>:CommentToggle<cr>i",
         short_desc = "comment"
     })

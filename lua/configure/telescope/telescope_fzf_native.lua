@@ -1,13 +1,16 @@
 local plugin = {}
 
-plugin.core = {""}
+plugin.core = {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    run = 'make'
+}
 
 plugin.core.setup = function()
-end     
+end
 
 plugin.core.config = function()
-end     
+end
 
 plugin.mapping = function()
-end   
+end
 return plugin
