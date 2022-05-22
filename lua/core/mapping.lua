@@ -22,8 +22,8 @@ global_mapping.register = function(map)
         short_desc = "No Short Desc",
         noremap = nil,
         expr = nil,
-        silent = { -- see https://neovim.io/doc/user/map.html#:map-arguments
-            buffer = false, -- first is buffer ,buffer will be effective in the currnet buffer only
+        option = { -- see https://neovim.io/doc/user/map.html#:map-arguments
+            --buffer = false, -- first is buffer ,buffer will be effective in the currnet buffer only
             nowait = true, -- this attribute may effctive in global mapping or buffer mapping 
             -- must start with ',' ,nvim does not wait for more characters to be typed,
             silent = true, -- to defing a mapping which will not be echoed on command line 
@@ -67,47 +67,43 @@ global_mapping.register = function(map)
         end
     end
     ---assign default_setting end ---
-    for k, v in pairs(map_option_default_value) do
-        if map[k] == nil then
-            option[k] = v
-        else
-            option[k] = map[k]
-        end
-    end
+    -- for k, v in pairs(map_option_default_value) do
+    --     if map[k] == nil then
+    --         option[k] = v
+    --     else
+    --         option[k] = map[k]
+    --     end
+    -- end
 
     -- :checkhealth provider
     -- todo check used key
     for i, m in ipairs(map.mode) do
-        vim.api.nvim_set_keymap(m, k, map.action[i], map.option)
+        -- print_r(map)
+        vim.api.nvim_set_keymap(m, map.key, map.action[i], map.option)
     end
 end
 
 -- paste start ----
 global_mapping.register({
-    mode = {'n'},
-    key = {"<leader> p"},
-    action = '"+p',
+    mode = {'n','i'},
+    key = "<leader> p",
+    action = {'"+p',"<esc>+p"},
     short_desc = "common"
 })
-global_mapping.register({
-    mode = {'i'},
-    key = {"<leader> p"},
-    action = '<esc>+p',
-    short_desc = "common"
-})
+
 -- paste end ----
 ------------------------------------------------
 -- quit start ----
 global_mapping.register({
     mode = {'n'},
-    key = {"<leader> q"},
-    action = ':qa<cr>',
+    key = "<leader>qa",
+    action = {':qa<cr>'},
     short_desc = "common"
 })
 global_mapping.register({
     mode = {"n"},
-    key = {"<leader> q w"},
-    action = ':qaw<cr>',
+    key = "<leader>qw",
+    action = {':qaw<cr>'},
     short_desc = "Directly Quit After Write"
 })
 -- quit end ----
@@ -115,8 +111,8 @@ global_mapping.register({
 -- read start ----
 global_mapping.register({
     mode = {"n"},
-    key = {"<leader>", "r", "d"},
-    action = ':read !date <cr>',
+    key = "<leader>rd",
+    action = {':read !date <cr>'},
     short_desc = "Read Date From System"
 })
 -- read end ----
@@ -124,20 +120,125 @@ global_mapping.register({
 -- save start ----
 global_mapping.register({
     mode = {"n"},
-    key = {"<leader>", "s", "s"},
-    action = ':w<cr>',
+    key = "<leader>", "s", "s",
+    action = {':w<cr>'},
     short_desc = "Save Current Buffer"
 })
 
 global_mapping.register({
     mode = {"n"},
-    key = {"<leader>", "s", "a"},
-    action = ':wa<cr>',
+    key = "<leader>", "s", "a",
+    action = {':wa<cr>'},
     short_desc = "Save All Buffers"
 })
 -- save end ----
 ------------------------------------------------
 
+
+
+global_mapping.register({
+    mode = {"n"},
+    key = "<leader>", "w", "s",
+    action = {':split<cr>'},
+    short_desc = "Split Window"
+})
+global_mapping.register({
+    mode = {"n"},
+    key = "<leader>", "w", "v",
+    action = {':vsplit<cr>'},
+    short_desc = "Vertical Split Window"
+})
+global_mapping.register({
+    mode = {"n"},
+    key = "<leader>", "w", "d",
+    action = {':q<cr>'},
+    short_desc = "Close Current Window"
+})
+global_mapping.register({
+    mode = {"n"},
+    key = "<leader>", "w", "o",
+    action = {':only<cr>'},
+    short_desc = "Only Reserve Current Window"
+})
+global_mapping.register({
+    mode = {"n"},
+    key = "<leader>", "w", "w",
+    action = {'<c-w><c-w>'},
+    short_desc = "Goto Next Window"
+})
+global_mapping.register({
+    mode = {"n"},
+    key = "<leader>", "w", "j",
+    action = {'<c-w><c-j>'},
+    short_desc = "Goto The Down Window"
+})
+global_mapping.register({
+    mode = {"i"},
+    key = "<C-w>",
+    action = {'<C-[>diwa'},
+    short_desc = "Delete Prior Word"
+})
+global_mapping.register({
+    mode = {"i"},
+    key = "<C-h>",
+    action = {'<BS>'},
+    short_desc = "Delete Prior Char"
+})
+global_mapping.register({
+    mode = {"i"},
+    key = "<C-d>",
+    action = {'<Del>'},
+    short_desc = "Delete Next Char"
+})
+global_mapping.register({
+    mode ={ "i"},
+    key = "<C-k>",
+    action = {'<ESC>d$a'},
+    short_desc = "Delete To The End"
+})
+global_mapping.register({
+    mode ={ "i"},
+    key = "<C-u>",
+    action = {'<C-G>u<C-U>'},
+    short_desc = "Delete To The Begin"
+})
+
+global_mapping.register({
+    mode ={ "i"},
+    key = "<C-b>",
+    action = {'<Left>'},
+    short_desc = "Go Left"
+})
+global_mapping.register({
+    mode = {"i"},
+    key = "<C-f>",
+    action = {'<Right>'},
+    short_desc = "Go Right"
+})
+global_mapping.register({
+    mode ={ "i"},
+    key = "<C-a>",
+    action = {'<ESC>^i'},
+    short_desc = "Go To The Begin and Insert"
+})
+global_mapping.register({
+    mode ={ "i"},
+    key = "<C-e>",
+    action = {'<ESC>$a'},
+    short_desc = "Go To The End and Append"
+})
+global_mapping.register({
+    mode = {"i"},
+    key = "<C-O>",
+    action = {'<Esc>o'},
+    short_desc = "New Line and Insert"
+})
+global_mapping.register({
+    mode = {"i"},
+    key = "<C-S>",
+    action = {'<esc>:w<CR>'},
+    short_desc = "Save"
+})
 global_mapping.setup = function()
     -- local plugin_mapping=require('')
 end
