@@ -34,8 +34,8 @@ default_setting['opt']=
     }
 default_setting['global']=
     {
-       mapleader = ' ',
-       maplocalleader = ' ',
+       mapleader = '<Space>',
+       maplocalleader = '<Space>',
     }
 for key,value in pairs(default_setting['opt']) do
     vim.o[key]=value
