@@ -104,7 +104,6 @@ end
 -- end
 
 plugins_configure.create_mapping = function()
-
     for feature_name, _plugins in pairs(plugins) do
         if FEATURES[feature_name] == true then
             for _, plugin in pairs(_plugins) do
@@ -117,7 +116,6 @@ plugins_configure.create_mapping = function()
             end
         end
     end
-
 end
 
 plugins_configure.setup = function()
