@@ -70,7 +70,7 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["DAPInstall.nvim"] = {
-    config = { "\27LJ\2\2·\4\0\0\5\0\21\0(6\0\0\0'\1\1\0B\0\2\0029\1\2\0005\2\b\0006\3\3\0009\3\4\0039\3\5\3'\4\6\0B\3\2\2'\4\a\0&\3\4\3=\3\t\2B\1\2\0015\1\v\0005\2\n\0=\2\f\0015\2\r\0=\2\14\0015\2\15\0=\2\16\0016\2\3\0009\2\4\0029\2\17\2'\3\18\0009\4\f\1B\2\3\0016\2\3\0009\2\4\0029\2\17\2'\3\19\0009\4\16\1B\2\3\0016\2\3\0009\2\4\0029\2\17\2'\3\20\0009\4\14\1B\2\3\1K\0\1\0\26DapBreakpointRejected\15DapStopped\18DapBreakpoint\16sign_define\fstopped\1\0\4\vtexthl\"LspDiagnosticsSignInformation\ttext\vâ­ï¸\vlinehl\28DiagnosticUnderlineInfo\nnumhl\"LspDiagnosticsSignInformation\rrejected\1\0\4\vtexthl\27LspDiagnosticsSignHint\ttext\bï—£\vlinehl\5\nnumhl\5\nerror\1\0\0\1\0\4\vtexthl\28LspDiagnosticsSignError\ttext\tğŸ›‘\vlinehl\5\nnumhl\5\22installation_path\1\0\0\17/dapinstall/\tdata\fstdpath\afn\bvim\nsetup\16dap-install\frequire\0" },
+    config = { "\27LJ\2\2·\4\0\0\5\0\21\0(6\0\0\0'\1\1\0B\0\2\0029\1\2\0005\2\b\0006\3\3\0009\3\4\0039\3\5\3'\4\6\0B\3\2\2'\4\a\0&\3\4\3=\3\t\2B\1\2\0015\1\v\0005\2\n\0=\2\f\0015\2\r\0=\2\14\0015\2\15\0=\2\16\0016\2\3\0009\2\4\0029\2\17\2'\3\18\0009\4\f\1B\2\3\0016\2\3\0009\2\4\0029\2\17\2'\3\19\0009\4\16\1B\2\3\0016\2\3\0009\2\4\0029\2\17\2'\3\20\0009\4\14\1B\2\3\1K\0\1\0\26DapBreakpointRejected\15DapStopped\18DapBreakpoint\16sign_define\fstopped\1\0\4\vtexthl\"LspDiagnosticsSignInformation\ttext\vâ­ï¸\vlinehl\28DiagnosticUnderlineInfo\nnumhl\"LspDiagnosticsSignInformation\rrejected\1\0\4\vtexthl\27LspDiagnosticsSignHint\ttext\bâ§\vlinehl\5\nnumhl\5\nerror\1\0\0\1\0\4\vtexthl\28LspDiagnosticsSignError\ttext\tğŸ›‘\vlinehl\5\nnumhl\5\22installation_path\1\0\0\17/dapinstall/\tdata\fstdpath\afn\bvim\nsetup\16dap-install\frequire\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/DAPInstall.nvim",
@@ -287,14 +287,14 @@ _G.packer_plugins = {
     url = "https://github.com/terrortylor/nvim-comment"
   },
   ["nvim-dap"] = {
-    config = { "\27LJ\2\2ø\4\0\0\a\0\31\0-6\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\0\0X\2\5€6\2\3\0009\2\4\2'\3\5\0B\2\2\1K\0\1\0009\2\6\0015\3\b\0005\4\a\0=\4\t\0035\4\v\0005\5\n\0=\5\f\4=\4\r\0035\4\18\0004\5\5\0005\6\14\0>\6\1\0055\6\15\0>\6\2\0055\6\16\0>\6\3\0055\6\17\0>\6\4\5=\5\19\4=\4\20\0035\4\22\0005\5\21\0=\5\19\4=\4\23\0035\4\24\0005\5\26\0005\6\25\0=\6\27\5=\5\r\4=\4\28\0035\4\29\0=\4\30\3B\2\2\1K\0\1\0\fwindows\1\0\1\vindent\3\1\rfloating\nclose\1\0\0\1\3\0\0\6q\n<Esc>\1\0\1\vborder\vsingle\ttray\1\0\2\tsize\3\5\rposition\vbottom\1\2\0\0\trepl\fsidebar\relements\1\0\2\tsize\3(\rposition\tleft\1\0\2\aid\16breakpoints\tsize\4³æÌ™\3³æŒş\3\1\0\2\aid\fwatches\tsize\4³æÌ™\3³æŒş\3\1\0\2\aid\vstacks\tsize\4æÌ™³\6æÌÙş\3\1\0\2\aid\vscopes\tsize\4æÌ™³\6æÌÙş\3\rmappings\vexpand\1\0\5\topen\6O\trepl\6r\vtoggle\6t\tedit\6e\vremove\6d\1\4\0\0\6o\18<2-LeftMouse>\t<CR>\nicons\1\0\0\1\0\2\14collapsed\bâ–¸\rexpanded\bâ–¾\nsetup\20dapui not found\vnotify\bvim\ndapui\frequire\npcall\0" },
+    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/nvim-dap",
     url = "https://github.com/ravenxrz/nvim-dap"
   },
   ["nvim-dap-ui"] = {
-    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    config = { "\27LJ\2\2ğ\4\0\0\5\0\"\0-6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0005\2\3\0=\2\5\0015\2\a\0005\3\6\0=\3\b\2=\2\t\0016\2\n\0009\2\v\0029\2\f\2'\3\r\0B\2\2\2=\2\14\0015\2\19\0004\3\5\0005\4\15\0>\4\1\0035\4\16\0>\4\2\0035\4\17\0>\4\3\0035\4\18\0>\4\4\3=\3\20\2=\2\21\0015\2\23\0005\3\22\0=\3\20\2=\2\24\0015\2\25\0005\3\27\0005\4\26\0=\4\28\3=\3\t\2=\2\29\0015\2\30\0=\2\31\0015\2 \0=\2!\1B\0\2\1K\0\1\0\vrender\1\0\0\fwindows\1\0\1\vindent\3\1\rfloating\nclose\1\0\0\1\3\0\0\6q\n<Esc>\1\0\1\vborder\vsingle\ttray\1\0\2\tsize\3\n\rposition\vbottom\1\2\0\0\trepl\fsidebar\relements\1\0\2\tsize\3(\rposition\tleft\1\0\2\aid\fwatches\tsize\4\0€€Àş\3\1\0\2\aid\vstacks\tsize\4\0€€Àş\3\1\0\2\aid\16breakpoints\tsize\4\0€€Àş\3\1\0\2\aid\vscopes\tsize\4\0€€Àş\3\17expand_lines\rnvim-0.7\bhas\afn\bvim\rmappings\vexpand\1\0\5\topen\6o\trepl\6r\vtoggle\6t\tedit\6e\vremove\6d\1\3\0\0\t<CR>\18<2-LeftMouse>\nicons\1\0\0\1\0\2\14collapsed\bâ–¸\rexpanded\bâ–¾\nsetup\ndapui\frequire\0" },
     loaded = true,
     needs_bufread = false,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/nvim-dap-ui",
@@ -956,7 +956,7 @@ try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-buffer")
 time([[Config for cmp-buffer]], false)
 -- Config for: nvim-dap-ui
 time([[Config for nvim-dap-ui]], true)
-try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "nvim-dap-ui")
+try_loadstring("\27LJ\2\2ğ\4\0\0\5\0\"\0-6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0005\2\3\0=\2\5\0015\2\a\0005\3\6\0=\3\b\2=\2\t\0016\2\n\0009\2\v\0029\2\f\2'\3\r\0B\2\2\2=\2\14\0015\2\19\0004\3\5\0005\4\15\0>\4\1\0035\4\16\0>\4\2\0035\4\17\0>\4\3\0035\4\18\0>\4\4\3=\3\20\2=\2\21\0015\2\23\0005\3\22\0=\3\20\2=\2\24\0015\2\25\0005\3\27\0005\4\26\0=\4\28\3=\3\t\2=\2\29\0015\2\30\0=\2\31\0015\2 \0=\2!\1B\0\2\1K\0\1\0\vrender\1\0\0\fwindows\1\0\1\vindent\3\1\rfloating\nclose\1\0\0\1\3\0\0\6q\n<Esc>\1\0\1\vborder\vsingle\ttray\1\0\2\tsize\3\n\rposition\vbottom\1\2\0\0\trepl\fsidebar\relements\1\0\2\tsize\3(\rposition\tleft\1\0\2\aid\fwatches\tsize\4\0€€Àş\3\1\0\2\aid\vstacks\tsize\4\0€€Àş\3\1\0\2\aid\16breakpoints\tsize\4\0€€Àş\3\1\0\2\aid\vscopes\tsize\4\0€€Àş\3\17expand_lines\rnvim-0.7\bhas\afn\bvim\rmappings\vexpand\1\0\5\topen\6o\trepl\6r\vtoggle\6t\tedit\6e\vremove\6d\1\3\0\0\t<CR>\18<2-LeftMouse>\nicons\1\0\0\1\0\2\14collapsed\bâ–¸\rexpanded\bâ–¾\nsetup\ndapui\frequire\0", "config", "nvim-dap-ui")
 time([[Config for nvim-dap-ui]], false)
 -- Config for: cmp-tabnine
 time([[Config for cmp-tabnine]], true)
@@ -980,7 +980,7 @@ try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "cmp-path")
 time([[Config for cmp-path]], false)
 -- Config for: nvim-dap
 time([[Config for nvim-dap]], true)
-try_loadstring("\27LJ\2\2ø\4\0\0\a\0\31\0-6\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\0\0X\2\5€6\2\3\0009\2\4\2'\3\5\0B\2\2\1K\0\1\0009\2\6\0015\3\b\0005\4\a\0=\4\t\0035\4\v\0005\5\n\0=\5\f\4=\4\r\0035\4\18\0004\5\5\0005\6\14\0>\6\1\0055\6\15\0>\6\2\0055\6\16\0>\6\3\0055\6\17\0>\6\4\5=\5\19\4=\4\20\0035\4\22\0005\5\21\0=\5\19\4=\4\23\0035\4\24\0005\5\26\0005\6\25\0=\6\27\5=\5\r\4=\4\28\0035\4\29\0=\4\30\3B\2\2\1K\0\1\0\fwindows\1\0\1\vindent\3\1\rfloating\nclose\1\0\0\1\3\0\0\6q\n<Esc>\1\0\1\vborder\vsingle\ttray\1\0\2\tsize\3\5\rposition\vbottom\1\2\0\0\trepl\fsidebar\relements\1\0\2\tsize\3(\rposition\tleft\1\0\2\aid\16breakpoints\tsize\4³æÌ™\3³æŒş\3\1\0\2\aid\fwatches\tsize\4³æÌ™\3³æŒş\3\1\0\2\aid\vstacks\tsize\4æÌ™³\6æÌÙş\3\1\0\2\aid\vscopes\tsize\4æÌ™³\6æÌÙş\3\rmappings\vexpand\1\0\5\topen\6O\trepl\6r\vtoggle\6t\tedit\6e\vremove\6d\1\4\0\0\6o\18<2-LeftMouse>\t<CR>\nicons\1\0\0\1\0\2\14collapsed\bâ–¸\rexpanded\bâ–¾\nsetup\20dapui not found\vnotify\bvim\ndapui\frequire\npcall\0", "config", "nvim-dap")
+try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "nvim-dap")
 time([[Config for nvim-dap]], false)
 -- Config for: vim-bookmarks
 time([[Config for vim-bookmarks]], true)
@@ -1004,7 +1004,7 @@ try_loadstring("\27LJ\2\2Î\14\0\0\t\0E\0[6\0\0\0009\0\1\0005\1\3\0005\2\4\0=\2\5
 time([[Config for nvim-tree.lua]], false)
 -- Config for: DAPInstall.nvim
 time([[Config for DAPInstall.nvim]], true)
-try_loadstring("\27LJ\2\2·\4\0\0\5\0\21\0(6\0\0\0'\1\1\0B\0\2\0029\1\2\0005\2\b\0006\3\3\0009\3\4\0039\3\5\3'\4\6\0B\3\2\2'\4\a\0&\3\4\3=\3\t\2B\1\2\0015\1\v\0005\2\n\0=\2\f\0015\2\r\0=\2\14\0015\2\15\0=\2\16\0016\2\3\0009\2\4\0029\2\17\2'\3\18\0009\4\f\1B\2\3\0016\2\3\0009\2\4\0029\2\17\2'\3\19\0009\4\16\1B\2\3\0016\2\3\0009\2\4\0029\2\17\2'\3\20\0009\4\14\1B\2\3\1K\0\1\0\26DapBreakpointRejected\15DapStopped\18DapBreakpoint\16sign_define\fstopped\1\0\4\vtexthl\"LspDiagnosticsSignInformation\ttext\vâ­ï¸\vlinehl\28DiagnosticUnderlineInfo\nnumhl\"LspDiagnosticsSignInformation\rrejected\1\0\4\vtexthl\27LspDiagnosticsSignHint\ttext\bï—£\vlinehl\5\nnumhl\5\nerror\1\0\0\1\0\4\vtexthl\28LspDiagnosticsSignError\ttext\tğŸ›‘\vlinehl\5\nnumhl\5\22installation_path\1\0\0\17/dapinstall/\tdata\fstdpath\afn\bvim\nsetup\16dap-install\frequire\0", "config", "DAPInstall.nvim")
+try_loadstring("\27LJ\2\2·\4\0\0\5\0\21\0(6\0\0\0'\1\1\0B\0\2\0029\1\2\0005\2\b\0006\3\3\0009\3\4\0039\3\5\3'\4\6\0B\3\2\2'\4\a\0&\3\4\3=\3\t\2B\1\2\0015\1\v\0005\2\n\0=\2\f\0015\2\r\0=\2\14\0015\2\15\0=\2\16\0016\2\3\0009\2\4\0029\2\17\2'\3\18\0009\4\f\1B\2\3\0016\2\3\0009\2\4\0029\2\17\2'\3\19\0009\4\16\1B\2\3\0016\2\3\0009\2\4\0029\2\17\2'\3\20\0009\4\14\1B\2\3\1K\0\1\0\26DapBreakpointRejected\15DapStopped\18DapBreakpoint\16sign_define\fstopped\1\0\4\vtexthl\"LspDiagnosticsSignInformation\ttext\vâ­ï¸\vlinehl\28DiagnosticUnderlineInfo\nnumhl\"LspDiagnosticsSignInformation\rrejected\1\0\4\vtexthl\27LspDiagnosticsSignHint\ttext\bâ§\vlinehl\5\nnumhl\5\nerror\1\0\0\1\0\4\vtexthl\28LspDiagnosticsSignError\ttext\tğŸ›‘\vlinehl\5\nnumhl\5\22installation_path\1\0\0\17/dapinstall/\tdata\fstdpath\afn\bvim\nsetup\16dap-install\frequire\0", "config", "DAPInstall.nvim")
 time([[Config for DAPInstall.nvim]], false)
 -- Config for: md-img-paste.vim
 time([[Config for md-img-paste.vim]], true)
