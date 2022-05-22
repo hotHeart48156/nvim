@@ -90,18 +90,18 @@ for _, path in ipairs(all_plugin_configure_file) do
     table.insert(plugins[header], package)
 end
 
-for feature_name, plugin_s in pairs(plugins) do
-    if FEATURES[feature_name:sub(1, -2)] == true then
-        -- plugins_configure.plugins_groups[feature_name]             
-        local result = {}
-        for _, p in ipairs(plugin_s) do
-            result[p] = {
-               -- disable = false
-            }
-        end
-        plugins_configure.plugins_groups[feature_name] = result
-    end
-end
+-- for feature_name, plugin_s in pairs(plugins) do
+--     if FEATURES[feature_name:sub(1, -2)] == true then
+--         -- plugins_configure.plugins_groups[feature_name]             
+--         local result = {}
+--         for _, p in ipairs(plugin_s) do
+--             result[p] = {
+--                -- disable = false
+--             }
+--         end
+--         plugins_configure.plugins_groups[feature_name] = result
+--     end
+-- end
 
 plugins_configure.create_mapping = function()
 
