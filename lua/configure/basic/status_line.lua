@@ -1,5 +1,8 @@
 local plugin = {}
-plugin.core = {"nvim-lualine/lualine.nvim"}
+plugin.core = {
+    "nvim-lualine/lualine.nvim",
+    requires = {'kyazdani42/nvim-web-devicons'}
+}
 
 plugin.core.setup = function()
     -- todo set image store dir and image name ; need xclip 
@@ -21,8 +24,8 @@ plugin.core.config = function()
         sources = {"nvim_diagnostic"},
         sections = {"error", "warn"},
         symbols = {
-            error = " ",
-            warn = " "
+            error = "⛔ ",
+            warn = "⚠️ "
         },
         colored = false,
         update_in_insert = false,
@@ -33,9 +36,9 @@ plugin.core.config = function()
         "diff",
         colored = true,
         symbols = {
-            added = "  ",
-            modified = " ",
-            removed = " "
+            added = "+ ",
+            modified = "֎ ",
+            removed = "␡ "
         },
         diff_color = {
             added = {
@@ -77,13 +80,13 @@ plugin.core.config = function()
     local filetype = {
         "filetype",
         icons_enabled = false,
-        icon = nil
+        -- icon = nil
     }
 
     local branch = {
         "branch",
         icons_enabled = true,
-        icon = ""
+        icon = "ᛦ"
     }
 
     local location = {
@@ -114,17 +117,16 @@ plugin.core.config = function()
             icons_enabled = true,
             theme = "auto",
             component_separators = {
-                left = "",
-                right = ""
+                left = "←",
+                right = "→"
             },
             section_separators = {
-                left = "",
-                right = ""
+                left = "←",
+                right = "→"
             },
-            -- component_separators = { left = "", right = "" },
-            -- section_separators = { left = "", right = "" },
             disabled_filetypes = {"alpha", "dashboard", "NvimTree", "Outline"},
-            always_divide_middle = true
+            always_divide_middle = true,
+            -- globalstatus = false,
         },
         sections = {
             lualine_a = {branch, diagnostics},

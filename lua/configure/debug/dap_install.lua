@@ -18,7 +18,7 @@ plugin.core.config = function()
           numhl = "",
         },
         rejected = {
-          text = "",
+          text = "⏧",
           texthl = "LspDiagnosticsSignHint",
           linehl = "",
           numhl = "",
