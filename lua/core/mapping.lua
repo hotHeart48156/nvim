@@ -24,7 +24,7 @@ global_mapping.register = function(map)
         expr = nil,
         option = { -- see https://neovim.io/doc/user/map.html#:map-arguments
             --buffer = false, -- first is buffer ,buffer will be effective in the currnet buffer only
-            nowait = true, -- this attribute may effctive in global mapping or buffer mapping 
+            nowait = false, -- this attribute may effctive in global mapping or buffer mapping 
             -- must start with ',' ,nvim does not wait for more characters to be typed,
             silent = true, -- to defing a mapping which will not be echoed on command line 
             -- after exec command not show any result 
@@ -96,14 +96,14 @@ global_mapping.register({
 -- quit start ----
 global_mapping.register({
     mode = {'n'},
-    key = "<leader>qa",
-    action = {':qa<cr>'},
+    key = "<S-q>",
+    action = {":q<cr>"},
     short_desc = "common"
 })
 global_mapping.register({
     mode = {"n"},
-    key = "<leader>qw",
-    action = {':qaw<cr>'},
+    key = "QW",
+    action = {":qaw<cr>"},
     short_desc = "Directly Quit After Write"
 })
 -- quit end ----
