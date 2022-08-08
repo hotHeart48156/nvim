@@ -1,9 +1,9 @@
 local plugin = {}
 plugin.core = {"rcarriga/nvim-notify"}
 
-plugin.setup = function() end
+plugin.core.setup = function() end
 
-plugin.config = function()
+plugin.core.config = function()
     local status_ok, notify = pcall(require, "notify")
     if not status_ok then
         vim.notify("notify module not found!")
@@ -22,7 +22,7 @@ plugin.config = function()
         on_close = nil,
 
         -- Render function for notifications. See notify-render()
-        render = "default",
+        render = "minimal",
 
         -- Default timeout for notifications
         timeout = 5000,

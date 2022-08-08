@@ -1,26 +1,13 @@
 local plugin = {}
 
-plugin.core = {
-    "marko-cerovac/material.nvim",
-    as = "material",
-    config = function() -- Specifies code to run after this plugin is loaded
-    end
-}
+plugin.core = {"marko-cerovac/material.nvim"}
 
 plugin.mapping = function()
 
 end
 
-plugin.core.setup = function(theme)
-    vim.cmd("packadd material")
-    if vim.g.theme == "light" then
-        vim.g.material_style = 'Lighter '
-    elseif vim.g.theme == 'midium' then
-        vim.g.material_style = 'palenight'
-    else
-        vim.g.material_style = 'darker'
-    end
-    vim.cmd("colorscheme material")
+plugin.core.setup = function()
+
 end
 
 plugin.core.config = function()
@@ -37,7 +24,7 @@ plugin.core.config = function()
         },
 
         italics = {
-            comments = false, -- Enable italic comments
+            comments = true, -- Enable italic comments
             keywords = false, -- Enable italic keywords
             functions = false, -- Enable italic functions
             strings = false, -- Enable italic strings
@@ -69,5 +56,24 @@ plugin.core.config = function()
 
         custom_highlights = {} -- Overwrite highlights with your own
     })
+    -- vim.cmd("packadd material")
+    if vim.g.theme == 'light' then
+        vim.g.material_style = 'lighter'
+    elseif vim.g.theme == 'midium' then
+        vim.g.material_style = 'palenight'
+    else
+        vim.g.material_style = 'darker'
+    end
+    vim.cmd("colorscheme material")
+    -- Lua:
+    vim.api.nvim_set_keymap('n', '<leader>ml', [[<Cmd>lua require('material.functions').change_style('lighter')<CR>]], {
+        noremap = true,
+        silent = true
+    })
+    vim.api.nvim_set_keymap('n', '<leader>md', [[<Cmd>lua require('material.functions').change_style('darker')<CR>]], {
+        noremap = true,
+        silent = true
+    })
+
 end
 return plugin

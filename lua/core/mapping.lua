@@ -236,9 +236,11 @@ global_mapping.register({
 global_mapping.register({
     mode = {"i"},
     key = "<C-S>",
-    action = {'<esc>:w<CR>'},
+    action = {'<esc>:w<CR>i'},
     short_desc = "Save"
 })
+
+
 global_mapping.setup = function()
     -- local plugin_mapping=require('')
 end

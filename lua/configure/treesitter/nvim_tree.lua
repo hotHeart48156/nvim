@@ -156,6 +156,30 @@ plugin.core.config = function()
             }
         }
     })
+    vim.api.nvim_set_keymap('n', 'to', ":NvimTreeOpen<CR>", {
+        noremap = true,
+        silent = true
+    })
+    vim.api.nvim_set_keymap('n', 'tc', ":NvimTreeClose<CR>", {
+        noremap = true,
+        silent = true
+    })
+    vim.api.nvim_set_keymap('n', 'tfo', ":NvimTreeFocus<CR>", {
+        noremap = true,
+        silent = true
+    })
+    vim.api.nvim_set_keymap('n', 'ts', ":NvimTreeResize<CR>", {
+        noremap = true,
+        silent = true
+    })
+    vim.api.nvim_set_keymap('n', 'tr', ":NvimTreeRefresh<CR>", {
+        noremap = true,
+        silent = true
+    })
+    vim.api.nvim_set_keymap('n', 'tf', ":NvimTreeFindFile<CR>", {
+        noremap = true,
+        silent = true
+    })
 end
 
 plugin.mapping = function() end

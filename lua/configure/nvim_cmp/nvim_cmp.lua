@@ -111,7 +111,10 @@ plugin.core.config = function()
         },
         sources = nvim_cmp.config.sources({{--不要配置相关的源
             name = 'nvim_lsp'
-        }, {
+        },
+        {
+          name = 'orgmode'
+        },{
             name = "luasnip"
         }, {
             name = "path"

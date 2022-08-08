@@ -3,15 +3,14 @@ local plugin = {}
 plugin.core = {"nvim-treesitter/nvim-treesitter"}
 
 plugin.core.setup = function()
-end     
+end
 plugin.core.config = function()
 	require('nvim-treesitter.configs').setup{
-	   ensure_installed = { "c", "lua", "rust" ,"cpp"},
-           sync_install = true,
-
+	   ensure_installed = { "c", "lua", "rust" ,"cpp",'org'},
+     sync_install = true,
 	   highlight={
 	     enable=true,
-	     additional_vim_regex_highlighting = false,
+	     additional_vim_regex_highlighting = {'org'},
 	   },
 	   incremental_selection = {
     		enable = true,
@@ -26,10 +25,10 @@ plugin.core.config = function()
 		   enable=true
 	   }
 	}
-end     
+end
 plugin.core.run=':TSUpdate'
 
 plugin.mapping = function()
-end   
+end
 
 return plugin

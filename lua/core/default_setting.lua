@@ -41,6 +41,7 @@ for key,value in pairs(default_setting['opt']) do
     vim.o[key]=value
 end
 
-for ket,value in pairs(default_setting['global']) do
+for key,value in pairs(default_setting['global']) do
     vim.g.key=value
+	-- print("hello"..tostring(key)..vim.g.key)
 end
