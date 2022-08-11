@@ -1,6 +1,14 @@
 local plugin = {}
-plugin.core = {"kyazdani42/nvim-tree.lua"}
-plugin.core.setup = function() end
+plugin.core = {
+  "kyazdani42/nvim-tree.lua",
+  requires = {
+    'kyazdani42/nvim-web-devicons', -- optional, for file icons
+  },
+  tag = 'nightly' -- optional, updated every week. (see issue #1193)
+}
+plugin.core.setup = function(
+
+) end
 
 plugin.core.config = function()
 
@@ -40,26 +48,26 @@ plugin.core.config = function()
         {key = ".", action = "run_file_command"}
     }
 
-    vim.g.nvim_tree_icons = {
-        default = "⚛",
-        symlink = "☯",
-        git = {
-            unstaged = "✗",
-            staged = "✓",
-            unmerged = "⛛",
-            renamed = "➜",
-            deleted = "❂",
-            untracked = "★",
-            ignored = "◌"
-        },
-        folder = {
-            default = "📂",
-            open = "✼",
-            empty = "📁",
-            empty_open = "∅",
-            symlink = "☯"
-        }
-    }
+    -- vim.g.nvim_tree_icons = {
+    --     default = "⚛",
+    --     symlink = "☯",
+    --     git = {
+    --         unstaged = "✗",
+    --         staged = "✓",
+    --         unmerged = "⛛",
+    --         renamed = "➜",
+    --         deleted = "❂",
+    --         untracked = "★",
+    --         ignored = "◌"
+    --     },
+    --     folder = {
+    --         default = "📂",
+    --         open = "✼",
+    --         empty = "📁",
+    --         empty_open = "∅",
+    --         symlink = "☯"
+    --     }
+    -- }
 
     local status_ok, nvim_tree = pcall(require, "nvim-tree")
     if not status_ok then
