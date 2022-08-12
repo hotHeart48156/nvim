@@ -9,13 +9,9 @@ FEATURES['markdown']=true
 FEATURES['treesitter']=true
 FEATURES['snippets']=true
 FEATURES['misc']=true
-vim.g.theme = 'light'
-SERVERS = { "sumneko_lua","pyright","rust_analyzer" }
+vim.g.theme = 'dark'
+SERVERS = { "sumneko_lua","pyright","rust_analyzer","clangd","cmake" }
 require ('core.default_setting')
 require('core.plugins').setup()
 require('core.mapping').setup()
 require('core.plugins').create_mapping()
-
-
-
-
