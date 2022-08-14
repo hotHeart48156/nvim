@@ -18,6 +18,9 @@ plugin.core = {"williamboman/nvim-lsp-installer", {--https://github.com/williamb
                 opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
             end
             lspconfig[server].setup(opts)
+            lspconfig.vimls.setup{
+                on_attach = require("aerial").on_attach,
+              }
         end
 
     end

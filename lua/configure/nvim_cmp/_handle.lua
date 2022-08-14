@@ -42,7 +42,7 @@ handlers.setup = function()
         border = 'rounded'
     })
     vim.lsp.handlers['textDocument/signtureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-        border = 'rounder'
+        border = 'rounded'
     })
 end
 
