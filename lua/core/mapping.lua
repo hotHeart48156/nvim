@@ -24,10 +24,10 @@ global_mapping.register = function(map)
         expr = nil,
         option = { -- see https://neovim.io/doc/user/map.html#:map-arguments
             --buffer = false, -- first is buffer ,buffer will be effective in the currnet buffer only
-            nowait = false, -- this attribute may effctive in global mapping or buffer mapping 
+            nowait = false, -- this attribute may effctive in global mapping or buffer mapping
             -- must start with ',' ,nvim does not wait for more characters to be typed,
-            silent = true, -- to defing a mapping which will not be echoed on command line 
-            -- after exec command not show any result 
+            silent = true, -- to defing a mapping which will not be echoed on command line
+            -- after exec command not show any result
             script = false,
             --              the mapping will only remap characters
             -- inth        e {rhs} using mappings that were defined local to a script, starting with
@@ -242,6 +242,147 @@ global_mapping.register({
 
 
 global_mapping.setup = function()
+  vim.api.nvim_set_keymap('n', 'ws', ":split<CR>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'wv', ":vsplit<cr>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'wd', ":q<cr>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'wo', ":only<cr>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'ww', "<c-w><c-w>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'wl', "<c-w><c-l>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'wh', "<c-w><c-h>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'wk', "<c-w><c-k>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', '<C-Up>', ":resize -2<CR>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<C-Up>', "<ESC>:resize -2<CR>i", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', '<C-Down>', ":resize +2<CR>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<C-Down>', "<ESC>:resize -2<CR>i", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', '<C-Left>', "<C-w><", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<C-Left>', "<ESC><C-w><i", {
+      noremap = true,
+      silent = true
+  })
+
+  vim.api.nvim_set_keymap('n', '<C-Right>', "<C-w>>2", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<C-Right>', "<ESC><C-w>>2i", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<C-s>', "<esc>:w<CR>i", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<C-o>', "<esc>o", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<C-q>', "<esc>:wq<CR>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', '<C-s>', ":w<CR>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'qq', ":q<cr>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'qc', ":q!<cr>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'qw', ":wq<cr>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'rd', ":read !date <cr>", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'ye', "y$", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', '<leader>ye', "<esc>y$i", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'ys', "y^", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<leader>ys', "<esc>y^i", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', 'y', "yy", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<leader>y', "<esc>yyi", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<leader>p', "<esc>pi", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<C-a>', "<ESC>^i", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', '<C-a>', "^", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('i', '<C-e>', "<ESC>$a", {
+      noremap = true,
+      silent = true
+  })
+  vim.api.nvim_set_keymap('n', '<C-e>', "$", {
+      noremap = true,
+      silent = true
+  })
     -- local plugin_mapping=require('')
 end
 

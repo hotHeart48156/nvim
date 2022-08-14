@@ -1,7 +1,7 @@
 return {
   cmake={
     "command":"cmake-language-server",
-    "filetypes": ["cmake"],
+    "filetypes": ["cmake","txt"],
     "rootPatterns": [
         "build/"
       ],
