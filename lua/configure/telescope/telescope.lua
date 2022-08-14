@@ -122,8 +122,8 @@ plugin.core.config = function()
             find_files = {
                 theme = "dropdown",
                 previewer = false,
-                -- find_command = { "find", "-type", "f" },
-                find_command = {"fd"}
+                find_command = { "find", "-type", "f" },
+                -- find_command = { "fd", "-H" , "-I"}
             }
 
             -- Default configuration for builtin pickers goes here:
@@ -135,6 +135,23 @@ plugin.core.config = function()
             -- builtin picker
         },
         extensions = {
+          project = {
+            base_dirs = {
+            '~/dev/src',
+            {'~/dev/src2'},
+            {'~/dev/src3', max_depth = 4},
+            {path = '~/dev/src4'},
+            {path = '~/dev/src5', max_depth = 2},
+            },
+            hidden_files = true, -- default: false
+            theme = "dropdown"
+          },
+          media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+          filetypes = {"png", "webp", "jpg", "jpeg"},
+          find_cmd = "rg" -- find command (defaults to `fd`)
+          },
             -- Your extension configuration goes here:
             -- extension_name = {
             --   extension_config_key = value,
@@ -158,9 +175,15 @@ plugin.core.config = function()
             },
             ["ui-select"] = {require("telescope.themes").get_dropdown {
                 -- even more opts
-            }}
+            }},
+            live_grep_args  = {
+              auto_quoting = false, -- enable/disable auto-quoting
+            },
+
         }
     }
+
+-- telescope.load_extension('vim_bookmarks')
     vim.api.nvim_set_keymap('n', '<leader>ff', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], {
         noremap = true,
         silent = true
@@ -178,10 +201,14 @@ plugin.core.config = function()
         silent = true
     })
     -- telescope.load_extension("frecency")
+    telescope.load_extension('dap')
+    telescope.load_extension("live_grep_args")
     telescope.load_extension('fzf')
     telescope.load_extension("ui-select")
     -- telescope.load_extension('dap')
     telescope.load_extension('vim_bookmarks')
+    telescope.load_extension('project')
+    telescope.load_extension('media_files')
 end
 
 plugin.mapping = function()

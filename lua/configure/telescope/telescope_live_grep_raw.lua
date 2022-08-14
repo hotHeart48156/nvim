@@ -1,13 +1,13 @@
 local plugin = {}
 
-plugin.core = {"nvim-telescope/telescope-rg.nvim"}
+plugin.core = {"nvim-telescope/telescope-live-grep-args.nvim"}
 
 plugin.core.setup = function()
-end     
+end
 
 plugin.core.config = function()
-end     
+end
 
 plugin.mapping = function()
-end   
+end
 return plugin
