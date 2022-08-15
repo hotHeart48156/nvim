@@ -77,13 +77,10 @@ plugin.core.config = function()
     ---@param dir number 1 for forward, -1 for backward; defaults to 1
     ---@return boolean true if a jumpable luasnip field is found while inside a snippet
     local jumpable = function(dir)
-        print("1svsvsvs")
         local luasnip_ok, luasnip = pcall(require, "luasnip")
         if not luasnip_ok then
             return
         end
-        print("2")
-    
         local win_get_cursor = vim.api.nvim_win_get_cursor
         local get_current_buf = vim.api.nvim_get_current_buf
     
@@ -92,17 +89,14 @@ plugin.core.config = function()
             if not luasnip.session.current_nodes then
                 return false
             end
-            print("here1")
     
             local node = luasnip.session.current_nodes[get_current_buf()]
             if not node then
                 return false
             end
-            print("here2")
             local snip_begin_pos, snip_end_pos = node.parent.snippet.mark:pos_begin_end()
             local pos = win_get_cursor(0)
             pos[1] = pos[1] - 1 -- LuaSnip is 0-based not 1-based like nvim for rows
-            print("here3")
             return pos[1] >= snip_begin_pos[1] and pos[1] <= snip_end_pos[1]
         end
     
@@ -113,7 +107,6 @@ plugin.core.config = function()
             if not luasnip.session.current_nodes then
                 return false
             end
-            print("here4")
     
             local pos = win_get_cursor(0)
             pos[1] = pos[1] - 1
@@ -121,7 +114,6 @@ plugin.core.config = function()
             if not node then
                 return false
             end
-            print("here5")
     
             local snippet = node.parent.snippet
             local exit_node = snippet.insert_nodes[0]
@@ -136,7 +128,6 @@ plugin.core.config = function()
                     return false
                 end
             end
-            print("here6")
     
             node = snippet.inner_first:jump_into(1, true)
             while node ~= nil and node.next ~= nil and node ~= snippet do
@@ -144,7 +135,6 @@ plugin.core.config = function()
                 local next_pos = n_next and n_next.mark:pos_begin()
                 local candidate = n_next ~= snippet and next_pos and (pos[1] < next_pos[1]) or
                                       (pos[1] == next_pos[1] and pos[2] < next_pos[2])
-                print("here7")
                 -- Past unmarked exit node, exit early
                 if n_next == nil or n_next == snippet.next then
                     snippet:remove_from_jumplist()
@@ -167,7 +157,6 @@ plugin.core.config = function()
                     return false
                 end
             end
-            print("here8")
             -- No  candidate, but have an exit node
             if exit_node then
                 -- to jump to the exit node, seek to snippet
@@ -178,12 +167,10 @@ plugin.core.config = function()
             -- No exit node, exit from snippet
             snippet:remove_from_jumplist()
             luasnip.session.current_nodes[get_current_buf()] = nil
-            print("here9")
             return false
         end
     
         if dir == -1 then
-            print("here10")
             return inside_snippet() and luasnip.jumpable(-1)
         else
             return inside_snippet() and seek_luasnip_cursor_node() and luasnip.jumpable()
@@ -246,7 +233,6 @@ plugin.core.config = function()
             ["<C-f>"] = nvim_cmp.mapping.scroll_docs(4),
             -- TODO: potentially fix emmet nonsense
             ["<Tab>"] = nvim_cmp.mapping(function(fallback)
-                vim.notify("<TAb>")
                 if nvim_cmp.visible() then
                     nvim_cmp.select_next_item()
                 elseif luasnip.expandable() then
@@ -281,12 +267,10 @@ plugin.core.config = function()
                     return
                 end
                 if jumpable(1) then
-                    print("vmfkml")
                     if not luasnip.jump(1) then
                         fallback()
                     end
                 else
-                    print("156156")
                     fallback()
                 end
             end)
@@ -333,7 +317,6 @@ plugin.core.config = function()
             name = 'buffer'
         }}
     })
-    vim.notify("buffer exec")
     nvim_cmp.setup.cmdline('?', {
         mapping = nvim_cmp.mapping.preset.cmdline(),
         sources = {{
