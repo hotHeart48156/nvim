@@ -6,7 +6,7 @@ plugin.core.setup = function()
 end
 plugin.core.config = function()
 	require('nvim-treesitter.configs').setup{
-	   ensure_installed = { "cpp", "c", "python", "go", "markdown", "json", "yaml", "html", "lua" },
+	   ensure_installed = { "cpp", "c", "python", "go", "markdown", "json", "yaml", "html", "lua" ,"org"},
      sync_install = true,
 	   highlight={
 	     enable=true,
