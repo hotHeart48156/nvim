@@ -94,7 +94,7 @@ plugin.core.config = function()
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('i', '<C>[', "<ESC>:BufferLineCycleNext<CR>i", {
+    vim.api.nvim_set_keymap('i', '<leader>n', "<ESC>:BufferLineCycleNext<CR>i", {
         noremap = true,
         silent = true
     })
@@ -102,7 +102,7 @@ plugin.core.config = function()
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('i', '<C>]', "<ESC>:BufferLineCyclePrev<CR>i", {
+    vim.api.nvim_set_keymap('i', '<leader>p', "<ESC>:BufferLineCyclePrev<CR>i", {
         noremap = true,
         silent = true
     })
