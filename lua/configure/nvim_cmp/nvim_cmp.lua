@@ -136,7 +136,9 @@ plugin.core.config = function()
     end
     require('luasnip.loaders.from_vscode').lazy_load()
     -- require('luasnip.loaders.from_vscode').load({paths={'path'}})
-    local nvim_cmp = require 'cmp'
+    local nvim_cmp = require("cmp")
+    -- vim.notify("yyes")
+    -- vim.notify(nvim_cmp.setup==nil)
     local kind_icons = {
         Class = "❂ ",
         Color = "⛯ ",
@@ -266,10 +268,10 @@ plugin.core.config = function()
 
                 if jumpable(1) then
                     if not luasnip.jump(1) then
-                        -- fallback()
+                        fallback()
                     end
                 else
-                    -- fallback()
+                    fallback()
                 end
             end)
         },
@@ -299,6 +301,7 @@ plugin.core.config = function()
             name = "crates"
         }})
     }
+    nvim_cmp.setup(cmp_config)
 
     nvim_cmp.setup.filetype({'markdown', 'help'}, {
         sources = {{
@@ -307,40 +310,40 @@ plugin.core.config = function()
             name = 'buffer'
         }}
     })
-    nvim_cmp.setup.cmdline('/', {
-        mapping = nvim_cmp.mapping.preset.cmdline(),
-        sources = {{
-            name = 'buffer'
-        }}
-    })
 
-    nvim_cmp.setup.cmdline('?', {
-        mapping = nvim_cmp.mapping.preset.cmdline(),
+    -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+    cmp.setup.cmdline('/', {
+        mapping = cmp.mapping.preset.cmdline(),
         sources = {{
             name = 'buffer'
         }}
     })
-    nvim_cmp.setup.cmdline('?', {
-        mapping = nvim_cmp.mapping.preset.cmdline(),
+    vim.notify("buffer exec")
+    cmp.setup.cmdline('?', {
+        mapping = cmp.mapping.preset.cmdline(),
         sources = {{
             name = 'buffer'
         }}
     })
 
     -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-    nvim_cmp.setup.cmdline(':', {
-        mapping = nvim_cmp.mapping.preset.cmdline(),
-        sources = {{
+    cmp.setup.cmdline(':', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({{
             name = 'cmdline'
-        }, {
+        }}, {{
             name = 'path'
-        }}
+        }})
     })
+
+    -- disable autocompletion for guihua
+    vim.cmd("autocmd FileType guihua lua require('cmp').setup.buffer { enabled = false }")
+    vim.cmd("autocmd FileType guihua_rust lua require('cmp').setup.buffer { enabled = false }")
     nvim_cmp.setup({
         enabled = function()
             buftype = vim.api.nvim_buf_get_option(0, "buftype")
             if buftype == "prompt" then
-                -- vim.notify(buftype)
+                vim.notify(buftype)
                 return false
             end
         end
