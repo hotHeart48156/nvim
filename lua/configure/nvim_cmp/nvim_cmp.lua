@@ -299,7 +299,7 @@ plugin.core.config = function()
             name = "crates"
         }})
     }
-    
+
     nvim_cmp.setup.filetype({'markdown', 'help'}, {
         sources = {{
             name = 'path'
@@ -337,14 +337,14 @@ plugin.core.config = function()
         }}
     })
     nvim_cmp.setup({
-        enabled = 
-          function ()
-                 buftype = vim.api.nvim_buf_get_option(0, "buftype")
-                 if buftype == "prompt" then return false end
-              end
+        enabled = function()
+            buftype = vim.api.nvim_buf_get_option(0, "buftype")
+            if buftype == "prompt" then
+                -- vim.notify(buftype)
+                return false
+            end
+        end
     })
-    
-    
 
 end
 plugin.mapping = function()
