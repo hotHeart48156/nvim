@@ -1,5 +1,5 @@
 local all_mode = {'', -- empty string :help mapmode-nvo Normal Visual Select Operator-pending :map
-'n', -- help mapmode-n Normal :nmap
+'', -- help mapmode-n Normal :nmap
 'v', -- help mapmode-v Visual and Select :vmap
 's', -- help mapmode-s Select :smap
 'x', -- help mapmode-x Visual :xmap

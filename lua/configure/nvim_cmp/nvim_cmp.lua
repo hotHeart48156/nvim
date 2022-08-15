@@ -110,7 +110,16 @@ local function jumpable(dir)
         return inside_snippet() and seek_luasnip_cursor_node() and luasnip.jumpable()
     end
 end
+local is_emmet_active = function()
+    local clients = vim.lsp.buf_get_clients()
 
+    for _, client in pairs(clients) do
+        if client.name == "emmet_ls" then
+            return true
+        end
+    end
+    return false
+end
 local plugin = {}
 plugin.core = {
     "hrsh7th/nvim-cmp", -- https://github.com/hrsh7th/nvim-cmp/blob/main/doc/cmp.txt
@@ -219,11 +228,10 @@ plugin.core.config = function()
             ["<C-j>"] = nvim_cmp.mapping.select_next_item(),
             ["<C-d>"] = nvim_cmp.mapping.scroll_docs(-4),
             ["<C-f>"] = nvim_cmp.mapping.scroll_docs(4),
-            ["<C-p>"] = nvim_cmp.mapping.complete(),
-            ["<C-e>"] = nvim_cmp.mapping.abort(),
+            -- TODO: potentially fix emmet nonsense
             ["<Tab>"] = nvim_cmp.mapping(function(fallback)
                 if nvim_cmp.visible() then
-                  nvim_cmp.select_next_item()
+                    nvim_cmp.select_next_item()
                 elseif luasnip.expandable() then
                     luasnip.expand()
                 elseif jumpable(1) then
@@ -238,13 +246,16 @@ plugin.core.config = function()
             end, {"i", "s"}),
             ["<S-Tab>"] = nvim_cmp.mapping(function(fallback)
                 if nvim_cmp.visible() then
-                  nvim_cmp.select_prev_item()
+                    nvim_cmp.select_prev_item()
                 elseif jumpable(-1) then
                     luasnip.jump(-1)
                 else
                     fallback()
                 end
             end, {"i", "s"}),
+
+            ["<C-p>"] = nvim_cmp.mapping.complete(),
+            ["<C-e>"] = nvim_cmp.mapping.abort(),
             ["<CR>"] = nvim_cmp.mapping(function(fallback)
                 if nvim_cmp.visible() and nvim_cmp.confirm(cmp_config.confirm_opts) then
                     if jumpable(1) then
@@ -255,10 +266,10 @@ plugin.core.config = function()
 
                 if jumpable(1) then
                     if not luasnip.jump(1) then
-                        fallback()
+                        -- fallback()
                     end
                 else
-                    fallback()
+                    -- fallback()
                 end
             end)
         },
@@ -288,6 +299,7 @@ plugin.core.config = function()
             name = "crates"
         }})
     }
+    
     nvim_cmp.setup.filetype({'markdown', 'help'}, {
         sources = {{
             name = 'path'
@@ -308,6 +320,12 @@ plugin.core.config = function()
             name = 'buffer'
         }}
     })
+    nvim_cmp.setup.cmdline('?', {
+        mapping = nvim_cmp.mapping.preset.cmdline(),
+        sources = {{
+            name = 'buffer'
+        }}
+    })
 
     -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
     nvim_cmp.setup.cmdline(':', {
@@ -318,7 +336,15 @@ plugin.core.config = function()
             name = 'path'
         }}
     })
-    nvim_cmp.setup(cmp_config)
+    nvim_cmp.setup({
+        enabled = 
+          function ()
+                 buftype = vim.api.nvim_buf_get_option(0, "buftype")
+                 if buftype == "prompt" then return false end
+              end
+    })
+    
+    
 
 end
 plugin.mapping = function()

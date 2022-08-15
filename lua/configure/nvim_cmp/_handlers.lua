@@ -57,6 +57,7 @@ local function lsp_highlight_document(client)
     )
   end
 end
+-- autocmd FileType  TelescopePrompt  lua require'cmp'.setup.buffer{completion = { autocomplete = false }}
 
 local function lsp_keymaps(bufnr)
   local opts = { noremap = true, silent = true }
