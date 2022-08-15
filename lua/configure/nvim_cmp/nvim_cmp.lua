@@ -136,7 +136,7 @@ plugin.core.config = function()
     end
     require('luasnip.loaders.from_vscode').lazy_load()
     -- require('luasnip.loaders.from_vscode').load({paths={'path'}})
-    local nvim_cmp = require("cmp")
+    local nvim_cmp = require "cmp"
     -- vim.notify("yyes")
     -- vim.notify(nvim_cmp.setup==nil)
     local kind_icons = {
@@ -301,7 +301,6 @@ plugin.core.config = function()
             name = "crates"
         }})
     }
-    nvim_cmp.setup(cmp_config)
 
     nvim_cmp.setup.filetype({'markdown', 'help'}, {
         sources = {{
@@ -312,24 +311,24 @@ plugin.core.config = function()
     })
 
     -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-    cmp.setup.cmdline('/', {
-        mapping = cmp.mapping.preset.cmdline(),
+    nvim_cmp.setup.cmdline('/', {
+        mapping = nvim_cmp.mapping.preset.cmdline(),
         sources = {{
             name = 'buffer'
         }}
     })
     vim.notify("buffer exec")
-    cmp.setup.cmdline('?', {
-        mapping = cmp.mapping.preset.cmdline(),
+    nvim_cmp.setup.cmdline('?', {
+        mapping = nvim_cmp.mapping.preset.cmdline(),
         sources = {{
             name = 'buffer'
         }}
     })
 
     -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-    cmp.setup.cmdline(':', {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources({{
+    nvim_cmp.setup.cmdline(':', {
+        mapping = nvim_cmp.mapping.preset.cmdline(),
+        sources = nvim_cmp.config.sources({{
             name = 'cmdline'
         }}, {{
             name = 'path'
@@ -337,8 +336,8 @@ plugin.core.config = function()
     })
 
     -- disable autocompletion for guihua
-    vim.cmd("autocmd FileType guihua lua require('cmp').setup.buffer { enabled = false }")
-    vim.cmd("autocmd FileType guihua_rust lua require('cmp').setup.buffer { enabled = false }")
+    -- vim.cmd("autocmd FileType guihua lua require('cmp').setup.buffer { enabled = false }")
+    -- vim.cmd("autocmd FileType guihua_rust lua require('cmp').setup.buffer { enabled = false }")
     nvim_cmp.setup({
         enabled = function()
             buftype = vim.api.nvim_buf_get_option(0, "buftype")
@@ -348,6 +347,7 @@ plugin.core.config = function()
             end
         end
     })
+    nvim_cmp.setup(cmp_config)
 
 end
 plugin.mapping = function()
