@@ -315,7 +315,7 @@ global_mapping.setup = function()
       noremap = true,
       silent = true
   })
-  vim.api.nvim_set_keymap('i', '<C-q>', "<esc>:wq<CR>", {
+  vim.api.nvim_set_keymap('i', '<C-q>', "<esc>:wqall<CR>", {
       noremap = true,
       silent = true
   })
@@ -323,7 +323,7 @@ global_mapping.setup = function()
       noremap = true,
       silent = true
   })
-  vim.api.nvim_set_keymap('n', 'qq', ":q<cr>", {
+  vim.api.nvim_set_keymap('n', 'qq', ":wqall<cr>", {
       noremap = true,
       silent = true
   })
@@ -331,7 +331,7 @@ global_mapping.setup = function()
       noremap = true,
       silent = true
   })
-  vim.api.nvim_set_keymap('n', 'qw', ":wq<cr>", {
+  vim.api.nvim_set_keymap('n', 'q', ":wq<cr>", {
       noremap = true,
       silent = true
   })

@@ -1,7 +1,8 @@
 local plugin = {}
 plugin.core = {"rcarriga/nvim-notify"}
 
-plugin.core.setup = function() end
+plugin.core.setup = function()
+end
 
 plugin.core.config = function()
     local status_ok, notify = pcall(require, "notify")
@@ -10,7 +11,6 @@ plugin.core.config = function()
         return
     end
 
-    vim.notify = notify
     notify.setup({
         -- Animation style (see below for details)
         -- stages = "fade_in_slide_out",
@@ -48,7 +48,9 @@ plugin.core.config = function()
         --     TRACE = "☣"
         -- }
     })
+    vim.notify = notify
 end
 
-plugin.mapping = function() end
+plugin.mapping = function()
+end
 return plugin

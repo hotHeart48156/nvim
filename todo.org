@@ -1,1 +1,4 @@
-* camc
+* dap ui
+* ftplugin
+* git
+* cmake

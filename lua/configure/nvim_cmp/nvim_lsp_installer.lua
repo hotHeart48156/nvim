@@ -1,7 +1,7 @@
 local plugin = {}
 plugin.core = {"williamboman/nvim-lsp-installer", {--https://github.com/williamboman/nvim-lsp-installer/blob/main/doc/nvim-lsp-installer.txt
     "neovim/nvim-lspconfig",
-    config = function()
+     config = function()
         require("nvim-lsp-installer").setup {} -- must exec otherwise no clinet attach on buffer
         require('configure.nvim_cmp._handlers').setup()
         local lspconfig = require("lspconfig")
