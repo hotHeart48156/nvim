@@ -107,7 +107,6 @@ plugin.core.config = function()
             if not luasnip.session.current_nodes then
                 return false
             end
-    
             local pos = win_get_cursor(0)
             pos[1] = pos[1] - 1
             local node = luasnip.session.current_nodes[get_current_buf()]
@@ -124,7 +123,6 @@ plugin.core.config = function()
                 if (pos[1] > exit_pos_end[1]) or (pos[1] == exit_pos_end[1] and pos[2] > exit_pos_end[2]) then
                     snippet:remove_from_jumplist()
                     luasnip.session.current_nodes[get_current_buf()] = nil
-    
                     return false
                 end
             end
@@ -139,7 +137,6 @@ plugin.core.config = function()
                 if n_next == nil or n_next == snippet.next then
                     snippet:remove_from_jumplist()
                     luasnip.session.current_nodes[get_current_buf()] = nil
-    
                     return false
                 end
     
@@ -153,7 +150,6 @@ plugin.core.config = function()
                 if not ok then
                     snippet:remove_from_jumplist()
                     luasnip.session.current_nodes[get_current_buf()] = nil
-    
                     return false
                 end
             end
@@ -233,6 +229,7 @@ plugin.core.config = function()
             ["<C-f>"] = nvim_cmp.mapping.scroll_docs(4),
             -- TODO: potentially fix emmet nonsense
             ["<Tab>"] = nvim_cmp.mapping(function(fallback)
+                local nvim_cmp = require "cmp"
                 local luasnip = require "luasnip"
                 
                 if nvim_cmp.visible() then
@@ -264,6 +261,8 @@ plugin.core.config = function()
             ["<C-p>"] = nvim_cmp.mapping.complete(),
             ["<C-e>"] = nvim_cmp.mapping.abort(),
             ["<CR>"] = nvim_cmp.mapping(function(fallback)
+                local nvim_cmp = require "cmp"
+                local luasnip = require "luasnip"
                 if nvim_cmp.visible() and nvim_cmp.confirm(cmp_config.confirm_opts) then
                     if jumpable(1) then
                         luasnip.jump(1)
@@ -274,6 +273,8 @@ plugin.core.config = function()
                     if not luasnip.jump(1) then
                         fallback()
                     end
+                    print("c")
+                    return
                 else
                     fallback()
                 end
