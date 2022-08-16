@@ -233,6 +233,8 @@ plugin.core.config = function()
             ["<C-f>"] = nvim_cmp.mapping.scroll_docs(4),
             -- TODO: potentially fix emmet nonsense
             ["<Tab>"] = nvim_cmp.mapping(function(fallback)
+                local luasnip = require "luasnip"
+                
                 if nvim_cmp.visible() then
                     nvim_cmp.select_next_item()
                 elseif luasnip.expandable() then
@@ -248,6 +250,8 @@ plugin.core.config = function()
                 end
             end, {"i", "s"}),
             ["<S-Tab>"] = nvim_cmp.mapping(function(fallback)
+                local nvim_cmp = require "cmp"
+                local luasnip = require "luasnip"
                 if nvim_cmp.visible() then
                     nvim_cmp.select_prev_item()
                 elseif jumpable(-1) then
