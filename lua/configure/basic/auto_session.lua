@@ -1,7 +1,5 @@
 local plugin = {}
-
 plugin.core = {"Shatur/neovim-session-manager"}
-
 plugin.core.setup = function()
 
 end

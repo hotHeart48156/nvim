@@ -20,6 +20,12 @@ plugin.core.config=function()
   vim.api.nvim_set_keymap('n', '<leader><leader>j', "<cmd>HopLine<cr>", {})
   vim.api.nvim_set_keymap('n', '<leader><leader>k', "<cmd>HopLine<cr>", {})
   vim.api.nvim_set_keymap('n', '<leader><leader>s', "<cmd>HopChar1<cr>", {})
+
+  vim.api.nvim_set_keymap('v', '<leader><leader>s', "<cmd>HopChar1<cr>", {})
+  vim.api.nvim_set_keymap('v', '<leader><leader>w', "<cmd>HopWord<cr>", {})
+
+  vim.api.nvim_set_keymap('i', '<leader><leader>s', "<cmd>HopChar1<cr>", {})
+  vim.api.nvim_set_keymap('i', '<leader><leader>w', "<cmd>HopWord<cr>", {})
 end
 plugin.core.setup=function() end
 -- plugin.core.config=function() end
