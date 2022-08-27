@@ -340,7 +340,7 @@ global_mapping.setup = function()
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('n', 'qqq', "<cmd>q!<cr>", {
+    vim.api.nvim_set_keymap('n', 'cc', "<cmd>q!<cr>", {
         noremap = true,
         silent = true
     })
