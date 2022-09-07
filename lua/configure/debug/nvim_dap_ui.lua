@@ -39,10 +39,10 @@ plugin.core.config = function()
   -- require("user.dap.dap-cpp")
   -- require("user.dap.di-go")
 
-  require("user.dap.dap-cpp")
-  require("user.dap.dap-go")
-  require("user.dap.dap-python")
-  require("user.dap.dap-lua")
+  require("configure.debug.config._dap_cpp")
+  require("configure.debug.config._dap_go")
+  require("configure.debug.config._dap_python")
+  require("configure.debug.config._dap_lua")
   
 end
 

@@ -44,7 +44,7 @@ dap.configurations.go = {
     program = "${file}",
     args = function()
       local input = vim.fn.input("Input args: ")
-      return require("user.dap.dap-util").str2argtable(input)
+      return require("configure.debug.config._utils").str2argtable(input)
     end,
   },
   {
