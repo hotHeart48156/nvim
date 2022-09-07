@@ -258,7 +258,7 @@ plugin.core.config = function()
                 end
             end, {"i", "s"}),
 
-            ["<C-p>"] = nvim_cmp.mapping.complete(),
+      --["<C-p>"] = nvim_cmp.mapping.complete(),
             ["<C-e>"] = nvim_cmp.mapping.abort(),
             ["<CR>"] = nvim_cmp.mapping(function(fallback)
                 local nvim_cmp = require "cmp"
