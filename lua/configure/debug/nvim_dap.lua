@@ -6,7 +6,7 @@ plugin.core.config = function()
   local opts = { noremap = true, silent = true }
   local keymap = vim.api.nvim_set_keymap
   -- debug
-keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint(); require'user.dap.dap-util'.store_breakpoints(true)<cr>", opts)
+keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint(); require'configure.debug.config._dap_util'.store_breakpoints(true)<cr>", opts)
 keymap("n", "<leader>dB", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", opts)
 -- keymap("n", "<leader>dr", "lua require'dap'.repl.open()<cr>", opts)
 keymap("n", "<F9>", "<cmd>lua require'dap'.run_last()<cr>", opts)
