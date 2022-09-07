@@ -344,6 +344,22 @@ global_mapping.setup = function()
         noremap = true,
         silent = true
     })
+    vim.api.nvim_set_keymap('n',"ssl","<cmd>SessionManager load_session<cr>",{
+        noremap = true,
+        silent=true
+    })
+    vim.api.nvim_set_keymap('n','ssd','<cmd>SessionManager delete_session<cr>',{
+        noremap = true,
+        silent=true
+    })
+    vim.api.nvim_set_keymap('n', 'qc', "<cmd>q!<cr>", {
+        noremap = true,
+        silent = true
+    })
+    vim.api.nvim_set_keymap('n', 'qc', "<cmd>q!<cr>", {
+        noremap = true,
+        silent = true
+    })
     vim.api.nvim_set_keymap('n', 'rd', ":read !date <cr>", {
         noremap = true,
         silent = true
