@@ -344,14 +344,25 @@ global_mapping.setup = function()
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('n',"ssl","<cmd>SessionManager load_session<cr>",{
+    vim.api.nvim_set_keymap('n',"<leader>sl","<cmd>SessionManager load_session<cr>",{
         noremap = true,
         silent=true
     })
-    vim.api.nvim_set_keymap('n','ssd','<cmd>SessionManager delete_session<cr>',{
+
+    vim.api.nvim_set_keymap('n','<leader>sd','<cmd>SessionManager delete_session<cr>',{
         noremap = true,
         silent=true
     })
+    vim.api.nvim_set_keymap('n','bpp','<cmd>BufferLinePick<cr>',{
+        noremap = true,
+        silent=true
+    })
+    
+    vim.api.nvim_set_keymap('n','bc','<cmd>BufferLinePickClose<cr>',{
+        noremap = true,
+        silent=true
+    })
+    
     vim.api.nvim_set_keymap('n', 'qc', "<cmd>q!<cr>", {
         noremap = true,
         silent = true
@@ -359,6 +370,10 @@ global_mapping.setup = function()
     vim.api.nvim_set_keymap('n', 'qc', "<cmd>q!<cr>", {
         noremap = true,
         silent = true
+    })
+    vim.api.nvim_set_keymap('i','<C-p>','<esc>pa',{
+        noremap = true,
+        silent=true
     })
     vim.api.nvim_set_keymap('n', 'rd', ":read !date <cr>", {
         noremap = true,
