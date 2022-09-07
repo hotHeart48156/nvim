@@ -30,7 +30,6 @@ plugin.core = {"williamboman/nvim-lsp-installer", {--https://github.com/williamb
 -- end
 
 plugin.core.config = function()
-    print("yes")
     local lsp_install = require('nvim-lsp-installer')
     lsp_install.setup({
         ensure_installed = SERVERS,
