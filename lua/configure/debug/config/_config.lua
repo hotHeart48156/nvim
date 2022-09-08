@@ -14,7 +14,7 @@ local function config_dapi_and_sign()
       numhl = "",
     },
     rejected = {
-      text = "",
+      text = "R",
       texthl = "LspDiagnosticsSignHint",
       linehl = "",
       numhl = "",
@@ -73,10 +73,10 @@ local function config_debuggers()
   -- require("user.dap.dap-cpp")
   -- require("user.dap.di-go")
 
-  require("user.dap.dap-cpp")
-  require("user.dap.dap-go")
-  require("user.dap.dap-python")
-  require("user.dap.dap-lua")
+  require("configure.debug.config._dap_cpp")
+  require("configure.debug.config._dap_go")
+  require("configure.debug.config._dap_python")
+  require("configure.debug.config._dap_lua")
   -- require("user.dap.dap-cpp")
   -- require("config.dap.python").setup()
   -- require("config.dap.rust").setup()

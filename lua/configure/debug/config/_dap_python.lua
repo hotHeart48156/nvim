@@ -2,7 +2,7 @@ local dap = require('dap')
 
 dap.adapters.python = {
   type = "executable",
-  command = "python",
+  command = "python3",
   args = { "-m", "debugpy.adapter" },
 }
 
@@ -18,11 +18,11 @@ dap.configurations.python = {
       return require("configure.debug.config._dap_util").str2argtable(input)
     end,
     pythonPath = function()
-      local venv_path = os.getenv("VIRTUAL_ENV")
-      if venv_path then
-        return venv_path .. "/bin/python"
-      end
-      return "/usr/bin/python"
+      -- local venv_path = os.getenv("VIRTUAL_ENV")
+      -- if venv_path then
+      --   return venv_path .. "/bin/python3"
+      -- end
+      return "/usr/bin/python3"
     end
   }
 }
