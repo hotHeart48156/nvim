@@ -7,7 +7,6 @@ dap.adapters.python = {
 }
 
 dap.configurations.python = {
-  -- launch exe
   {
     type = "python", -- the type here established the link to the adapter definition: `dap.adapters.python`
     request = "launch",
