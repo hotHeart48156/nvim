@@ -345,6 +345,7 @@ plugin.core.config = function()
     nvim_cmp.setup({
         enabled = function()
             buftype = vim.api.nvim_buf_get_option(0, "buftype")
+            vim.notify(buftype)
             if buftype == "prompt" then
                 vim.notify(buftype)
                 return false
