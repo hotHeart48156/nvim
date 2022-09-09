@@ -8,13 +8,12 @@ plugin.core.config = function()
     local db = require('dashboard')
     db.custom_center = {{
         icon = '  ',
-        desc = 'Recently latest session                  ',
+        desc = 'Recently latest session',
         shortcut = 'SPC s l',
         action = 'SessionLoad'
     }}
-    db.custom_header={"yes today"}
+    db.custom_header = {"yes today"}
     db.custom_footer = {"🐬 Have A Good Day!"}
-
 end
 
 plugin.mapping = function()
