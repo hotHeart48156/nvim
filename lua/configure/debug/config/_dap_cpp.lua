@@ -6,12 +6,6 @@ dap.adapters.cppdbg = {
     type = 'executable',
     command = dbg_path .. "extension/debugAdapters/bin/OpenDebugAD7"
 }
-
-dap.adapters.lldb = {
-    type = 'executable',
-    command = '/usr/bin/lldb-vscode-10', -- adjust as needed, must be absolute path
-    name = 'lldb'
-}
 dap.configurations.cpp = { -- launch exe
 {
     name = "Launch file",
