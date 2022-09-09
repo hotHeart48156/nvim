@@ -287,6 +287,10 @@ global_mapping.setup = function()
         noremap = true,
         silent = true
     })
+    vim.api.nvim_set_keymap('n', 'wj', "<c-w><c-j>", {
+        noremap = true,
+        silent = true
+    })
     vim.api.nvim_set_keymap('n', '<C-Up>', "<cmd>resize -2<CR>", {
         noremap = true,
         silent = true
