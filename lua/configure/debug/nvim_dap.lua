@@ -1,5 +1,5 @@
 local plugin = {}
-plugin.core = {"ravenxrz/nvim-dap"}
+plugin.core = {"mfussenegger/nvim-dap"}
 plugin.core.setup = function()
 end
 plugin.core.config = function()
