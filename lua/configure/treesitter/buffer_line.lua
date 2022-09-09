@@ -90,27 +90,35 @@ plugin.core.config = function()
             -- end
         }
     })
-    vim.api.nvim_set_keymap('n', 'bn', ":BufferLineCycleNext<CR>", {
+    vim.api.nvim_set_keymap('n', 'bn', "<cmd>BufferLineCycleNext<CR>", {
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('i', '<leader>n', "<ESC>:BufferLineCycleNext<CR>i", {
+    vim.api.nvim_set_keymap('n', 'bl', "<cmd>BufferLineCloseLeft<CR>", {
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('n', 'bp', ":BufferLineCyclePrev<CR>", {
+    vim.api.nvim_set_keymap('n', 'br', "<cmd>BufferLineCloseRight<CR>", {
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('i', '<leader>p', "<ESC>:BufferLineCyclePrev<CR>i", {
+    vim.api.nvim_set_keymap('i', '<leader>n', "<cmd>BufferLineCycleNext<CR>", {
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('n', 'be', ":BufferLineSortByExtension<CR>", {
+    vim.api.nvim_set_keymap('n', 'bp', "<cmd>BufferLineCyclePrev<CR>", {
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('n', 'bd', ":BufferLineSortByExtension<CR>", {
+    vim.api.nvim_set_keymap('i', '<leader>p', "<cmd>BufferLineCyclePrev<CR>", {
+        noremap = true,
+        silent = true
+    })
+    vim.api.nvim_set_keymap('n', 'be', "<cmd>BufferLineSortByExtension<CR>", {
+        noremap = true,
+        silent = true
+    })
+    vim.api.nvim_set_keymap('n', 'bd', "<cmd>BufferLineSortByExtension<CR>", {
         noremap = true,
         silent = true
     })
