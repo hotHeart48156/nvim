@@ -77,7 +77,7 @@ end
 
 function M.setup()
   config_dapi_and_sign()
-  -- config_dapui()
+  config_dapui()
   config_debuggers() -- Debugger
 end
 
