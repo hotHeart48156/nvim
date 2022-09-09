@@ -4,13 +4,14 @@ local dbg_path = require("dap-install.config.settings").options["installation_pa
 dap.adapters.cppdbg = {
     id = 'cppdbg',
     type = 'executable',
-    command = dbg_path .. "extension/debugAdapters/bin/OpenDebugAD7"
+    command = dbg_path .. "extension/debugAdapters/bin/OpenDebugAD7",
+    -- args={" --pauseForDebugger"}
 }
-dap.configurations.cpp = { -- launch exe
+dap.configurations.cpp = { 
 {
     name = "Launch file",
     type = "cppdbg",
-    request = "launch",
+    request = "launch",--g++ -g file
     program = function()
         return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
     end,
