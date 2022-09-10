@@ -361,17 +361,17 @@ global_mapping.setup = function()
         noremap = true,
         silent=true
     })
-    
+
     vim.api.nvim_set_keymap('n','bc','<cmd>BufferLinePickClose<cr>',{
         noremap = true,
         silent=true
     })
-    
+
     vim.api.nvim_set_keymap('n', 'qc', "<cmd>q!<cr>", {
         noremap = true,
         silent = true
     })
-    
+
     vim.api.nvim_set_keymap('i','<C-p>','<esc>pa',{
         noremap = true,
         silent=true
@@ -425,7 +425,7 @@ global_mapping.setup = function()
         silent = true
     })
 
-    vim.api.nvim_set_keymap('n', '<M-a>', "<Cmd>lua vim.lsp.buf.code_action()<CR>", {
+    vim.api.nvim_set_keymap('n', '<S-a>', "<Cmd>lua vim.lsp.buf.code_action()<CR>", {
         noremap = true,
         silent = true
     })
