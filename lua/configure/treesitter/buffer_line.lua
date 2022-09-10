@@ -102,6 +102,10 @@ plugin.core.config = function()
         noremap = true,
         silent = true
     })
+    vim.api.nvim_set_keymap('n', '<leader>bp', "<cmd>BufferLinePick<CR>", {
+        noremap = true,
+        silent = true
+    })
     vim.api.nvim_set_keymap('i', '<leader>n', "<cmd>BufferLineCycleNext<CR>", {
         noremap = true,
         silent = true

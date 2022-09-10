@@ -271,7 +271,6 @@ plugin.core.config = function()
                     if not luasnip.jump(1) then
                         fallback()
                     end
-                    print("c")
                     return
                 else
                     fallback()
