@@ -312,6 +312,19 @@ plugin.core.config = function()
         }}
     })
 
+    nvim_cmp.setup.filetype({"dap-repl", "dapui_watches"}, {
+        sources = {
+                {
+                name = 'nvim_lsp'
+            }},
+            {{
+                name = 'buffer'
+            }},
+            {{
+                name = "dap"
+            }
+        }
+    })
     -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
     nvim_cmp.setup.cmdline('/', {
         mapping = nvim_cmp.mapping.preset.cmdline(),
@@ -335,15 +348,7 @@ plugin.core.config = function()
             name = 'path'
         }})
     })
-    nvim_cmp.setup.filetype({"dap-repl", "dapui_watches"}, {
-        sources = cmp.config.sources({{
-            name = 'nvim_lsp'
-        }}, {{
-            name = 'buffer'
-        }}, {{
-            name = "dap"
-        }})
-    })
+
     nvim_cmp.setup({
         enabled = function()
             return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt" or require("cmp_dap").is_dap_buffer()
@@ -356,15 +361,17 @@ plugin.core.config = function()
     --     }}
     -- })
     -- disable autocompletion for guihua
-    -- vim.cmd("autocmd FileType guihua lua require('cmp').setup.buffer { enabled = false }")
+    -- vim.cmd("autocmd FileType dap-repl lua require('cmp').setup.buffer { enabled = false }")
+    -- vim.cmd("autocmd FileType dapui_watches lua require('cmp').setup.buffer { enabled = false }")
     -- vim.cmd("autocmd FileType guihua_rust lua require('cmp').setup.buffer { enabled = false }")
     -- nvim_cmp.setup({
     --     enabled = function()
     --         buftype = vim.api.nvim_buf_get_option(0, "buftype")
+
     --         vim.notify(buftype)
     --         if buftype == "prompt" then
     --             vim.notify(buftype)
-    --             return false
+    --             -- return false
     --         end
     --     end
     -- })

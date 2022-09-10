@@ -41,6 +41,7 @@ local function config_dapui()
   end
   local debug_close = function()
     dap.repl.close()
+    
     dapui.close()
     vim.api.nvim_command("DapVirtualTextDisable")
     -- vim.api.nvim_command("bdelete! term:")   -- close debug temrinal

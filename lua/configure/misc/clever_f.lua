@@ -6,4 +6,7 @@ end
 plugin.core.config = function()
 
 end
+plugin.mapping = function()
+
+end
 return plugin
