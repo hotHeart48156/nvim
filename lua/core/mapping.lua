@@ -307,20 +307,20 @@ global_mapping.setup = function()
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('n', '<C-Left>', "<C-w><", {
+    vim.api.nvim_set_keymap('n', '<C-Left>', "<C-w>>2", {
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('i', '<C-Left>', "<ESC><C-w><i", {
+    vim.api.nvim_set_keymap('i', '<C-Left>', "<ESC><C-w>>2i", {
         noremap = true,
         silent = true
     })
 
-    vim.api.nvim_set_keymap('n', '<C-Right>', "<C-w>>2", {
+    vim.api.nvim_set_keymap('n', '<C-Right>', "<C-w<<2", {
         noremap = true,
         silent = true
     })
-    vim.api.nvim_set_keymap('i', '<C-Right>', "<ESC><C-w>>2i", {
+    vim.api.nvim_set_keymap('i', '<C-Right>', "<ESC><C-w<<2i", {
         noremap = true,
         silent = true
     })
