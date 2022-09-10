@@ -335,11 +335,13 @@ plugin.core.config = function()
             name = 'path'
         }})
     })
-    nvim_cmp.setup.filetype('dap-repl', {
+    nvim_cmp.setup.filetype({"dap-repl", "dapui_watches"}, {
         sources = cmp.config.sources({{
             name = 'nvim_lsp'
         }}, {{
             name = 'buffer'
+        }}, {{
+            name = "dap"
         }})
     })
     nvim_cmp.setup({
@@ -348,24 +350,24 @@ plugin.core.config = function()
         end
     })
 
-    nvim_cmp.setup.filetype({"dap-repl", "dapui_watches"}, {
-        sources = {{
-            name = "dap"
-        }}
-    })
+    -- nvim_cmp.setup.filetype({"dap-repl", "dapui_watches"}, {
+    --     sources = {{
+    --         name = "dap"
+    --     }}
+    -- })
     -- disable autocompletion for guihua
     -- vim.cmd("autocmd FileType guihua lua require('cmp').setup.buffer { enabled = false }")
     -- vim.cmd("autocmd FileType guihua_rust lua require('cmp').setup.buffer { enabled = false }")
-    nvim_cmp.setup({
-        enabled = function()
-            buftype = vim.api.nvim_buf_get_option(0, "buftype")
-            vim.notify(buftype)
-            if buftype == "prompt" then
-                vim.notify(buftype)
-                return false
-            end
-        end
-    })
+    -- nvim_cmp.setup({
+    --     enabled = function()
+    --         buftype = vim.api.nvim_buf_get_option(0, "buftype")
+    --         vim.notify(buftype)
+    --         if buftype == "prompt" then
+    --             vim.notify(buftype)
+    --             return false
+    --         end
+    --     end
+    -- })
     nvim_cmp.setup(cmp_config)
 
 end
