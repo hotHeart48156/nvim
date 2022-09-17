@@ -30,6 +30,7 @@ default_setting['opt']=
 	-- updatetime = 300,
 	--floder
 	foldmethod  = 'expr',
+  wrap=true
 	-- foldlevel = 99
     }
 default_setting['global']=
